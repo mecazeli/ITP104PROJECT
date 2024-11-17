@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -38,11 +39,21 @@
             this.textBox1.Size = new System.Drawing.Size(215, 20);
             this.textBox1.TabIndex = 0;
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Location = new System.Drawing.Point(356, 23);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(52, 13);
+            this.lblHeader.TabIndex = 1;
+            this.lblHeader.Text = "HEADER";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -55,6 +66,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblHeader;
     }
 }
 
