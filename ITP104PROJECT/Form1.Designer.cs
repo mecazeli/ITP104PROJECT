@@ -49,27 +49,27 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(381, 213);
+            this.txtUsername.Font = new System.Drawing.Font("Book Antiqua", 13.25F);
+            this.txtUsername.Location = new System.Drawing.Point(378, 212);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(221, 26);
+            this.txtUsername.Size = new System.Drawing.Size(221, 29);
             this.txtUsername.TabIndex = 2;
             // 
             // textPassword
             // 
-            this.textPassword.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPassword.Location = new System.Drawing.Point(381, 265);
+            this.textPassword.Font = new System.Drawing.Font("Book Antiqua", 13.25F);
+            this.textPassword.Location = new System.Drawing.Point(378, 264);
             this.textPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(221, 26);
+            this.textPassword.Size = new System.Drawing.Size(221, 29);
             this.textPassword.TabIndex = 3;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(293, 215);
+            this.lblUsername.Location = new System.Drawing.Point(290, 214);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(83, 21);
@@ -80,7 +80,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(293, 268);
+            this.lblPassword.Location = new System.Drawing.Point(290, 267);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(80, 21);
