@@ -16,5 +16,10 @@ namespace ITP104PROJECT
         {
             InitializeComponent();
         }
+
+        private void txtDepName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
