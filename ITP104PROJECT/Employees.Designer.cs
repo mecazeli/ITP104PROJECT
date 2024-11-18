@@ -87,9 +87,9 @@
             this.lblAddEmployee.ForeColor = System.Drawing.Color.White;
             this.lblAddEmployee.Location = new System.Drawing.Point(452, 7);
             this.lblAddEmployee.Name = "lblAddEmployee";
-            this.lblAddEmployee.Size = new System.Drawing.Size(230, 30);
+            this.lblAddEmployee.Size = new System.Drawing.Size(227, 30);
             this.lblAddEmployee.TabIndex = 2;
-            this.lblAddEmployee.Text = "Add A New Employee";
+            this.lblAddEmployee.Text = "Add a New Employee";
             // 
             // panel3
             // 

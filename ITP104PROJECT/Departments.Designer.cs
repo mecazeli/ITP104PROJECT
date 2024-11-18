@@ -189,7 +189,7 @@
             this.dfvDepartments.Name = "dfvDepartments";
             this.dfvDepartments.RowHeadersWidth = 51;
             this.dfvDepartments.RowTemplate.Height = 24;
-            this.dfvDepartments.Size = new System.Drawing.Size(892, 751);
+            this.dfvDepartments.Size = new System.Drawing.Size(1666, 751);
             this.dfvDepartments.TabIndex = 2;
             // 
             // panelDepFooter
@@ -202,7 +202,7 @@
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDepFooter.Location = new System.Drawing.Point(258, 485);
             this.panelDepFooter.Name = "panelDepFooter";
-            this.panelDepFooter.Size = new System.Drawing.Size(892, 266);
+            this.panelDepFooter.Size = new System.Drawing.Size(1666, 266);
             this.panelDepFooter.TabIndex = 3;
             // 
             // lblAddDep
@@ -210,11 +210,11 @@
             this.lblAddDep.AutoSize = true;
             this.lblAddDep.Font = new System.Drawing.Font("Arial Narrow", 14.8F, System.Drawing.FontStyle.Bold);
             this.lblAddDep.ForeColor = System.Drawing.Color.White;
-            this.lblAddDep.Location = new System.Drawing.Point(46, 5);
+            this.lblAddDep.Location = new System.Drawing.Point(465, 4);
             this.lblAddDep.Name = "lblAddDep";
-            this.lblAddDep.Size = new System.Drawing.Size(247, 30);
+            this.lblAddDep.Size = new System.Drawing.Size(244, 30);
             this.lblAddDep.TabIndex = 2;
-            this.lblAddDep.Text = "Add A New Department";
+            this.lblAddDep.Text = "Add a New Department";
             // 
             // btnView
             // 
@@ -236,7 +236,7 @@
             // 
             this.lblDepName.AutoSize = true;
             this.lblDepName.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.lblDepName.Location = new System.Drawing.Point(56, 77);
+            this.lblDepName.Location = new System.Drawing.Point(457, 78);
             this.lblDepName.Name = "lblDepName";
             this.lblDepName.Size = new System.Drawing.Size(155, 21);
             this.lblDepName.TabIndex = 3;
@@ -251,7 +251,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(76, 151);
+            this.button1.Location = new System.Drawing.Point(477, 152);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.button1.Size = new System.Drawing.Size(185, 51);
@@ -288,7 +288,7 @@
             // 
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(610, 0);
+            this.panel2.Location = new System.Drawing.Point(1384, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 264);
             this.panel2.TabIndex = 8;
@@ -303,14 +303,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(280, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 264);
+            this.panel3.Size = new System.Drawing.Size(1104, 264);
             this.panel3.TabIndex = 9;
             // 
             // txtDepName
             // 
             this.txtDepName.BackColor = System.Drawing.Color.White;
             this.txtDepName.Font = new System.Drawing.Font("Arial", 13F);
-            this.txtDepName.Location = new System.Drawing.Point(59, 101);
+            this.txtDepName.Location = new System.Drawing.Point(460, 102);
             this.txtDepName.Name = "txtDepName";
             this.txtDepName.Size = new System.Drawing.Size(221, 32);
             this.txtDepName.TabIndex = 6;
@@ -322,7 +322,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(328, 42);
+            this.panel4.Size = new System.Drawing.Size(1102, 42);
             this.panel4.TabIndex = 7;
             // 
             // pictureBox1
@@ -337,12 +337,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 751);
+            this.ClientSize = new System.Drawing.Size(1924, 751);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.dfvDepartments);
             this.Controls.Add(this.panelSideBar);
             this.Name = "Departments";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Departments";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dfvDepartments)).EndInit();
