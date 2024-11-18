@@ -80,14 +80,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(267, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 726);
+            this.panel1.Size = new System.Drawing.Size(904, 726);
             this.panel1.TabIndex = 1;
             // 
             // lblDashboard
             // 
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(263, 38);
+            this.lblDashboard.Location = new System.Drawing.Point(83, 39);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(262, 44);
             this.lblDashboard.TabIndex = 0;
@@ -100,9 +100,9 @@
             this.btnDepartments.FlatAppearance.BorderSize = 5;
             this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartments.Location = new System.Drawing.Point(81, 174);
+            this.btnDepartments.Location = new System.Drawing.Point(91, 163);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(168, 156);
+            this.btnDepartments.Size = new System.Drawing.Size(210, 190);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
             // 
@@ -113,9 +113,9 @@
             this.btnEmployees.FlatAppearance.BorderSize = 5;
             this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Location = new System.Drawing.Point(294, 174);
+            this.btnEmployees.Location = new System.Drawing.Point(350, 163);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(168, 156);
+            this.btnEmployees.Size = new System.Drawing.Size(210, 190);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
             // 
@@ -126,39 +126,39 @@
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjects.Location = new System.Drawing.Point(508, 174);
+            this.btnProjects.Location = new System.Drawing.Point(607, 163);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(168, 156);
+            this.btnProjects.Size = new System.Drawing.Size(210, 190);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
             // 
             // lblDepartments
             // 
             this.lblDepartments.AutoSize = true;
-            this.lblDepartments.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartments.Location = new System.Drawing.Point(104, 341);
+            this.lblDepartments.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
+            this.lblDepartments.Location = new System.Drawing.Point(123, 375);
             this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(126, 27);
+            this.lblDepartments.Size = new System.Drawing.Size(149, 31);
             this.lblDepartments.TabIndex = 4;
             this.lblDepartments.Text = "Departments";
             // 
             // lblEmployees
             // 
             this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployees.Location = new System.Drawing.Point(327, 341);
+            this.lblEmployees.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
+            this.lblEmployees.Location = new System.Drawing.Point(392, 375);
             this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(111, 27);
+            this.lblEmployees.Size = new System.Drawing.Size(131, 31);
             this.lblEmployees.TabIndex = 5;
             this.lblEmployees.Text = "Employees";
             // 
             // lblProjects
             // 
             this.lblProjects.AutoSize = true;
-            this.lblProjects.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjects.Location = new System.Drawing.Point(550, 341);
+            this.lblProjects.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
+            this.lblProjects.Location = new System.Drawing.Point(663, 375);
             this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(86, 27);
+            this.lblProjects.Size = new System.Drawing.Size(101, 31);
             this.lblProjects.TabIndex = 6;
             this.lblProjects.Text = "Projects";
             // 
@@ -263,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 726);
+            this.ClientSize = new System.Drawing.Size(1171, 726);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideBar);
             this.Name = "Dashboard";
