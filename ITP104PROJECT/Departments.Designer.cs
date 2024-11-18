@@ -309,10 +309,10 @@
             // txtDepName
             // 
             this.txtDepName.BackColor = System.Drawing.Color.White;
-            this.txtDepName.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepName.Font = new System.Drawing.Font("Arial", 13F);
             this.txtDepName.Location = new System.Drawing.Point(59, 101);
             this.txtDepName.Name = "txtDepName";
-            this.txtDepName.Size = new System.Drawing.Size(221, 34);
+            this.txtDepName.Size = new System.Drawing.Size(221, 32);
             this.txtDepName.TabIndex = 6;
             // 
             // panel4
