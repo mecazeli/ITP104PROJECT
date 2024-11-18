@@ -54,6 +54,7 @@
             // 
             // panelLogin
             // 
+            this.panelLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.textBox2);
             this.panelLogin.Controls.Add(this.textBox1);
@@ -126,6 +127,8 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Book Antiqua", 12.8F, System.Drawing.FontStyle.Bold);
             this.btnLogin.Location = new System.Drawing.Point(161, 401);
             this.btnLogin.Name = "btnLogin";
