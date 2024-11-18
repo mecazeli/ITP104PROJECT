@@ -54,7 +54,6 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.textBox2);
             this.panelLogin.Controls.Add(this.textBox1);
@@ -62,7 +61,7 @@
             this.panelLogin.Controls.Add(this.lblUsername);
             this.panelLogin.Controls.Add(this.lblAdmin);
             this.panelLogin.Controls.Add(this.lblLogin);
-            this.panelLogin.Location = new System.Drawing.Point(76, 115);
+            this.panelLogin.Location = new System.Drawing.Point(73, 101);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(492, 498);
             this.panelLogin.TabIndex = 1;
