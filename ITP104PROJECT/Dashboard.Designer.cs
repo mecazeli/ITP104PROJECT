@@ -40,9 +40,9 @@
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnSideProj = new System.Windows.Forms.Button();
-            this.btnSideEmp = new System.Windows.Forms.Button();
-            this.btnSideDep = new System.Windows.Forms.Button();
+            this.btnProject = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnDepartment = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,7 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 726);
             this.panel1.TabIndex = 1;
-   
             // 
             // lblProjects
             // 
@@ -156,9 +155,9 @@
             this.panelSideBar.Controls.Add(this.lblAdmin);
             this.panelSideBar.Controls.Add(this.btnLogout);
             this.panelSideBar.Controls.Add(this.btnSettings);
-            this.panelSideBar.Controls.Add(this.btnSideProj);
-            this.panelSideBar.Controls.Add(this.btnSideEmp);
-            this.panelSideBar.Controls.Add(this.btnSideDep);
+            this.panelSideBar.Controls.Add(this.btnProject);
+            this.panelSideBar.Controls.Add(this.btnEmployee);
+            this.panelSideBar.Controls.Add(this.btnDepartment);
             this.panelSideBar.Controls.Add(this.btnDashboard);
             this.panelSideBar.Controls.Add(this.lblName);
             this.panelSideBar.Controls.Add(this.pictureBox1);
@@ -205,44 +204,45 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
-            // btnSideProj
+            // btnProject
             // 
-            this.btnSideProj.FlatAppearance.BorderSize = 0;
-            this.btnSideProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideProj.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideProj.ForeColor = System.Drawing.Color.White;
-            this.btnSideProj.Location = new System.Drawing.Point(0, 452);
-            this.btnSideProj.Name = "btnSideProj";
-            this.btnSideProj.Size = new System.Drawing.Size(267, 52);
-            this.btnSideProj.TabIndex = 5;
-            this.btnSideProj.Text = "Projects";
-            this.btnSideProj.UseVisualStyleBackColor = true;
+            this.btnProject.FlatAppearance.BorderSize = 0;
+            this.btnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProject.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnProject.ForeColor = System.Drawing.Color.White;
+            this.btnProject.Location = new System.Drawing.Point(0, 452);
+            this.btnProject.Name = "btnProject";
+            this.btnProject.Size = new System.Drawing.Size(267, 52);
+            this.btnProject.TabIndex = 5;
+            this.btnProject.Text = "Projects";
+            this.btnProject.UseVisualStyleBackColor = true;
             // 
-            // btnSideEmp
+            // btnEmployee
             // 
-            this.btnSideEmp.FlatAppearance.BorderSize = 0;
-            this.btnSideEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideEmp.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideEmp.ForeColor = System.Drawing.Color.White;
-            this.btnSideEmp.Location = new System.Drawing.Point(0, 394);
-            this.btnSideEmp.Name = "btnSideEmp";
-            this.btnSideEmp.Size = new System.Drawing.Size(267, 52);
-            this.btnSideEmp.TabIndex = 4;
-            this.btnSideEmp.Text = "Employees";
-            this.btnSideEmp.UseVisualStyleBackColor = true;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 394);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(267, 52);
+            this.btnEmployee.TabIndex = 4;
+            this.btnEmployee.Text = "Employees";
+            this.btnEmployee.UseVisualStyleBackColor = true;
             // 
-            // btnSideDep
+            // btnDepartment
             // 
-            this.btnSideDep.FlatAppearance.BorderSize = 0;
-            this.btnSideDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideDep.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideDep.ForeColor = System.Drawing.Color.White;
-            this.btnSideDep.Location = new System.Drawing.Point(3, 336);
-            this.btnSideDep.Name = "btnSideDep";
-            this.btnSideDep.Size = new System.Drawing.Size(267, 52);
-            this.btnSideDep.TabIndex = 3;
-            this.btnSideDep.Text = "Departments";
-            this.btnSideDep.UseVisualStyleBackColor = true;
+            this.btnDepartment.FlatAppearance.BorderSize = 0;
+            this.btnDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepartment.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnDepartment.ForeColor = System.Drawing.Color.White;
+            this.btnDepartment.Location = new System.Drawing.Point(3, 336);
+            this.btnDepartment.Name = "btnDepartment";
+            this.btnDepartment.Size = new System.Drawing.Size(267, 52);
+            this.btnDepartment.TabIndex = 3;
+            this.btnDepartment.Text = "Departments";
+            this.btnDepartment.UseVisualStyleBackColor = true;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnDashboard
             // 
@@ -307,9 +307,9 @@
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnSideProj;
-        private System.Windows.Forms.Button btnSideEmp;
-        private System.Windows.Forms.Button btnSideDep;
+        private System.Windows.Forms.Button btnProject;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox1;
