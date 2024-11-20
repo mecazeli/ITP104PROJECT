@@ -31,8 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
@@ -51,12 +51,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelLogin
             // 
             this.panelLogin.Controls.Add(this.btnLogin);
-            this.panelLogin.Controls.Add(this.textBox2);
-            this.panelLogin.Controls.Add(this.textBox1);
+            this.panelLogin.Controls.Add(this.txtPassword);
+            this.panelLogin.Controls.Add(this.txtUsername);
             this.panelLogin.Controls.Add(this.lblPassword);
             this.panelLogin.Controls.Add(this.lblUsername);
             this.panelLogin.Controls.Add(this.lblAdmin);
@@ -80,22 +81,22 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(121, 320);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(257, 30);
-            this.textBox2.TabIndex = 5;
+            this.txtPassword.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(121, 320);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(257, 36);
+            this.txtPassword.TabIndex = 5;
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(121, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 30);
-            this.textBox1.TabIndex = 4;
+            this.txtUsername.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(121, 223);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(257, 36);
+            this.txtUsername.TabIndex = 4;
             // 
             // lblPassword
             // 
@@ -103,7 +104,7 @@
             this.lblPassword.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(117, 295);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(76, 19);
+            this.lblPassword.Size = new System.Drawing.Size(89, 22);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password";
             // 
@@ -113,7 +114,7 @@
             this.lblUsername.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(117, 198);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(80, 19);
+            this.lblUsername.Size = new System.Drawing.Size(93, 22);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username";
             // 
@@ -123,7 +124,7 @@
             this.lblAdmin.Font = new System.Drawing.Font("Book Antiqua", 18.2F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.Location = new System.Drawing.Point(203, 117);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(92, 29);
+            this.lblAdmin.Size = new System.Drawing.Size(117, 37);
             this.lblAdmin.TabIndex = 1;
             this.lblAdmin.Text = "Admin";
             // 
@@ -134,13 +135,13 @@
             this.lblLogin.ForeColor = System.Drawing.Color.Brown;
             this.lblLogin.Location = new System.Drawing.Point(115, 34);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(255, 35);
+            this.lblLogin.Size = new System.Drawing.Size(315, 44);
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login to Velvaire";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1061, 684);
@@ -163,8 +164,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblAdmin;

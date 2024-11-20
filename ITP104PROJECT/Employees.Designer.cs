@@ -31,7 +31,21 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblAddEmployee = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblEmployeeDep = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelemployee = new System.Windows.Forms.Button();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -40,34 +54,20 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnDelemployee = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnViewEmployees = new System.Windows.Forms.Button();
             this.panelDepFooter = new System.Windows.Forms.Panel();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblSalary = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblEmployeeDep = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDepFooter.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -115,6 +115,47 @@
             this.panel3.Size = new System.Drawing.Size(1374, 264);
             this.panel3.TabIndex = 9;
             // 
+            // lblEmployeeDep
+            // 
+            this.lblEmployeeDep.AutoSize = true;
+            this.lblEmployeeDep.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblEmployeeDep.Location = new System.Drawing.Point(618, 156);
+            this.lblEmployeeDep.Name = "lblEmployeeDep";
+            this.lblEmployeeDep.Size = new System.Drawing.Size(93, 19);
+            this.lblEmployeeDep.TabIndex = 18;
+            this.lblEmployeeDep.Text = "Department";
+            this.lblEmployeeDep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(622, 178);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(180, 30);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblSalary.Location = new System.Drawing.Point(618, 82);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(56, 19);
+            this.lblSalary.TabIndex = 14;
+            this.lblSalary.Text = "Salary";
+            this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(622, 100);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(180, 28);
+            this.textBox3.TabIndex = 15;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
@@ -130,6 +171,112 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Add Department";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblPosition.Location = new System.Drawing.Point(358, 161);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(67, 19);
+            this.lblPosition.TabIndex = 12;
+            this.lblPosition.Text = "Position";
+            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(362, 179);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(180, 28);
+            this.textBox2.TabIndex = 13;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblAddress.Location = new System.Drawing.Point(358, 76);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(69, 19);
+            this.lblAddress.TabIndex = 10;
+            this.lblAddress.Text = "Address";
+            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(362, 100);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 28);
+            this.textBox1.TabIndex = 11;
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblAge.Location = new System.Drawing.Point(93, 161);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(38, 19);
+            this.lblAge.TabIndex = 8;
+            this.lblAge.Text = "Age";
+            this.lblAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtAge
+            // 
+            this.txtAge.BackColor = System.Drawing.Color.White;
+            this.txtAge.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Location = new System.Drawing.Point(97, 180);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(180, 28);
+            this.txtAge.TabIndex = 9;
+            // 
+            // lblEmployeeName
+            // 
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.Font = new System.Drawing.Font("Arial", 9.8F);
+            this.lblEmployeeName.Location = new System.Drawing.Point(93, 82);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(51, 19);
+            this.lblEmployeeName.TabIndex = 3;
+            this.lblEmployeeName.Text = "Name";
+            this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtEmployeeName
+            // 
+            this.txtEmployeeName.BackColor = System.Drawing.Color.White;
+            this.txtEmployeeName.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeName.Location = new System.Drawing.Point(97, 101);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(180, 28);
+            this.txtEmployeeName.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnDelemployee);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1082, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(290, 262);
+            this.panel2.TabIndex = 7;
+            // 
+            // btnDelemployee
+            // 
+            this.btnDelemployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnDelemployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnDelemployee.FlatAppearance.BorderSize = 3;
+            this.btnDelemployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelemployee.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
+            this.btnDelemployee.ForeColor = System.Drawing.Color.White;
+            this.btnDelemployee.Location = new System.Drawing.Point(56, 111);
+            this.btnDelemployee.Name = "btnDelemployee";
+            this.btnDelemployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnDelemployee.Size = new System.Drawing.Size(185, 51);
+            this.btnDelemployee.TabIndex = 6;
+            this.btnDelemployee.Text = "Delete Employee";
+            this.btnDelemployee.UseVisualStyleBackColor = false;
             // 
             // lblAdmin
             // 
@@ -231,22 +378,6 @@
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Jessa Cariñaga";
             // 
-            // btnDelemployee
-            // 
-            this.btnDelemployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnDelemployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.btnDelemployee.FlatAppearance.BorderSize = 3;
-            this.btnDelemployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelemployee.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
-            this.btnDelemployee.ForeColor = System.Drawing.Color.White;
-            this.btnDelemployee.Location = new System.Drawing.Point(56, 111);
-            this.btnDelemployee.Name = "btnDelemployee";
-            this.btnDelemployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnDelemployee.Size = new System.Drawing.Size(185, 51);
-            this.btnDelemployee.TabIndex = 6;
-            this.btnDelemployee.Text = "Delete Employee";
-            this.btnDelemployee.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnViewEmployees);
@@ -323,137 +454,7 @@
             this.dgvEmployees.RowTemplate.Height = 24;
             this.dgvEmployees.Size = new System.Drawing.Size(1924, 751);
             this.dgvEmployees.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnDelemployee);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1082, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(290, 262);
-            this.panel2.TabIndex = 7;
-            // 
-            // txtEmployeeName
-            // 
-            this.txtEmployeeName.BackColor = System.Drawing.Color.White;
-            this.txtEmployeeName.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(97, 101);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(180, 28);
-            this.txtEmployeeName.TabIndex = 6;
-            // 
-            // lblEmployeeName
-            // 
-            this.lblEmployeeName.AutoSize = true;
-            this.lblEmployeeName.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblEmployeeName.Location = new System.Drawing.Point(93, 82);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(51, 19);
-            this.lblEmployeeName.TabIndex = 3;
-            this.lblEmployeeName.Text = "Name";
-            this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtAge
-            // 
-            this.txtAge.BackColor = System.Drawing.Color.White;
-            this.txtAge.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(97, 180);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(180, 28);
-            this.txtAge.TabIndex = 9;
-            // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblAge.Location = new System.Drawing.Point(93, 161);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(38, 19);
-            this.lblAge.TabIndex = 8;
-            this.lblAge.Text = "Age";
-            this.lblAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(362, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 28);
-            this.textBox1.TabIndex = 11;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblAddress.Location = new System.Drawing.Point(358, 76);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(69, 19);
-            this.lblAddress.TabIndex = 10;
-            this.lblAddress.Text = "Address";
-            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(362, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 28);
-            this.textBox2.TabIndex = 13;
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblPosition.Location = new System.Drawing.Point(358, 161);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(67, 19);
-            this.lblPosition.TabIndex = 12;
-            this.lblPosition.Text = "Position";
-            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(622, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 28);
-            this.textBox3.TabIndex = 15;
-            // 
-            // lblSalary
-            // 
-            this.lblSalary.AutoSize = true;
-            this.lblSalary.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblSalary.Location = new System.Drawing.Point(618, 82);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(56, 19);
-            this.lblSalary.TabIndex = 14;
-            this.lblSalary.Text = "Salary";
-            this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(622, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 30);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // lblEmployeeDep
-            // 
-            this.lblEmployeeDep.AutoSize = true;
-            this.lblEmployeeDep.Font = new System.Drawing.Font("Arial", 9.8F);
-            this.lblEmployeeDep.Location = new System.Drawing.Point(618, 156);
-            this.lblEmployeeDep.Name = "lblEmployeeDep";
-            this.lblEmployeeDep.Size = new System.Drawing.Size(93, 19);
-            this.lblEmployeeDep.TabIndex = 18;
-            this.lblEmployeeDep.Text = "Department";
-            this.lblEmployeeDep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
             // 
             // Employees
             // 
@@ -472,13 +473,13 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelDepFooter.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
