@@ -30,6 +30,12 @@ namespace ITP104PROJECT
         {
             Departments departmentsForm = new Departments();
             departmentsForm.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

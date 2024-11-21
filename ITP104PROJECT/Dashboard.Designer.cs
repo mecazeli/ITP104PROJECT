@@ -62,18 +62,21 @@
             this.panel1.Controls.Add(this.btnDepartments);
             this.panel1.Controls.Add(this.lblDashboard);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(258, 0);
+            this.panel1.Location = new System.Drawing.Point(194, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 726);
+            this.panel1.Size = new System.Drawing.Size(684, 590);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblProjects
             // 
             this.lblProjects.AutoSize = true;
             this.lblProjects.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
-            this.lblProjects.Location = new System.Drawing.Point(663, 375);
+            this.lblProjects.Location = new System.Drawing.Point(497, 305);
+            this.lblProjects.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(101, 31);
+            this.lblProjects.Size = new System.Drawing.Size(83, 26);
             this.lblProjects.TabIndex = 6;
             this.lblProjects.Text = "Projects";
             // 
@@ -81,9 +84,10 @@
             // 
             this.lblEmployees.AutoSize = true;
             this.lblEmployees.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
-            this.lblEmployees.Location = new System.Drawing.Point(392, 375);
+            this.lblEmployees.Location = new System.Drawing.Point(294, 305);
+            this.lblEmployees.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(131, 31);
+            this.lblEmployees.Size = new System.Drawing.Size(107, 26);
             this.lblEmployees.TabIndex = 5;
             this.lblEmployees.Text = "Employees";
             // 
@@ -91,9 +95,10 @@
             // 
             this.lblDepartments.AutoSize = true;
             this.lblDepartments.Font = new System.Drawing.Font("Arial Narrow", 15.8F, System.Drawing.FontStyle.Bold);
-            this.lblDepartments.Location = new System.Drawing.Point(123, 375);
+            this.lblDepartments.Location = new System.Drawing.Point(92, 305);
+            this.lblDepartments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(149, 31);
+            this.lblDepartments.Size = new System.Drawing.Size(122, 26);
             this.lblDepartments.TabIndex = 4;
             this.lblDepartments.Text = "Departments";
             // 
@@ -104,9 +109,10 @@
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjects.Location = new System.Drawing.Point(607, 163);
+            this.btnProjects.Location = new System.Drawing.Point(455, 132);
+            this.btnProjects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(210, 190);
+            this.btnProjects.Size = new System.Drawing.Size(158, 154);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
             // 
@@ -118,9 +124,10 @@
             this.btnEmployees.FlatAppearance.BorderSize = 5;
             this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Location = new System.Drawing.Point(350, 163);
+            this.btnEmployees.Location = new System.Drawing.Point(262, 132);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(210, 190);
+            this.btnEmployees.Size = new System.Drawing.Size(158, 154);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
             // 
@@ -133,9 +140,10 @@
             this.btnDepartments.FlatAppearance.BorderSize = 5;
             this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartments.Location = new System.Drawing.Point(91, 163);
+            this.btnDepartments.Location = new System.Drawing.Point(68, 132);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(210, 190);
+            this.btnDepartments.Size = new System.Drawing.Size(158, 154);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
             // 
@@ -143,9 +151,10 @@
             // 
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(83, 39);
+            this.lblDashboard.Location = new System.Drawing.Point(62, 32);
+            this.lblDashboard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(262, 44);
+            this.lblDashboard.Size = new System.Drawing.Size(209, 35);
             this.lblDashboard.TabIndex = 0;
             this.lblDashboard.Text = "DASHBOARD";
             // 
@@ -163,8 +172,9 @@
             this.panelSideBar.Controls.Add(this.pictureBox1);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(258, 726);
+            this.panelSideBar.Size = new System.Drawing.Size(194, 590);
             this.panelSideBar.TabIndex = 2;
             // 
             // lblAdmin
@@ -172,9 +182,10 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.ForeColor = System.Drawing.Color.White;
-            this.lblAdmin.Location = new System.Drawing.Point(102, 214);
+            this.lblAdmin.Location = new System.Drawing.Point(76, 174);
+            this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(54, 22);
+            this.lblAdmin.Size = new System.Drawing.Size(43, 17);
             this.lblAdmin.TabIndex = 8;
             this.lblAdmin.Text = "Admin";
             // 
@@ -184,9 +195,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 568);
+            this.btnLogout.Location = new System.Drawing.Point(0, 462);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(267, 52);
+            this.btnLogout.Size = new System.Drawing.Size(200, 42);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -197,9 +209,10 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(0, 510);
+            this.btnSettings.Location = new System.Drawing.Point(0, 414);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(267, 52);
+            this.btnSettings.Size = new System.Drawing.Size(200, 42);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -210,9 +223,10 @@
             this.btnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProject.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnProject.ForeColor = System.Drawing.Color.White;
-            this.btnProject.Location = new System.Drawing.Point(0, 452);
+            this.btnProject.Location = new System.Drawing.Point(0, 367);
+            this.btnProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProject.Name = "btnProject";
-            this.btnProject.Size = new System.Drawing.Size(267, 52);
+            this.btnProject.Size = new System.Drawing.Size(200, 42);
             this.btnProject.TabIndex = 5;
             this.btnProject.Text = "Projects";
             this.btnProject.UseVisualStyleBackColor = true;
@@ -223,9 +237,10 @@
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 394);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 320);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(267, 52);
+            this.btnEmployee.Size = new System.Drawing.Size(200, 42);
             this.btnEmployee.TabIndex = 4;
             this.btnEmployee.Text = "Employees";
             this.btnEmployee.UseVisualStyleBackColor = true;
@@ -236,9 +251,10 @@
             this.btnDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDepartment.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartment.ForeColor = System.Drawing.Color.White;
-            this.btnDepartment.Location = new System.Drawing.Point(3, 336);
+            this.btnDepartment.Location = new System.Drawing.Point(2, 273);
+            this.btnDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDepartment.Name = "btnDepartment";
-            this.btnDepartment.Size = new System.Drawing.Size(267, 52);
+            this.btnDepartment.Size = new System.Drawing.Size(200, 42);
             this.btnDepartment.TabIndex = 3;
             this.btnDepartment.Text = "Departments";
             this.btnDepartment.UseVisualStyleBackColor = true;
@@ -250,9 +266,10 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 278);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 226);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(267, 52);
+            this.btnDashboard.Size = new System.Drawing.Size(200, 42);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -262,27 +279,30 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial Narrow", 11F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(64, 191);
+            this.lblName.Location = new System.Drawing.Point(48, 155);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(127, 23);
+            this.lblName.Size = new System.Drawing.Size(102, 20);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Jessa Cariñaga";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(62, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 726);
+            this.ClientSize = new System.Drawing.Size(878, 590);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideBar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
             this.Text = "Connect";
             this.panel1.ResumeLayout(false);
