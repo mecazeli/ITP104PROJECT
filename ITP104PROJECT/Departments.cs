@@ -15,12 +15,18 @@ namespace ITP104PROJECT
     {
         public static string connection = "server=localhost; user=root; password=liezel11; database=company";
         public MySqlConnection conn;
-        public Departments()
+        public Admin admin;
+        public Departments(Admin admin)
         {
             InitializeComponent();
             conn = new MySqlConnection(connection);
+            this.admin = admin;
         }
 
+        private void Departments_Load(object sender, EventArgs e)
+        {
+            lblName.Text = admin.name;
+        }
         private void btnView_Click(object sender, EventArgs e)
         {
             try
@@ -40,6 +46,7 @@ namespace ITP104PROJECT
 
                 dataGridViewDepartments.Columns[0].HeaderText = "Id";
                 dataGridViewDepartments.Columns[1].HeaderText = "Department Name";
+                dataGridViewDepartments.Columns[2].HeaderText = "Description";
 
 
             }catch(Exception ex)
@@ -58,5 +65,6 @@ namespace ITP104PROJECT
         {
 
         }
+
     }
 }

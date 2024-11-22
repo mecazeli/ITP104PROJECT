@@ -28,7 +28,7 @@ namespace ITP104PROJECT
 
         private void btnDepartment_Click(object sender, EventArgs e)
         {
-            Departments departmentsForm = new Departments();
+            Departments departmentsForm = new Departments(admin);
             departmentsForm.Show();
             this.Hide();
         }
