@@ -21,7 +21,7 @@ namespace ITP104PROJECT
             this.admin = admin;
         }
 
-       private void Dashboard_Load(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
             lblName.Text = admin.name;
         }
@@ -37,5 +37,7 @@ namespace ITP104PROJECT
         {
 
         }
+
+        
     }
 }
