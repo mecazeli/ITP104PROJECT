@@ -66,5 +66,30 @@ namespace ITP104PROJECT
 
         }
 
+        private void btnAddDep_Click(object sender, EventArgs e)
+        {
+            string depName = txtDepName.Text.Trim();
+            string depDescription = txtDepDescription.Text.Trim();
+
+            try
+            {
+                conn.Open();
+
+                string query = "INSERT INTO department(departmentName,description) VALUES(@name,@description)";
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                command.Parameters.AddWithValue("@name", depName);
+                command.Parameters.AddWithValue("@description", depDescription);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error occurred: " +ex.Message,"Database Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
