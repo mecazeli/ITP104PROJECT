@@ -68,6 +68,13 @@ namespace ITP104PROJECT
 
         private void btnAddDep_Click(object sender, EventArgs e)
         {
+            AddingDepartment();
+        }
+
+
+        //method for adding department
+        private void AddingDepartment()
+        {
             string depName = txtDepName.Text.Trim();
             string depDescription = txtDepDescription.Text.Trim();
 
@@ -82,14 +89,80 @@ namespace ITP104PROJECT
                 command.Parameters.AddWithValue("@description", depDescription);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " +ex.Message,"Database Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 conn.Close();
             }
         }
+
+        // method for update department 
+        // hindi pa siya integrated mismo 
+        // kasi meron pa ako tanong kung ano plan natin pag update
+        // kung meron o wla na
+        private void UpdatingDepartment()
+        {
+            string depName = txtDepName.Text.Trim();
+            string depDescription = txtDepDescription.Text.Trim();
+
+            try
+            {
+                conn.Open();
+
+                string query = "UPDATE department SET departmentName = @name, description = @description";
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                command.Parameters.AddWithValue("@name", depName);
+                command.Parameters.AddWithValue("@description", depDescription);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        // method for delete 
+        // same din dito
+        private void DeletingDepartment()
+        {
+
+            if (dataGridViewDepartments.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Please select a department to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
+            string depId = selectedRow.Cells["departmentId"].Value.ToString();
+
+            try
+            {
+                conn.Open();
+
+                string query = "DELETE FROM department WHERE departmentId = @id";
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                command.Parameters.AddWithValue("@id", depId);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

@@ -1,5 +1,5 @@
 CREATE DATABASE company;
-
+USE company;
 CREATE TABLE department(
      departmentId INT PRIMARY KEY AUTO_INCREMENT,
      departmentName VARCHAR(100),
