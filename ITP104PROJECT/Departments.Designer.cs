@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -43,6 +43,8 @@
             this.dataGridViewDepartments = new System.Windows.Forms.DataGridView();
             this.panelDepFooter = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnUpdDep = new System.Windows.Forms.Button();
+            this.txtDepDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDepName = new System.Windows.Forms.Label();
             this.txtDepName = new System.Windows.Forms.TextBox();
@@ -50,10 +52,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblAddDep = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDelDep = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnView = new System.Windows.Forms.Button();
-            this.txtDepDescription = new System.Windows.Forms.TextBox();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDepartments)).BeginInit();
@@ -206,23 +207,23 @@
             this.dataGridViewDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewDepartments.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dataGridViewDepartments.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDepartments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDepartments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDepartments.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDepartments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewDepartments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDepartments.Location = new System.Drawing.Point(194, 0);
             this.dataGridViewDepartments.Margin = new System.Windows.Forms.Padding(2);
@@ -250,6 +251,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnUpdDep);
             this.panel3.Controls.Add(this.txtDepDescription);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblDepName);
@@ -262,6 +264,32 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(827, 214);
             this.panel3.TabIndex = 9;
+            // 
+            // btnUpdDep
+            // 
+            this.btnUpdDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnUpdDep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnUpdDep.FlatAppearance.BorderSize = 3;
+            this.btnUpdDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdDep.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
+            this.btnUpdDep.ForeColor = System.Drawing.Color.White;
+            this.btnUpdDep.Location = new System.Drawing.Point(474, 162);
+            this.btnUpdDep.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdDep.Name = "btnUpdDep";
+            this.btnUpdDep.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnUpdDep.Size = new System.Drawing.Size(153, 41);
+            this.btnUpdDep.TabIndex = 10;
+            this.btnUpdDep.Text = "Update Department";
+            this.btnUpdDep.UseVisualStyleBackColor = false;
+            this.btnUpdDep.Click += new System.EventHandler(this.btnUpdDep_Click);
+            // 
+            // txtDepDescription
+            // 
+            this.txtDepDescription.Location = new System.Drawing.Point(395, 93);
+            this.txtDepDescription.Multiline = true;
+            this.txtDepDescription.Name = "txtDepDescription";
+            this.txtDepDescription.Size = new System.Drawing.Size(305, 47);
+            this.txtDepDescription.TabIndex = 9;
             // 
             // label1
             // 
@@ -340,7 +368,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnDelDep);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1037, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -348,22 +376,23 @@
             this.panel2.Size = new System.Drawing.Size(210, 214);
             this.panel2.TabIndex = 8;
             // 
-            // button2
+            // btnDelDep
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(30, 82);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.button2.Size = new System.Drawing.Size(159, 41);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Delete Department";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnDelDep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnDelDep.FlatAppearance.BorderSize = 3;
+            this.btnDelDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelDep.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
+            this.btnDelDep.ForeColor = System.Drawing.Color.White;
+            this.btnDelDep.Location = new System.Drawing.Point(30, 82);
+            this.btnDelDep.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelDep.Name = "btnDelDep";
+            this.btnDelDep.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnDelDep.Size = new System.Drawing.Size(159, 41);
+            this.btnDelDep.TabIndex = 6;
+            this.btnDelDep.Text = "Delete Department";
+            this.btnDelDep.UseVisualStyleBackColor = false;
+            this.btnDelDep.Click += new System.EventHandler(this.btnDelDep_Click);
             // 
             // panel1
             // 
@@ -392,14 +421,6 @@
             this.btnView.Text = "View Departments";
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // txtDepDescription
-            // 
-            this.txtDepDescription.Location = new System.Drawing.Point(395, 93);
-            this.txtDepDescription.Multiline = true;
-            this.txtDepDescription.Name = "txtDepDescription";
-            this.txtDepDescription.Size = new System.Drawing.Size(305, 47);
-            this.txtDepDescription.TabIndex = 9;
             // 
             // Departments
             // 
@@ -446,7 +467,7 @@
         private System.Windows.Forms.Label lblAddDep;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblDepName;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelDep;
         private System.Windows.Forms.Button btnAddDep;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtDepName;
@@ -455,5 +476,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDepDescription;
+        private System.Windows.Forms.Button btnUpdDep;
     }
 }
