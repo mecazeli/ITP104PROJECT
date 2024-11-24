@@ -16,5 +16,10 @@ namespace ITP104PROJECT
         {
             InitializeComponent();
         }
+
+        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
