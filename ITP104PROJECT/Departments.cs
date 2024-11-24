@@ -28,7 +28,6 @@ namespace ITP104PROJECT
         {
 
         }
-<<<<<<< HEAD
         private void Departments_Load(object sender, EventArgs e)
         {
             lblName.Text = admin.name;
@@ -78,11 +77,11 @@ namespace ITP104PROJECT
                 DataTable departmentsTable = new DataTable();
                 departmentsTable.Load(rd);
 
-                dataGridViewDepartments.DataSource = departmentsTable;
+                dgvDepartments.DataSource = departmentsTable;
 
-                dataGridViewDepartments.Columns[0].HeaderText = "Id";
-                dataGridViewDepartments.Columns[1].HeaderText = "Department Name";
-                dataGridViewDepartments.Columns[2].HeaderText = "Description";
+                dgvDepartments.Columns[0].HeaderText = "Id";
+                dgvDepartments.Columns[1].HeaderText = "Department Name";
+                dgvDepartments.Columns[2].HeaderText = "Description";
 
 
             }
@@ -129,10 +128,10 @@ namespace ITP104PROJECT
         // method for update department 
         private void UpdatingDepartment()
         {
-            int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
            
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
+            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -167,10 +166,10 @@ namespace ITP104PROJECT
         // method for delete 
         private void DeletingDepartment()
         {
-            int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
            
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
+            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -199,175 +198,5 @@ namespace ITP104PROJECT
         }
 
        
-=======
-        //private void Departments_Load(object sender, EventArgs e)
-        //{
-        //    lblName.Text = admin.name;
-        //}
-        //private void btnView_Click(object sender, EventArgs e)
-        //{
-        //    ViewDepartments("Database company connected successfully!");
-        //}
-
-        //private void dataGridViewDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-            
-        //}
-
-        //private void btnAddDep_Click(object sender, EventArgs e)
-        //{
-        //    AddingDepartment();
-        //    ViewDepartments("Added Database Successfully!");
-        //}
-
-        //private void btnDelDep_Click(object sender, EventArgs e)
-        //{
-        //    DeletingDepartment();
-        //    ViewDepartments("Deleted Database Successfully!");
-        //}
-
-        //private void btnUpdDep_Click(object sender, EventArgs e)
-        //{
-        //    UpdatingDepartment();
-        //    ViewDepartments("Updated Database Successfully!");
-        //}
-
-
-        ////method for showing departments
-        //private void ViewDepartments(String message)
-        //{
-        //    try
-        //    {
-        //        conn.Open();
-        //        MessageBox.Show(message);
-
-        //        string query = "SELECT * FROM department";
-
-        //        MySqlCommand command = new MySqlCommand(query, conn);
-        //        MySqlDataReader rd = command.ExecuteReader();
-
-        //        DataTable departmentsTable = new DataTable();
-        //        departmentsTable.Load(rd);
-
-        //        dataGridViewDepartments.DataSource = departmentsTable;
-
-        //        dataGridViewDepartments.Columns[0].HeaderText = "Id";
-        //        dataGridViewDepartments.Columns[1].HeaderText = "Department Name";
-        //        dataGridViewDepartments.Columns[2].HeaderText = "Description";
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Cannot connect to the database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-
-        //}
-
-
-        ////method for adding department
-        //private void AddingDepartment()
-        //{
-        //    string depName = txtDepName.Text.Trim();
-        //    string depDescription = txtDepDescription.Text.Trim();
-
-        //    try
-        //    {
-        //        conn.Open();
-
-        //        string query = "INSERT INTO department(departmentName, description) VALUES(@name, @description)";
-        //        MySqlCommand command = new MySqlCommand(query, conn);
-
-        //        command.Parameters.AddWithValue("@name", depName);
-        //        command.Parameters.AddWithValue("@description", depDescription);
-
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
-
-        //// method for update department 
-        //private void UpdatingDepartment()
-        //{
-        //    int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-        //    DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
-           
-        //    if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
-        //    {
-        //        MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-        //    string depId = selectedRow.Cells["departmentId"].Value.ToString();
-        //    string depName = txtDepName.Text.Trim();
-        //    string depDescription = txtDepDescription.Text.Trim();
-
-        //    try
-        //    {
-        //        conn.Open();
-
-        //        string query = "UPDATE department SET departmentName = @name, description = @description WHERE departmentId = @id";
-        //        MySqlCommand command = new MySqlCommand(query, conn);
-
-        //        command.Parameters.AddWithValue("@id", depId);
-        //        command.Parameters.AddWithValue("@name", depName);
-        //        command.Parameters.AddWithValue("@description", depDescription);
-
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
-
-        //// method for delete 
-        //private void DeletingDepartment()
-        //{
-        //    int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-        //    DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
-           
-        //    if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
-        //    {
-        //        MessageBox.Show("Please select a department to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }            
-        //    string depId = selectedRow.Cells["departmentId"].Value.ToString();
-
-        //    try
-        //    {
-        //        conn.Open();
-
-        //        string query = "DELETE FROM department WHERE departmentId = @id";
-        //        MySqlCommand command = new MySqlCommand(query, conn);
-
-        //        command.Parameters.AddWithValue("@id", depId);
-
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
     }
 }

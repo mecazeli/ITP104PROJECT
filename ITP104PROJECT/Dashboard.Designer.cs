@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblProjects = new System.Windows.Forms.Label();
-            this.lblEmployees = new System.Windows.Forms.Label();
-            this.lblDepartments = new System.Windows.Forms.Label();
+            this.panelDasboard = new System.Windows.Forms.Panel();
             this.btnProjects = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnDepartments = new System.Windows.Forms.Button();
+            this.lblProjects = new System.Windows.Forms.Label();
+            this.lblEmployees = new System.Windows.Forms.Label();
+            this.lblDepartments = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panelSideBar = new System.Windows.Forms.Panel();
@@ -47,85 +47,28 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.panelDasboard.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelDasboard
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.panel1.Controls.Add(this.lblProjects);
-            this.panel1.Controls.Add(this.lblEmployees);
-            this.panel1.Controls.Add(this.lblDepartments);
-            this.panel1.Controls.Add(this.btnProjects);
-            this.panel1.Controls.Add(this.btnEmployees);
-            this.panel1.Controls.Add(this.btnDepartments);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(259, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1033, 726);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblProjects
-            // 
-            this.lblProjects.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblProjects.AutoSize = true;
-<<<<<<< HEAD
-            this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
-            this.lblProjects.Location = new System.Drawing.Point(756, 368);
-            this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(96, 27);
-=======
-            this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblProjects.Location = new System.Drawing.Point(665, 360);
-            this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(101, 28);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblProjects.TabIndex = 6;
-            this.lblProjects.Text = "Projects";
-            // 
-            // lblEmployees
-            // 
-            this.lblEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmployees.AutoSize = true;
-<<<<<<< HEAD
-            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
-            this.lblEmployees.Location = new System.Drawing.Point(447, 368);
-            this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(122, 27);
-=======
-            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblEmployees.Location = new System.Drawing.Point(395, 360);
-            this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(126, 28);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblEmployees.TabIndex = 5;
-            this.lblEmployees.Text = "Employees";
-            // 
-            // lblDepartments
-            // 
-            this.lblDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDepartments.AutoSize = true;
-<<<<<<< HEAD
-            this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
-            this.lblDepartments.Location = new System.Drawing.Point(141, 368);
-            this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(145, 27);
-=======
-            this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblDepartments.Location = new System.Drawing.Point(128, 360);
-            this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(150, 28);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblDepartments.TabIndex = 4;
-            this.lblDepartments.Text = "Departments";
+            this.panelDasboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.panelDasboard.Controls.Add(this.btnProjects);
+            this.panelDasboard.Controls.Add(this.btnEmployees);
+            this.panelDasboard.Controls.Add(this.btnDepartments);
+            this.panelDasboard.Controls.Add(this.lblProjects);
+            this.panelDasboard.Controls.Add(this.lblEmployees);
+            this.panelDasboard.Controls.Add(this.lblDepartments);
+            this.panelDasboard.Controls.Add(this.panel2);
+            this.panelDasboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDasboard.Location = new System.Drawing.Point(259, 0);
+            this.panelDasboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDasboard.Name = "panelDasboard";
+            this.panelDasboard.Size = new System.Drawing.Size(1134, 719);
+            this.panelDasboard.TabIndex = 1;
             // 
             // btnProjects
             // 
@@ -136,68 +79,82 @@
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjects.Location = new System.Drawing.Point(691, 162);
+            this.btnProjects.Location = new System.Drawing.Point(756, 162);
             this.btnProjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(231, 190);
+            this.btnProjects.Size = new System.Drawing.Size(250, 190);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
             // 
             // btnEmployees
             // 
-<<<<<<< HEAD
             this.btnEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-=======
-            this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
             this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmployees.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEmployees.FlatAppearance.BorderSize = 5;
             this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< HEAD
-            this.btnEmployees.Location = new System.Drawing.Point(394, 162);
+            this.btnEmployees.Location = new System.Drawing.Point(425, 162);
             this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(231, 190);
-=======
-            this.btnEmployees.Location = new System.Drawing.Point(350, 163);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(210, 190);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.btnEmployees.Size = new System.Drawing.Size(250, 190);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
             // 
             // btnDepartments
             // 
-<<<<<<< HEAD
             this.btnDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-=======
-            this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnDepartments.BackgroundImage = global::ITP104PROJECT.Properties.Resources.department;
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
             this.btnDepartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDepartments.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDepartments.FlatAppearance.BorderSize = 5;
             this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< HEAD
             this.btnDepartments.Location = new System.Drawing.Point(95, 162);
             this.btnDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(231, 190);
-=======
-            this.btnDepartments.Location = new System.Drawing.Point(91, 163);
-            this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(210, 190);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.btnDepartments.Size = new System.Drawing.Size(250, 190);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
+            // 
+            // lblProjects
+            // 
+            this.lblProjects.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblProjects.AutoSize = true;
+            this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblProjects.Location = new System.Drawing.Point(828, 368);
+            this.lblProjects.Name = "lblProjects";
+            this.lblProjects.Size = new System.Drawing.Size(96, 27);
+            this.lblProjects.TabIndex = 6;
+            this.lblProjects.Text = "Projects";
+            // 
+            // lblEmployees
+            // 
+            this.lblEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmployees.AutoSize = true;
+            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblEmployees.Location = new System.Drawing.Point(485, 368);
+            this.lblEmployees.Name = "lblEmployees";
+            this.lblEmployees.Size = new System.Drawing.Size(122, 27);
+            this.lblEmployees.TabIndex = 5;
+            this.lblEmployees.Text = "Employees";
+            // 
+            // lblDepartments
+            // 
+            this.lblDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDepartments.AutoSize = true;
+            this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblDepartments.Location = new System.Drawing.Point(147, 368);
+            this.lblDepartments.Name = "lblDepartments";
+            this.lblDepartments.Size = new System.Drawing.Size(145, 27);
+            this.lblDepartments.TabIndex = 4;
+            this.lblDepartments.Text = "Departments";
             // 
             // panel2
             // 
@@ -207,25 +164,17 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1033, 75);
+            this.panel2.Size = new System.Drawing.Size(1134, 75);
             this.panel2.TabIndex = 7;
             // 
             // lblDashboard
             // 
             this.lblDashboard.AutoSize = true;
-<<<<<<< HEAD
-            this.lblDashboard.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
-            this.lblDashboard.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.lblDashboard.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDashboard.ForeColor = System.Drawing.Color.White;
-            this.lblDashboard.Location = new System.Drawing.Point(41, 9);
+            this.lblDashboard.Location = new System.Drawing.Point(17, 9);
             this.lblDashboard.Name = "lblDashboard";
-<<<<<<< HEAD
-            this.lblDashboard.Size = new System.Drawing.Size(226, 52);
-=======
-            this.lblDashboard.Size = new System.Drawing.Size(311, 63);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.lblDashboard.Size = new System.Drawing.Size(217, 52);
             this.lblDashboard.TabIndex = 0;
             this.lblDashboard.Text = "Dashboard";
             // 
@@ -243,14 +192,9 @@
             this.panelSideBar.Controls.Add(this.pictureBox1);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-<<<<<<< HEAD
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(259, 726);
-=======
-            this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(258, 726);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.panelSideBar.Size = new System.Drawing.Size(259, 719);
             this.panelSideBar.TabIndex = 2;
             // 
             // lblAdmin
@@ -292,7 +236,6 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
             // btnProject
             // 
             this.btnProject.FlatAppearance.BorderSize = 0;
@@ -320,6 +263,7 @@
             this.btnEmployee.TabIndex = 4;
             this.btnEmployee.Text = "Employees";
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnDepartment
             // 
@@ -336,8 +280,6 @@
             this.btnDepartment.UseVisualStyleBackColor = true;
             this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
-=======
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
             // btnDashboard
             // 
             this.btnDashboard.FlatAppearance.BorderSize = 0;
@@ -376,15 +318,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 726);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1393, 719);
+            this.Controls.Add(this.panelDasboard);
             this.Controls.Add(this.panelSideBar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelDasboard.ResumeLayout(false);
+            this.panelDasboard.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
@@ -395,7 +337,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDasboard;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.Button btnDepartments;
         private System.Windows.Forms.Button btnProjects;
