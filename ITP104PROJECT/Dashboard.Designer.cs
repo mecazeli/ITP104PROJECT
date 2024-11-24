@@ -102,6 +102,7 @@
             this.btnEmployees.Size = new System.Drawing.Size(250, 190);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnDepartments
             // 
@@ -119,6 +120,7 @@
             this.btnDepartments.Size = new System.Drawing.Size(250, 190);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
+            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click);
             // 
             // lblProjects
             // 

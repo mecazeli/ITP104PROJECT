@@ -39,5 +39,19 @@ namespace ITP104PROJECT
             employeesForm.Show();
             this.Hide();
         }
+
+        private void btnDepartments_Click(object sender, EventArgs e)
+        {
+            Departments departmentsForm = new Departments(admin);
+            departmentsForm.Show();
+            this.Hide();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            Employees employeesForm = new Employees();
+            employeesForm.Show();
+            this.Hide();
+        }
     }
 }

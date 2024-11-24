@@ -14,7 +14,8 @@ namespace ITP104PROJECT
 {
     public partial class Departments : Form
     {
-        public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         public MySqlConnection conn;
         public Admin admin;
         public Departments(Admin admin)
@@ -197,6 +198,18 @@ namespace ITP104PROJECT
             }
         }
 
-       
+        private void btnSideDep_Click(object sender, EventArgs e)
+        {
+            Departments departmentsForm = new Departments(admin);
+            departmentsForm.Show();
+            this.Hide();
+        }
+
+        private void btnSideEmp_Click(object sender, EventArgs e)
+        {
+            Employees employeesForm = new Employees();
+            employeesForm.Show();
+            this.Hide();
+        }
     }
 }
