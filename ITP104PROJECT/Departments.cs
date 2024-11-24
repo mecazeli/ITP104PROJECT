@@ -25,6 +25,11 @@ namespace ITP104PROJECT
             this.admin = admin;
         }
 
+        private void txtDepName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Departments_Load(object sender, EventArgs e)
         {
             lblName.Text = admin.name;
@@ -98,7 +103,7 @@ namespace ITP104PROJECT
         private void AddingDepartment()
         {
             string depName = txtDepName.Text.Trim();
-            string depDescription = txtDepDescription.Text.Trim();
+            string depDescription = txtDescription.Text.Trim();
 
             try
             {
@@ -135,7 +140,7 @@ namespace ITP104PROJECT
             }
             string depId = selectedRow.Cells["departmentId"].Value.ToString();
             string depName = txtDepName.Text.Trim();
-            string depDescription = txtDepDescription.Text.Trim();
+            string depDescription = txtDescription.Text.Trim();
 
             try
             {
@@ -194,6 +199,6 @@ namespace ITP104PROJECT
             }
         }
 
-       
+
     }
 }
