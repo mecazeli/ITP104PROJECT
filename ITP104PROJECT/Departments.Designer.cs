@@ -50,9 +50,6 @@
             this.lblAddDep = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblAddDep = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -63,7 +60,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblDepartment = new System.Windows.Forms.Label();
-            this.btnView = new System.Windows.Forms.Button();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfvDepartments)).BeginInit();
@@ -73,7 +69,6 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -356,38 +351,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Add Department";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.lblAddDep);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1112, 42);
-            this.panel4.TabIndex = 7;
-            // 
-            // lblAddDep
-            // 
-            this.lblAddDep.AutoSize = true;
-            this.lblAddDep.Font = new System.Drawing.Font("Trebuchet MS", 14.8F, System.Drawing.FontStyle.Bold);
-            this.lblAddDep.ForeColor = System.Drawing.Color.White;
-            this.lblAddDep.Location = new System.Drawing.Point(465, 4);
-            this.lblAddDep.Name = "lblAddDep";
-            this.lblAddDep.Size = new System.Drawing.Size(287, 32);
-            this.lblAddDep.TabIndex = 2;
-            this.lblAddDep.Text = "Add a New Department";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel5);
-            //this.panel2.Controls.Add(this.button2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1389, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 264);
-            this.panel2.TabIndex = 8;
-            // 
+            //
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
@@ -463,7 +427,6 @@
             this.panel1.TabIndex = 7;
             // 
             // panel6
-            // btnView
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
