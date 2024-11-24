@@ -79,11 +79,11 @@ namespace ITP104PROJECT
                 DataTable departmentsTable = new DataTable();
                 departmentsTable.Load(rd);
 
-                dataGridViewDepartments.DataSource = departmentsTable;
+                dgvDepartments.DataSource = departmentsTable;
 
-                dataGridViewDepartments.Columns[0].HeaderText = "Id";
-                dataGridViewDepartments.Columns[1].HeaderText = "Department Name";
-                dataGridViewDepartments.Columns[2].HeaderText = "Description";
+                dgvDepartments.Columns[0].HeaderText = "Id";
+                dgvDepartments.Columns[1].HeaderText = "Department Name";
+                dgvDepartments.Columns[2].HeaderText = "Description";
 
 
             }
@@ -130,10 +130,10 @@ namespace ITP104PROJECT
         // method for update department 
         private void UpdatingDepartment()
         {
-            int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
            
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
+            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -168,10 +168,10 @@ namespace ITP104PROJECT
         // method for delete 
         private void DeletingDepartment()
         {
-            int selectedRowCell = dataGridViewDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridViewDepartments.Rows[selectedRowCell];
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
            
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dataGridViewDepartments.SelectedCells.Count == 0)
+            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -199,6 +199,7 @@ namespace ITP104PROJECT
             }
         }
 
+       
 
     }
 }

@@ -28,33 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblAddEmployee = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.button1 = new System.Windows.Forms.Button();
-=======
-            this.lblGender = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblEmployeeDep = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblSalary = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnDelemployee = new System.Windows.Forms.Button();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -63,10 +36,27 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDepLFooter = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnViewEmployees = new System.Windows.Forms.Button();
             this.panelDepFooter = new System.Windows.Forms.Panel();
+            this.panelDepRFooter = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
@@ -74,400 +64,18 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-=======
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelDepLFooter.SuspendLayout();
             this.panelDepFooter.SuspendLayout();
+            this.panelDepRFooter.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.lblAddEmployee);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(832, 34);
-            this.panel4.TabIndex = 7;
-            // 
-            // lblAddEmployee
-            // 
-            this.lblAddEmployee.AutoSize = true;
-            this.lblAddEmployee.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.lblAddEmployee.Location = new System.Drawing.Point(339, 6);
-            this.lblAddEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddEmployee.Name = "lblAddEmployee";
-            this.lblAddEmployee.Size = new System.Drawing.Size(211, 26);
-            this.lblAddEmployee.TabIndex = 2;
-            this.lblAddEmployee.Text = "Add a New Employee";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblGender);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtGender);
-            this.panel3.Controls.Add(this.lblEmail);
-            this.panel3.Controls.Add(this.txtEmail);
-            this.panel3.Controls.Add(this.lblEmployeeDep);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.lblSalary);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.lblPosition);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.lblAddress);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.lblAge);
-            this.panel3.Controls.Add(this.txtAge);
-            this.panel3.Controls.Add(this.lblEmployeeName);
-            this.panel3.Controls.Add(this.txtEmployeeName);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(206, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1041, 214);
-            this.panel3.TabIndex = 9;
-            // 
-<<<<<<< HEAD
-=======
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(202, 131);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(54, 18);
-            this.lblGender.TabIndex = 21;
-            this.lblGender.Text = "Gender";
-            this.lblGender.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(728, 105);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.button1.Size = new System.Drawing.Size(168, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add Department";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-<<<<<<< HEAD
-            // lblEmployeeDep
-            // 
-            this.lblEmployeeDep.AutoSize = true;
-            this.lblEmployeeDep.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.lblEmployeeDep.Location = new System.Drawing.Point(733, 156);
-            this.lblEmployeeDep.Name = "lblEmployeeDep";
-            this.lblEmployeeDep.Size = new System.Drawing.Size(105, 23);
-=======
-            // txtGender
-            // 
-            this.txtGender.BackColor = System.Drawing.Color.White;
-            this.txtGender.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(206, 145);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(136, 24);
-            this.txtGender.TabIndex = 22;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(202, 62);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 18);
-            this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(206, 81);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(136, 24);
-            this.txtEmail.TabIndex = 20;
-            // 
-            // lblEmployeeDep
-            // 
-            this.lblEmployeeDep.AutoSize = true;
-            this.lblEmployeeDep.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeDep.Location = new System.Drawing.Point(544, 127);
-            this.lblEmployeeDep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmployeeDep.Name = "lblEmployeeDep";
-            this.lblEmployeeDep.Size = new System.Drawing.Size(84, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblEmployeeDep.TabIndex = 18;
-            this.lblEmployeeDep.Text = "Department";
-            this.lblEmployeeDep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.comboBox1.FormattingEnabled = true;
-<<<<<<< HEAD
-            this.comboBox1.Location = new System.Drawing.Point(737, 179);
-=======
-            this.comboBox1.Location = new System.Drawing.Point(548, 145);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 26);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // lblSalary
-            // 
-            this.lblSalary.AutoSize = true;
-<<<<<<< HEAD
-            this.lblSalary.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(733, 82);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(58, 23);
-=======
-            this.lblSalary.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(544, 67);
-            this.lblSalary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(44, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblSalary.TabIndex = 14;
-            this.lblSalary.Text = "Salary";
-            this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(737, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 27);
-=======
-            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(548, 81);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 24);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.textBox3.TabIndex = 15;
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-<<<<<<< HEAD
-            this.lblPosition.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.lblPosition.Location = new System.Drawing.Point(507, 161);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(73, 23);
-=======
-            this.lblPosition.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(370, 131);
-            this.lblPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(59, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblPosition.TabIndex = 12;
-            this.lblPosition.Text = "Position";
-            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.textBox2.Location = new System.Drawing.Point(511, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 27);
-=======
-            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(373, 145);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 24);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.textBox2.TabIndex = 13;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-<<<<<<< HEAD
-            this.lblAddress.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(507, 76);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(72, 23);
-=======
-            this.lblAddress.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(370, 62);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(58, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblAddress.TabIndex = 10;
-            this.lblAddress.Text = "Address";
-            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(511, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 27);
-=======
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(373, 81);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 24);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.textBox1.TabIndex = 11;
-            // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-<<<<<<< HEAD
-            this.lblAge.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.lblAge.Location = new System.Drawing.Point(33, 160);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(40, 23);
-=======
-            this.lblAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(32, 131);
-            this.lblAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(32, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblAge.TabIndex = 8;
-            this.lblAge.Text = "Age";
-            this.lblAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtAge
-            // 
-            this.txtAge.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.txtAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtAge.Location = new System.Drawing.Point(37, 179);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(180, 27);
-=======
-            this.txtAge.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(35, 146);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(136, 24);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.txtAge.TabIndex = 9;
-            // 
-            // lblEmployeeName
-            // 
-            this.lblEmployeeName.AutoSize = true;
-<<<<<<< HEAD
-            this.lblEmployeeName.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeName.Location = new System.Drawing.Point(33, 81);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(54, 23);
-=======
-            this.lblEmployeeName.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeName.Location = new System.Drawing.Point(32, 67);
-            this.lblEmployeeName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(43, 18);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.lblEmployeeName.TabIndex = 3;
-            this.lblEmployeeName.Text = "Name";
-            this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmployeeName
-            // 
-            this.txtEmployeeName.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.txtEmployeeName.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(37, 100);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(180, 27);
-=======
-            this.txtEmployeeName.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(35, 82);
-            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(136, 24);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.txtEmployeeName.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.btnDelemployee);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(832, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 212);
-            this.panel2.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(205, 33);
-            this.panel6.TabIndex = 7;
-            // 
-            // btnDelemployee
-            // 
-            this.btnDelemployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnDelemployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.btnDelemployee.FlatAppearance.BorderSize = 3;
-            this.btnDelemployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelemployee.Font = new System.Drawing.Font("Arial Narrow", 11.8F, System.Drawing.FontStyle.Bold);
-            this.btnDelemployee.ForeColor = System.Drawing.Color.White;
-            this.btnDelemployee.Location = new System.Drawing.Point(22, 103);
-            this.btnDelemployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDelemployee.Name = "btnDelemployee";
-            this.btnDelemployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-<<<<<<< HEAD
-            this.btnDelemployee.Size = new System.Drawing.Size(224, 51);
-=======
-            this.btnDelemployee.Size = new System.Drawing.Size(168, 41);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
-            this.btnDelemployee.TabIndex = 6;
-            this.btnDelemployee.Text = "Delete Employee";
-            this.btnDelemployee.UseVisualStyleBackColor = false;
             // 
             // lblAdmin
             // 
@@ -477,10 +85,9 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.ForeColor = System.Drawing.Color.White;
-            this.lblAdmin.Location = new System.Drawing.Point(76, 174);
-            this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdmin.Location = new System.Drawing.Point(101, 212);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(49, 18);
+            this.lblAdmin.Size = new System.Drawing.Size(61, 23);
             this.lblAdmin.TabIndex = 8;
             this.lblAdmin.Text = "Admin";
             // 
@@ -490,10 +97,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 494);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Location = new System.Drawing.Point(0, 606);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(193, 42);
+            this.btnLogout.Size = new System.Drawing.Size(257, 52);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -504,10 +111,10 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(0, 440);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSettings.Location = new System.Drawing.Point(0, 540);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(193, 42);
+            this.btnSettings.Size = new System.Drawing.Size(257, 52);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -518,10 +125,10 @@
             this.btnSideProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideProj.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideProj.ForeColor = System.Drawing.Color.White;
-            this.btnSideProj.Location = new System.Drawing.Point(0, 387);
-            this.btnSideProj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideProj.Location = new System.Drawing.Point(0, 474);
+            this.btnSideProj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSideProj.Name = "btnSideProj";
-            this.btnSideProj.Size = new System.Drawing.Size(193, 42);
+            this.btnSideProj.Size = new System.Drawing.Size(257, 52);
             this.btnSideProj.TabIndex = 5;
             this.btnSideProj.Text = "Projects";
             this.btnSideProj.UseVisualStyleBackColor = true;
@@ -532,10 +139,10 @@
             this.btnSideEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideEmp.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideEmp.ForeColor = System.Drawing.Color.White;
-            this.btnSideEmp.Location = new System.Drawing.Point(0, 333);
-            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideEmp.Location = new System.Drawing.Point(0, 408);
+            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSideEmp.Name = "btnSideEmp";
-            this.btnSideEmp.Size = new System.Drawing.Size(193, 42);
+            this.btnSideEmp.Size = new System.Drawing.Size(257, 52);
             this.btnSideEmp.TabIndex = 4;
             this.btnSideEmp.Text = "Employees";
             this.btnSideEmp.UseVisualStyleBackColor = true;
@@ -546,10 +153,10 @@
             this.btnSideDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideDep.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideDep.ForeColor = System.Drawing.Color.White;
-            this.btnSideDep.Location = new System.Drawing.Point(2, 280);
-            this.btnSideDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideDep.Location = new System.Drawing.Point(3, 343);
+            this.btnSideDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSideDep.Name = "btnSideDep";
-            this.btnSideDep.Size = new System.Drawing.Size(190, 42);
+            this.btnSideDep.Size = new System.Drawing.Size(253, 52);
             this.btnSideDep.TabIndex = 3;
             this.btnSideDep.Text = "Departments";
             this.btnSideDep.UseVisualStyleBackColor = true;
@@ -560,10 +167,10 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 226);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 276);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(190, 42);
+            this.btnDashboard.Size = new System.Drawing.Size(253, 52);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -573,32 +180,32 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(48, 155);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(64, 189);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(111, 20);
+            this.lblName.Size = new System.Drawing.Size(140, 24);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Jessa Cariñaga";
             // 
-            // panel1
+            // panelDepLFooter
             // 
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.btnViewEmployees);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 214);
-            this.panel1.TabIndex = 7;
+            this.panelDepLFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDepLFooter.Controls.Add(this.panel5);
+            this.panelDepLFooter.Controls.Add(this.btnViewEmployees);
+            this.panelDepLFooter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelDepLFooter.Location = new System.Drawing.Point(0, 0);
+            this.panelDepLFooter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDepLFooter.Name = "panelDepLFooter";
+            this.panelDepLFooter.Size = new System.Drawing.Size(249, 263);
+            this.panelDepLFooter.TabIndex = 7;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 35);
+            this.panel5.Size = new System.Drawing.Size(247, 43);
             this.panel5.TabIndex = 5;
             // 
             // btnViewEmployees
@@ -609,11 +216,11 @@
             this.btnViewEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewEmployees.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewEmployees.ForeColor = System.Drawing.Color.White;
-            this.btnViewEmployees.Location = new System.Drawing.Point(22, 103);
-            this.btnViewEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewEmployees.Location = new System.Drawing.Point(16, 129);
+            this.btnViewEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewEmployees.Name = "btnViewEmployees";
-            this.btnViewEmployees.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnViewEmployees.Size = new System.Drawing.Size(168, 41);
+            this.btnViewEmployees.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnViewEmployees.Size = new System.Drawing.Size(220, 50);
             this.btnViewEmployees.TabIndex = 4;
             this.btnViewEmployees.Text = "View Employees";
             this.btnViewEmployees.UseVisualStyleBackColor = false;
@@ -623,13 +230,218 @@
             this.panelDepFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.panelDepFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDepFooter.Controls.Add(this.panel3);
-            this.panelDepFooter.Controls.Add(this.panel1);
+            this.panelDepFooter.Controls.Add(this.button3);
+            this.panelDepFooter.Controls.Add(this.panelDepRFooter);
+            this.panelDepFooter.Controls.Add(this.label2);
+            this.panelDepFooter.Controls.Add(this.panelDepLFooter);
+            this.panelDepFooter.Controls.Add(this.label9);
+            this.panelDepFooter.Controls.Add(this.textBox5);
+            this.panelDepFooter.Controls.Add(this.textBox11);
+            this.panelDepFooter.Controls.Add(this.label3);
+            this.panelDepFooter.Controls.Add(this.textBox10);
+            this.panelDepFooter.Controls.Add(this.textBox6);
+            this.panelDepFooter.Controls.Add(this.label8);
+            this.panelDepFooter.Controls.Add(this.label4);
+            this.panelDepFooter.Controls.Add(this.textBox9);
+            this.panelDepFooter.Controls.Add(this.comboBox2);
+            this.panelDepFooter.Controls.Add(this.label7);
+            this.panelDepFooter.Controls.Add(this.textBox8);
+            this.panelDepFooter.Controls.Add(this.label5);
+            this.panelDepFooter.Controls.Add(this.label6);
+            this.panelDepFooter.Controls.Add(this.textBox7);
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDepFooter.Location = new System.Drawing.Point(194, 394);
-            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDepFooter.Location = new System.Drawing.Point(258, 486);
+            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDepFooter.Name = "panelDepFooter";
-            this.panelDepFooter.Size = new System.Drawing.Size(1249, 216);
+            this.panelDepFooter.Size = new System.Drawing.Size(1666, 265);
             this.panelDepFooter.TabIndex = 6;
+            // 
+            // panelDepRFooter
+            // 
+            this.panelDepRFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDepRFooter.Controls.Add(this.panel4);
+            this.panelDepRFooter.Controls.Add(this.button2);
+            this.panelDepRFooter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDepRFooter.Location = new System.Drawing.Point(1419, 0);
+            this.panelDepRFooter.Name = "panelDepRFooter";
+            this.panelDepRFooter.Size = new System.Drawing.Size(245, 263);
+            this.panelDepRFooter.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label2.Location = new System.Drawing.Point(533, 169);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Gender";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(286, 71);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 23);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Name";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.textBox5.Location = new System.Drawing.Point(538, 191);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(209, 27);
+            this.textBox5.TabIndex = 22;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(291, 94);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(209, 27);
+            this.textBox11.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(538, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 23);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Email";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.textBox10.Location = new System.Drawing.Point(291, 191);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(209, 27);
+            this.textBox10.TabIndex = 9;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(538, 94);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(209, 27);
+            this.textBox6.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label8.Location = new System.Drawing.Point(286, 168);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 23);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Age";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label4.Location = new System.Drawing.Point(1024, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 23);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Department";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(786, 94);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(209, 27);
+            this.textBox9.TabIndex = 11;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1030, 190);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(209, 31);
+            this.comboBox2.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(786, 65);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 23);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Address";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.textBox8.Location = new System.Drawing.Point(786, 191);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(209, 27);
+            this.textBox8.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1024, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 23);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Salary";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label6.Location = new System.Drawing.Point(781, 169);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 23);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Position";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(1030, 93);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(209, 27);
+            this.textBox7.TabIndex = 15;
             // 
             // panelSideBar
             // 
@@ -647,17 +459,17 @@
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(194, 610);
+            this.panelSideBar.Size = new System.Drawing.Size(258, 751);
             this.panelSideBar.TabIndex = 4;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(46, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 127);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -668,26 +480,22 @@
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployees.Location = new System.Drawing.Point(0, 0);
-            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersWidth = 51;
             this.dgvEmployees.RowTemplate.Height = 24;
-            this.dgvEmployees.Size = new System.Drawing.Size(1443, 610);
+            this.dgvEmployees.Size = new System.Drawing.Size(1924, 751);
             this.dgvEmployees.TabIndex = 5;
-<<<<<<< HEAD
             this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
-=======
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
             // 
             // lblEmployees
             // 
             this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold);
+            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 25F);
             this.lblEmployees.ForeColor = System.Drawing.Color.White;
-            this.lblEmployees.Location = new System.Drawing.Point(16, 6);
-            this.lblEmployees.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmployees.Location = new System.Drawing.Point(17, 9);
             this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(384, 43);
+            this.lblEmployees.Size = new System.Drawing.Size(457, 52);
             this.lblEmployees.TabIndex = 2;
             this.lblEmployees.Text = "Employee Management";
             // 
@@ -699,10 +507,10 @@
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(194, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Location = new System.Drawing.Point(258, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1249, 61);
+            this.panel7.Size = new System.Drawing.Size(1666, 75);
             this.panel7.TabIndex = 7;
             // 
             // btnSearch
@@ -711,14 +519,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(1177, 17);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(1541, 18);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-<<<<<<< HEAD
-            this.btnSearch.Size = new System.Drawing.Size(84, 33);
-=======
-            this.btnSearch.Size = new System.Drawing.Size(62, 28);
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.btnSearch.Size = new System.Drawing.Size(112, 41);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -728,77 +532,83 @@
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(992, 19);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(1285, 25);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 26);
+            this.textBox4.Size = new System.Drawing.Size(231, 31);
             this.textBox4.TabIndex = 0;
-<<<<<<< HEAD
             // 
-            // txtGender
+            // button2
             // 
-            this.txtGender.BackColor = System.Drawing.Color.White;
-            this.txtGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtGender.Location = new System.Drawing.Point(274, 179);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(180, 27);
-            this.txtGender.TabIndex = 22;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(14, 129);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.button2.Size = new System.Drawing.Size(220, 50);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Delete Employee";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // lblGender
+            // button3
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.lblGender.Location = new System.Drawing.Point(270, 161);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(69, 23);
-            this.lblGender.TabIndex = 21;
-            this.lblGender.Text = "Gender";
-            this.lblGender.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1296, 130);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.button3.Size = new System.Drawing.Size(220, 50);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Add Employee";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // txtEmail
+            // panel3
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(274, 100);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(180, 27);
-            this.txtEmail.TabIndex = 20;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(249, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1170, 44);
+            this.panel3.TabIndex = 24;
             // 
-            // lblEmail
+            // panel4
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(270, 76);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 23);
-            this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-=======
->>>>>>> bc557d61cd32588c7e09d95289f44653300835a4
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(243, 43);
+            this.panel4.TabIndex = 7;
             // 
             // Employees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1443, 610);
+            this.ClientSize = new System.Drawing.Size(1924, 751);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.dgvEmployees);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Employees";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Employees";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelDepLFooter.ResumeLayout(false);
             this.panelDepFooter.ResumeLayout(false);
+            this.panelDepFooter.PerformLayout();
+            this.panelDepRFooter.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -810,11 +620,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblAddEmployee;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSettings;
@@ -823,35 +628,37 @@
         private System.Windows.Forms.Button btnSideDep;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnDelemployee;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDepLFooter;
         private System.Windows.Forms.Button btnViewEmployees;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelDepFooter;
         private System.Windows.Forms.Panel panelSideBar;
         private System.Windows.Forms.DataGridView dgvEmployees;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblEmployeeDep;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.Label lblEmployeeName;
-        private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblEmployees;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelDepRFooter;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

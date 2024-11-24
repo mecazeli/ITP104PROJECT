@@ -33,6 +33,11 @@ namespace ITP104PROJECT
             this.Hide();
         }
 
-        
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            Employees employeesForm = new Employees();
+            employeesForm.Show();
+            this.Hide();
+        }
     }
 }
