@@ -16,7 +16,11 @@ namespace ITP104PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Departments());
+=======
+            Application.Run(new Login());
+>>>>>>> a6d2c5c133ab431e53dfcc59c99c293bb44a1be9
         }
     }
 }
