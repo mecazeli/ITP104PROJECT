@@ -35,22 +35,22 @@
             this.btnProjects = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnDepartments = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnSideProj = new System.Windows.Forms.Button();
-            this.btnSideEmp = new System.Windows.Forms.Button();
-            this.btnSideDep = new System.Windows.Forms.Button();
+            this.btnProject = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnDepartment = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,93 +64,119 @@
             this.panel1.Controls.Add(this.btnDepartments);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(258, 0);
+            this.panel1.Location = new System.Drawing.Point(259, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 726);
+            this.panel1.Size = new System.Drawing.Size(1033, 726);
             this.panel1.TabIndex = 1;
             // 
             // lblProjects
             // 
+            this.lblProjects.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProjects.AutoSize = true;
-            this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblProjects.Location = new System.Drawing.Point(665, 360);
+            this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblProjects.Location = new System.Drawing.Point(756, 368);
             this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(101, 28);
+            this.lblProjects.Size = new System.Drawing.Size(96, 27);
             this.lblProjects.TabIndex = 6;
             this.lblProjects.Text = "Projects";
             // 
             // lblEmployees
             // 
+            this.lblEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblEmployees.Location = new System.Drawing.Point(395, 360);
+            this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblEmployees.Location = new System.Drawing.Point(447, 368);
             this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(126, 28);
+            this.lblEmployees.Size = new System.Drawing.Size(122, 27);
             this.lblEmployees.TabIndex = 5;
             this.lblEmployees.Text = "Employees";
             // 
             // lblDepartments
             // 
+            this.lblDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDepartments.AutoSize = true;
-            this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblDepartments.Location = new System.Drawing.Point(128, 360);
+            this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Bold);
+            this.lblDepartments.Location = new System.Drawing.Point(141, 368);
             this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(150, 28);
+            this.lblDepartments.Size = new System.Drawing.Size(145, 27);
             this.lblDepartments.TabIndex = 4;
             this.lblDepartments.Text = "Departments";
             // 
             // btnProjects
             // 
+            this.btnProjects.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.btnProjects.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjects.Location = new System.Drawing.Point(607, 163);
+            this.btnProjects.Location = new System.Drawing.Point(691, 162);
+            this.btnProjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(210, 190);
+            this.btnProjects.Size = new System.Drawing.Size(231, 190);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
             // 
             // btnEmployees
             // 
+            this.btnEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmployees.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEmployees.FlatAppearance.BorderSize = 5;
             this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Location = new System.Drawing.Point(350, 163);
+            this.btnEmployees.Location = new System.Drawing.Point(394, 162);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(210, 190);
+            this.btnEmployees.Size = new System.Drawing.Size(231, 190);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
             // 
             // btnDepartments
             // 
+            this.btnDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnDepartments.BackgroundImage = global::ITP104PROJECT.Properties.Resources.department;
             this.btnDepartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDepartments.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDepartments.FlatAppearance.BorderSize = 5;
             this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartments.Location = new System.Drawing.Point(91, 163);
+            this.btnDepartments.Location = new System.Drawing.Point(95, 162);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(210, 190);
+            this.btnDepartments.Size = new System.Drawing.Size(231, 190);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.lblDashboard);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1033, 75);
+            this.panel2.TabIndex = 7;
             // 
             // lblDashboard
             // 
             this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDashboard.ForeColor = System.Drawing.Color.White;
-            this.lblDashboard.Location = new System.Drawing.Point(316, 9);
+            this.lblDashboard.Location = new System.Drawing.Point(41, 9);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(311, 63);
+            this.lblDashboard.Size = new System.Drawing.Size(226, 52);
             this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "DASHBOARD";
+            this.lblDashboard.Text = "Dashboard";
             // 
             // panelSideBar
             // 
@@ -158,16 +184,17 @@
             this.panelSideBar.Controls.Add(this.lblAdmin);
             this.panelSideBar.Controls.Add(this.btnLogout);
             this.panelSideBar.Controls.Add(this.btnSettings);
-            this.panelSideBar.Controls.Add(this.btnSideProj);
-            this.panelSideBar.Controls.Add(this.btnSideEmp);
-            this.panelSideBar.Controls.Add(this.btnSideDep);
+            this.panelSideBar.Controls.Add(this.btnProject);
+            this.panelSideBar.Controls.Add(this.btnEmployee);
+            this.panelSideBar.Controls.Add(this.btnDepartment);
             this.panelSideBar.Controls.Add(this.btnDashboard);
             this.panelSideBar.Controls.Add(this.lblName);
             this.panelSideBar.Controls.Add(this.pictureBox1);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(258, 726);
+            this.panelSideBar.Size = new System.Drawing.Size(259, 726);
             this.panelSideBar.TabIndex = 2;
             // 
             // lblAdmin
@@ -175,7 +202,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.ForeColor = System.Drawing.Color.White;
-            this.lblAdmin.Location = new System.Drawing.Point(102, 214);
+            this.lblAdmin.Location = new System.Drawing.Point(101, 214);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(61, 23);
             this.lblAdmin.TabIndex = 8;
@@ -187,7 +214,8 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 568);
+            this.btnLogout.Location = new System.Drawing.Point(0, 569);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(267, 52);
             this.btnLogout.TabIndex = 7;
@@ -201,50 +229,55 @@
             this.btnSettings.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Location = new System.Drawing.Point(0, 510);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(267, 52);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
-            // btnSideProj
+            // btnProject
             // 
-            this.btnSideProj.FlatAppearance.BorderSize = 0;
-            this.btnSideProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideProj.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideProj.ForeColor = System.Drawing.Color.White;
-            this.btnSideProj.Location = new System.Drawing.Point(0, 452);
-            this.btnSideProj.Name = "btnSideProj";
-            this.btnSideProj.Size = new System.Drawing.Size(267, 52);
-            this.btnSideProj.TabIndex = 5;
-            this.btnSideProj.Text = "Projects";
-            this.btnSideProj.UseVisualStyleBackColor = true;
+            this.btnProject.FlatAppearance.BorderSize = 0;
+            this.btnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProject.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnProject.ForeColor = System.Drawing.Color.White;
+            this.btnProject.Location = new System.Drawing.Point(0, 452);
+            this.btnProject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProject.Name = "btnProject";
+            this.btnProject.Size = new System.Drawing.Size(267, 52);
+            this.btnProject.TabIndex = 5;
+            this.btnProject.Text = "Projects";
+            this.btnProject.UseVisualStyleBackColor = true;
             // 
-            // btnSideEmp
+            // btnEmployee
             // 
-            this.btnSideEmp.FlatAppearance.BorderSize = 0;
-            this.btnSideEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideEmp.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideEmp.ForeColor = System.Drawing.Color.White;
-            this.btnSideEmp.Location = new System.Drawing.Point(0, 394);
-            this.btnSideEmp.Name = "btnSideEmp";
-            this.btnSideEmp.Size = new System.Drawing.Size(267, 52);
-            this.btnSideEmp.TabIndex = 4;
-            this.btnSideEmp.Text = "Employees";
-            this.btnSideEmp.UseVisualStyleBackColor = true;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 394);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(267, 52);
+            this.btnEmployee.TabIndex = 4;
+            this.btnEmployee.Text = "Employees";
+            this.btnEmployee.UseVisualStyleBackColor = true;
             // 
-            // btnSideDep
+            // btnDepartment
             // 
-            this.btnSideDep.FlatAppearance.BorderSize = 0;
-            this.btnSideDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSideDep.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSideDep.ForeColor = System.Drawing.Color.White;
-            this.btnSideDep.Location = new System.Drawing.Point(3, 336);
-            this.btnSideDep.Name = "btnSideDep";
-            this.btnSideDep.Size = new System.Drawing.Size(267, 52);
-            this.btnSideDep.TabIndex = 3;
-            this.btnSideDep.Text = "Departments";
-            this.btnSideDep.UseVisualStyleBackColor = true;
+            this.btnDepartment.FlatAppearance.BorderSize = 0;
+            this.btnDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepartment.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnDepartment.ForeColor = System.Drawing.Color.White;
+            this.btnDepartment.Location = new System.Drawing.Point(3, 336);
+            this.btnDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDepartment.Name = "btnDepartment";
+            this.btnDepartment.Size = new System.Drawing.Size(267, 52);
+            this.btnDepartment.TabIndex = 3;
+            this.btnDepartment.Text = "Departments";
+            this.btnDepartment.UseVisualStyleBackColor = true;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnDashboard
             // 
@@ -253,6 +286,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Location = new System.Drawing.Point(0, 278);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(267, 52);
             this.btnDashboard.TabIndex = 2;
@@ -272,38 +306,31 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(62, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 127);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel2.Controls.Add(this.lblDashboard);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(913, 73);
-            this.panel2.TabIndex = 7;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 726);
+            this.ClientSize = new System.Drawing.Size(1292, 726);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideBar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Dashboard";
-            this.Text = "Connect";
+            this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -321,9 +348,9 @@
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnSideProj;
-        private System.Windows.Forms.Button btnSideEmp;
-        private System.Windows.Forms.Button btnSideDep;
+        private System.Windows.Forms.Button btnProject;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox1;
