@@ -105,6 +105,17 @@ namespace ITP104PROJECT
             string depName = txtDepName.Text.Trim();
             string depDescription = txtDescription.Text.Trim();
 
+            if (!ValidateDepartmentInput(depName, depDescription))
+            {
+                return;
+            }
+
+            if(IsDepartmentNameExists(depName))
+            {
+                MessageBox.Show("This department name is already exists. Please enter a different department","Duplicate Entry",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 conn.Open();
@@ -199,7 +210,39 @@ namespace ITP104PROJECT
             }
         }
 
-       
+        public bool IsDepartmentNameExists(string depName)
+        {
+            try
+            {
+                conn.Open();
 
+                string checkQuery = "SELECT COUNT(*) FROM department WHERE departmentName = @name";
+                MySqlCommand command = new MySqlCommand(checkQuery, conn);
+                command.Parameters.AddWithValue("@name", depName);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+                return count > 0;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("An error occurred while checking the department name: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public bool ValidateDepartmentInput(string depName, string depDescription)
+        {
+            if(string.IsNullOrEmpty(depName) || string.IsNullOrEmpty(depDescription))
+            {
+                MessageBox.Show("Both Department name and description are required.", "Input Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
     }
 }
