@@ -31,7 +31,7 @@ namespace ITP104PROJECT
 
         private void btnAddDep_Click(object sender, EventArgs e)
         {
-            AddingDepartment();
+            //AddingDepartment();
             ViewDepartments("Added Database Successfully!");
         }
 
@@ -78,43 +78,43 @@ namespace ITP104PROJECT
             }
         }
 
-        private void AddingDepartment()
-        {
-            string depName = txtDepName.Text.Trim();
-            string depDescription = txtDescription.Text.Trim();
+        //private void AddingDepartment()
+        //{
+        //    string depName = txtDepName.Text.Trim();
+        //    string depDescription = txtDescription.Text.Trim();
 
-            if (!ValidateDepartmentInput(depName, depDescription))
-            {
-                return;
-            }
+        //    if (!ValidateDepartmentInput(depName, depDescription))
+        //    {
+        //        return;
+        //    }
 
-            if (IsDepartmentNameExists(depName))
-            {
-                MessageBox.Show("This department name already exists. Please use a different department name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //    if (IsDepartmentNameExists(depName))
+        //    {
+        //        MessageBox.Show("This department name already exists. Please use a different department name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            try
-            {
-                conn.Open();
+        //    try
+        //    {
+        //        conn.Open();
 
-                string query = "INSERT INTO department(departmentName, description) VALUES(@name, @description)";
-                MySqlCommand command = new MySqlCommand(query, conn);
+        //        string query = "INSERT INTO department(departmentName, description) VALUES(@name, @description)";
+        //        MySqlCommand command = new MySqlCommand(query, conn);
 
-                command.Parameters.AddWithValue("@name", depName);
-                command.Parameters.AddWithValue("@description", depDescription);
+        //        command.Parameters.AddWithValue("@name", depName);
+        //        command.Parameters.AddWithValue("@description", depDescription);
 
-                command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
 
         //private void UpdatingDepartment()
         //{
@@ -199,7 +199,6 @@ namespace ITP104PROJECT
             }
         }
 
-<<<<<<< HEAD
         private void btnSideDep_Click(object sender, EventArgs e)
         {
             Departments departmentsForm = new Departments(admin);
@@ -212,7 +211,7 @@ namespace ITP104PROJECT
             Employees employeesForm = new Employees();
             employeesForm.Show();
             this.Hide();
-=======
+        }
         public bool IsDepartmentNameExists(string depName)
         {
             try
@@ -251,7 +250,6 @@ namespace ITP104PROJECT
         private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
->>>>>>> b3d9ce2290d657150993f400d625f056061f984b
         }
     }
 }

@@ -40,7 +40,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnViewEmployees = new System.Windows.Forms.Button();
             this.panelDepFooter = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelDepRFooter = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -64,12 +68,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblAddEmplyoee = new System.Windows.Forms.Label();
             this.panelDepLFooter.SuspendLayout();
             this.panelDepFooter.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panelDepRFooter.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -256,6 +258,33 @@
             this.panelDepFooter.Size = new System.Drawing.Size(1666, 265);
             this.panelDepFooter.TabIndex = 6;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel3.Controls.Add(this.lblAddEmplyoee);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(249, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1170, 44);
+            this.panel3.TabIndex = 24;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1296, 130);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.button3.Size = new System.Drawing.Size(220, 50);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Add Employee";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // panelDepRFooter
             // 
             this.panelDepRFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -266,6 +295,32 @@
             this.panelDepRFooter.Name = "panelDepRFooter";
             this.panelDepRFooter.Size = new System.Drawing.Size(245, 263);
             this.panelDepRFooter.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(243, 43);
+            this.panel4.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(14, 129);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.button2.Size = new System.Drawing.Size(220, 50);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Delete Employee";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -538,57 +593,16 @@
             this.textBox4.Size = new System.Drawing.Size(231, 31);
             this.textBox4.TabIndex = 0;
             // 
-            // button2
+            // lblAddEmplyoee
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(14, 129);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.button2.Size = new System.Drawing.Size(220, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Delete Employee";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1296, 130);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.button3.Size = new System.Drawing.Size(220, 50);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Add Employee";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(249, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1170, 44);
-            this.panel3.TabIndex = 24;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(243, 43);
-            this.panel4.TabIndex = 7;
+            this.lblAddEmplyoee.AutoSize = true;
+            this.lblAddEmplyoee.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold);
+            this.lblAddEmplyoee.ForeColor = System.Drawing.Color.White;
+            this.lblAddEmplyoee.Location = new System.Drawing.Point(429, 5);
+            this.lblAddEmplyoee.Name = "lblAddEmplyoee";
+            this.lblAddEmplyoee.Size = new System.Drawing.Size(283, 35);
+            this.lblAddEmplyoee.TabIndex = 3;
+            this.lblAddEmplyoee.Text = "Add A New Employee";
             // 
             // Employees
             // 
@@ -608,6 +622,8 @@
             this.panelDepLFooter.ResumeLayout(false);
             this.panelDepFooter.ResumeLayout(false);
             this.panelDepFooter.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panelDepRFooter.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
@@ -660,5 +676,6 @@
         private System.Windows.Forms.Panel panelDepRFooter;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblAddEmplyoee;
     }
 }
