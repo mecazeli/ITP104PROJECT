@@ -78,7 +78,11 @@
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnProjects.Location = new System.Drawing.Point(1017, 153);
+=======
+            this.btnProjects.Location = new System.Drawing.Point(1002, 153);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.btnProjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProjects.Name = "btnProjects";
             this.btnProjects.Size = new System.Drawing.Size(294, 219);
@@ -94,7 +98,11 @@
             this.btnEmployees.FlatAppearance.BorderSize = 5;
             this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnEmployees.Location = new System.Drawing.Point(633, 153);
+=======
+            this.btnEmployees.Location = new System.Drawing.Point(618, 153);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(294, 219);
@@ -111,7 +119,11 @@
             this.btnDepartments.FlatAppearance.BorderSize = 5;
             this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnDepartments.Location = new System.Drawing.Point(238, 153);
+=======
+            this.btnDepartments.Location = new System.Drawing.Point(223, 153);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.btnDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDepartments.Name = "btnDepartments";
             this.btnDepartments.Size = new System.Drawing.Size(294, 219);
@@ -125,7 +137,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProjects.AutoSize = true;
             this.lblProjects.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold);
+<<<<<<< HEAD
             this.lblProjects.Location = new System.Drawing.Point(1165, 499);
+=======
+            this.lblProjects.Location = new System.Drawing.Point(1150, 499);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.lblProjects.Name = "lblProjects";
             this.lblProjects.Size = new System.Drawing.Size(111, 32);
             this.lblProjects.TabIndex = 6;
@@ -137,7 +153,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployees.AutoSize = true;
             this.lblEmployees.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold);
+<<<<<<< HEAD
             this.lblEmployees.Location = new System.Drawing.Point(759, 504);
+=======
+            this.lblEmployees.Location = new System.Drawing.Point(739, 504);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.lblEmployees.Name = "lblEmployees";
             this.lblEmployees.Size = new System.Drawing.Size(137, 32);
             this.lblEmployees.TabIndex = 5;
@@ -149,7 +169,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDepartments.AutoSize = true;
             this.lblDepartments.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold);
+<<<<<<< HEAD
             this.lblDepartments.Location = new System.Drawing.Point(351, 499);
+=======
+            this.lblDepartments.Location = new System.Drawing.Point(332, 499);
+>>>>>>> 95b4968cfec36573e9b95bc41c0188d9aba85213
             this.lblDepartments.Name = "lblDepartments";
             this.lblDepartments.Size = new System.Drawing.Size(164, 32);
             this.lblDepartments.TabIndex = 4;
