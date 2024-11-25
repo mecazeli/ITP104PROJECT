@@ -1,47 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using Org.BouncyCastle.Ocsp;
+using MySql.Data.MySqlClient;
 
 namespace ITP104PROJECT
 {
     public partial class Departments : Form
     {
         public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
-        //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         public MySqlConnection conn;
         public Admin admin;
+
         public Departments(Admin admin)
         {
             InitializeComponent();
             conn = new MySqlConnection(connection);
             this.admin = admin;
-        }
-
-        private void txtDepName_TextChanged(object sender, EventArgs e)
-        {
-
+            lblName.Text = string.IsNullOrEmpty(admin.name) ? "Welcome!" : admin.name;
         }
 
         private void Departments_Load(object sender, EventArgs e)
         {
             lblName.Text = admin.name;
         }
+
         private void btnView_Click(object sender, EventArgs e)
         {
             ViewDepartments("Database company connected successfully!");
-        }
-
-        private void dataGridViewDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void btnAddDep_Click(object sender, EventArgs e)
@@ -62,9 +47,7 @@ namespace ITP104PROJECT
             ViewDepartments("Updated Database Successfully!");
         }
 
-
-        //method for showing departments
-        private void ViewDepartments(String message)
+        private void ViewDepartments(string message)
         {
             try
             {
@@ -84,8 +67,6 @@ namespace ITP104PROJECT
                 dgvDepartments.Columns[0].HeaderText = "Id";
                 dgvDepartments.Columns[1].HeaderText = "Department Name";
                 dgvDepartments.Columns[2].HeaderText = "Description";
-
-
             }
             catch (Exception ex)
             {
@@ -95,11 +76,8 @@ namespace ITP104PROJECT
             {
                 conn.Close();
             }
-
         }
 
-
-        //method for adding department
         private void AddingDepartment()
         {
             string depName = txtDepName.Text.Trim();
@@ -110,9 +88,9 @@ namespace ITP104PROJECT
                 return;
             }
 
-            if(IsDepartmentNameExists(depName))
+            if (IsDepartmentNameExists(depName))
             {
-                MessageBox.Show("This department name is already exists. Please enter a different department","Duplicate Entry",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("This department name already exists. Please use a different department name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -138,18 +116,24 @@ namespace ITP104PROJECT
             }
         }
 
-        // method for update department 
         private void UpdatingDepartment()
         {
-            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
-           
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
+            if (dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string depId = selectedRow.Cells["departmentId"].Value.ToString();
+
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
+            string depId = selectedRow.Cells["departmentId"].Value?.ToString();
+
+            if (string.IsNullOrEmpty(depId))
+            {
+                MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string depName = txtDepName.Text.Trim();
             string depDescription = txtDescription.Text.Trim();
 
@@ -176,18 +160,23 @@ namespace ITP104PROJECT
             }
         }
 
-        // method for delete 
         private void DeletingDepartment()
         {
-            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
-           
-            if (selectedRow.Cells["departmentId"].Value == DBNull.Value || dgvDepartments.SelectedCells.Count == 0)
+            if (dgvDepartments.SelectedCells.Count == 0)
             {
                 MessageBox.Show("Please select a department to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }            
-            string depId = selectedRow.Cells["departmentId"].Value.ToString();
+            }
+
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
+            string depId = selectedRow.Cells["departmentId"].Value?.ToString();
+
+            if (string.IsNullOrEmpty(depId))
+            {
+                MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
@@ -222,8 +211,8 @@ namespace ITP104PROJECT
 
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0;
-
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while checking the department name: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -236,9 +225,9 @@ namespace ITP104PROJECT
 
         public bool ValidateDepartmentInput(string depName, string depDescription)
         {
-            if(string.IsNullOrEmpty(depName) || string.IsNullOrEmpty(depDescription))
+            if (string.IsNullOrEmpty(depName) || string.IsNullOrEmpty(depDescription))
             {
-                MessageBox.Show("Both Department name and description are required.", "Input Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Both Department Name and Description are required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
