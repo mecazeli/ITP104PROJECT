@@ -41,11 +41,11 @@ namespace ITP104PROJECT
             ViewDepartments("Deleted Database Successfully!");
         }
 
-        private void btnUpdDep_Click(object sender, EventArgs e)
-        {
-            UpdatingDepartment();
-            ViewDepartments("Updated Database Successfully!");
-        }
+        //private void btnUpdDep_Click(object sender, EventArgs e)
+        //{
+        //    UpdatingDepartment();
+        //    ViewDepartments("Updated Database Successfully!");
+        //}
 
         private void ViewDepartments(string message)
         {
@@ -116,49 +116,49 @@ namespace ITP104PROJECT
             }
         }
 
-        private void UpdatingDepartment()
-        {
-            if (dgvDepartments.SelectedCells.Count == 0)
-            {
-                MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //private void UpdatingDepartment()
+        //{
+        //    if (dgvDepartments.SelectedCells.Count == 0)
+        //    {
+        //        MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
-            string depId = selectedRow.Cells["departmentId"].Value?.ToString();
+        //    int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+        //    DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
+        //    string depId = selectedRow.Cells["departmentId"].Value?.ToString();
 
-            if (string.IsNullOrEmpty(depId))
-            {
-                MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //    if (string.IsNullOrEmpty(depId))
+        //    {
+        //        MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            string depName = txtDepName.Text.Trim();
-            string depDescription = txtDescription.Text.Trim();
+        //    string depName = txtDepName.Text.Trim();
+        //    string depDescription = txtDescription.Text.Trim();
 
-            try
-            {
-                conn.Open();
+        //    try
+        //    {
+        //        conn.Open();
 
-                string query = "UPDATE department SET departmentName = @name, description = @description WHERE departmentId = @id";
-                MySqlCommand command = new MySqlCommand(query, conn);
+        //        string query = "UPDATE department SET departmentName = @name, description = @description WHERE departmentId = @id";
+        //        MySqlCommand command = new MySqlCommand(query, conn);
 
-                command.Parameters.AddWithValue("@id", depId);
-                command.Parameters.AddWithValue("@name", depName);
-                command.Parameters.AddWithValue("@description", depDescription);
+        //        command.Parameters.AddWithValue("@id", depId);
+        //        command.Parameters.AddWithValue("@name", depName);
+        //        command.Parameters.AddWithValue("@description", depDescription);
 
-                command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
 
         private void DeletingDepartment()
         {
