@@ -53,5 +53,10 @@ namespace ITP104PROJECT
             employeesForm.Show();
             this.Hide();
         }
+
+        private void panelDasboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

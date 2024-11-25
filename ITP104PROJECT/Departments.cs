@@ -31,7 +31,7 @@ namespace ITP104PROJECT
 
         private void btnAddDep_Click(object sender, EventArgs e)
         {
-            //AddingDepartment();
+            AddingDepartment();
             ViewDepartments("Added Database Successfully!");
         }
 
@@ -78,87 +78,72 @@ namespace ITP104PROJECT
             }
         }
 
-        //private void AddingDepartment()
-        //{
-        //    string depName = txtDepName.Text.Trim();
-        //    string depDescription = txtDescription.Text.Trim();
 
-        //    if (!ValidateDepartmentInput(depName, depDescription))
-        //    {
-        //        return;
-        //    }
+        private void AddingDepartment()
+        {
+            string depName = txtDepName.Text.Trim();
+            string depDescription = txtDescription.Text.Trim();
 
-        //    if (IsDepartmentNameExists(depName))
-        //    {
-        //        MessageBox.Show("This department name already exists. Please use a different department name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
+            if (!ValidateDepartmentInput(depName, depDescription))
+            {
+                return;
+            }
 
-        //    try
-        //    {
-        //        conn.Open();
+            if (IsDepartmentNameExists(depName))
+            {
+                MessageBox.Show("This department name already exists. Please use a different department name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        //        string query = "INSERT INTO department(departmentName, description) VALUES(@name, @description)";
-        //        MySqlCommand command = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
 
-        //        command.Parameters.AddWithValue("@name", depName);
-        //        command.Parameters.AddWithValue("@description", depDescription);
+                string query = "INSERT INTO department(departmentName, description) VALUES(@name, @description)";
+                MySqlCommand command = new MySqlCommand(query, conn);
 
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
+                command.Parameters.AddWithValue("@name", depName);
+                command.Parameters.AddWithValue("@description", depDescription);
 
-        //private void UpdatingDepartment()
-        //{
-        //    if (dgvDepartments.SelectedCells.Count == 0)
-        //    {
-        //        MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
-        //    int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
-        //    DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
-        //    string depId = selectedRow.Cells["departmentId"].Value?.ToString();
+        private void UpdateDepartment(string depID, string fieldName, string newValue)
+        {
 
-        //    if (string.IsNullOrEmpty(depId))
-        //    {
-        //        MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
+            try
+            {
+                conn.Open();
 
-        //    string depName = txtDepName.Text.Trim();
-        //    string depDescription = txtDescription.Text.Trim();
+                string query = $"UPDATE department SET {fieldName} = @newValue WHERE departmentId = @id";
+                MySqlCommand command = new MySqlCommand(query, conn);
 
-        //    try
-        //    {
-        //        conn.Open();
+                command.Parameters.AddWithValue("@newValue",newValue);
+                command.Parameters.AddWithValue("@id",depID);
 
-        //        string query = "UPDATE department SET departmentName = @name, description = @description WHERE departmentId = @id";
-        //        MySqlCommand command = new MySqlCommand(query, conn);
+                command.ExecuteNonQuery();
 
-        //        command.Parameters.AddWithValue("@id", depId);
-        //        command.Parameters.AddWithValue("@name", depName);
-        //        command.Parameters.AddWithValue("@description", depDescription);
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error occured while updating the department " + ex.Message,"Database Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        
+            
+        }
 
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
 
         private void DeletingDepartment()
         {
@@ -247,9 +232,61 @@ namespace ITP104PROJECT
             return true;
         }
 
-        private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDepartments_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                DataGridViewRow row = dgvDepartments.Rows[e.RowIndex];
+                string columnName = dgvDepartments.Columns[e.ColumnIndex].Name;
 
+                string depId = row.Cells["Id"].Value?.ToString();
+                string newValue = row.Cells[e.ColumnIndex].Value?.ToString();
+
+                if(string.IsNullOrEmpty(depId) || string.IsNullOrEmpty(newValue))
+                {
+                    MessageBox.Show("Invalid input. Please provide a valid value.","Input Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string fieldToUpdate = null;
+
+                  if(columnName == "departmentName")
+                {
+                    fieldToUpdate = "departmentName";
+                }else if(columnName == "description")
+                {
+                    fieldToUpdate = "description";
+                }
+                else
+                {
+                    return;
+                }
+
+                string originalValue = row.Cells[e.ColumnIndex].Tag?.ToString();
+
+                DialogResult dialogResult = MessageBox.Show(
+                    $"Are you sure you want to update the {fieldToUpdate} to:\n\n{newValue}?",
+                    "Confirm Update",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                 );
+
+                if(dialogResult == DialogResult.Yes)
+                {
+                   UpdateDepartment(depId,fieldToUpdate,newValue);
+                    MessageBox.Show($"{fieldToUpdate} updated successfully!","Update Successfully!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                    ViewDepartments("Database updated successfully");
+                }
+                else
+                {
+                    row.Cells[e.ColumnIndex].Value = originalValue;
+                }
+              
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
