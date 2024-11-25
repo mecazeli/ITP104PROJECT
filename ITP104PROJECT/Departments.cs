@@ -233,5 +233,10 @@ namespace ITP104PROJECT
 
             return true;
         }
+
+        private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
