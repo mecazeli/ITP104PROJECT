@@ -298,7 +298,7 @@ namespace ITP104PROJECT
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard dashboardForm = new Dashboard();
+            Dashboard dashboardForm = new Dashboard(admin);
             dashboardForm.Show();
             this.Hide();
         }
