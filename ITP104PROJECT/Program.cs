@@ -20,11 +20,8 @@ namespace ITP104PROJECT
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Project());
-=======
+
             Application.Run(new Dashboard(admin));
->>>>>>> b9cd67bbdf727a4f0bb9b5b5a42dba7cbac7a7e0
         }
     }
 }

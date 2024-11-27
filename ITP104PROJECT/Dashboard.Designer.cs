@@ -121,6 +121,7 @@
             this.btnProjects.Size = new System.Drawing.Size(293, 219);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
             // btnEmployees
             // 
@@ -252,6 +253,7 @@
             this.btnSideProj.TabIndex = 23;
             this.btnSideProj.Text = "Projects";
             this.btnSideProj.UseVisualStyleBackColor = true;
+            this.btnSideProj.Click += new System.EventHandler(this.btnSideProj_Click);
             // 
             // btnSideEmp
             // 

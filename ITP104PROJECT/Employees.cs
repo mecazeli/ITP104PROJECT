@@ -12,6 +12,8 @@ namespace ITP104PROJECT
 {
     public partial class Employees : Form
     {
+
+        public Admin admin;
         public Employees()
         {
             InitializeComponent();
@@ -45,6 +47,27 @@ namespace ITP104PROJECT
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnSideDep_Click(object sender, EventArgs e)
+        {
+            Departments departmentsForm = new Departments(admin);
+            departmentsForm.Show();
+            this.Hide();
+        }
+
+        private void btnSideEmp_Click(object sender, EventArgs e)
+        {
+            Employees employeesForm = new Employees();
+            employeesForm.Show();
+            this.Hide();
+        }
+
+        private void btnSideProj_Click(object sender, EventArgs e)
+        {
+            Project projectForm = new Project();
+            projectForm.Show();
+            this.Hide();
         }
     }
 }

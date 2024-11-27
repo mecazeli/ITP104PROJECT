@@ -56,5 +56,19 @@ namespace ITP104PROJECT
         {
 
         }
+
+        private void btnSideProj_Click(object sender, EventArgs e)
+        {
+            Project projectForm = new Project();
+            projectForm.Show();
+            this.Hide();
+        }
+
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            Project projectForm = new Project();
+            projectForm.Show();
+            this.Hide();
+        }
     }
 }
