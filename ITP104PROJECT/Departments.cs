@@ -288,5 +288,19 @@ namespace ITP104PROJECT
                 MessageBox.Show("Error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSideEmp_Click_1(object sender, EventArgs e)
+        {
+            Employees employeesForm = new Employees();
+            employeesForm.Show();
+            this.Hide();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboardForm = new Dashboard();
+            dashboardForm.Show();
+            this.Hide();
+        }
     }
 }
