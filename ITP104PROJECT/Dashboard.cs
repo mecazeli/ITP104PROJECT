@@ -13,12 +13,10 @@ namespace ITP104PROJECT
     public partial class Dashboard : Form
     {
         public Admin admin;
-        public Dashboard()
+        public Dashboard(Admin admin)
         {
             InitializeComponent();
-            
-
-            this.admin = admin;
+            this.admin = admin; 
         }
 
         //private void Dashboard_Load(object sender, EventArgs e)
