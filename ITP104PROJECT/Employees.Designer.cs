@@ -210,7 +210,7 @@
             // 
             // btnViewEmployees
             // 
-            this.btnViewEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnViewEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnViewEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnViewEmployees.FlatAppearance.BorderSize = 3;
             this.btnViewEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -280,7 +280,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -297,7 +297,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -561,6 +561,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1666, 75);
             this.panel7.TabIndex = 7;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // btnSearch
             // 

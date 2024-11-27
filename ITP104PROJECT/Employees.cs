@@ -41,5 +41,10 @@ namespace ITP104PROJECT
         {
 
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

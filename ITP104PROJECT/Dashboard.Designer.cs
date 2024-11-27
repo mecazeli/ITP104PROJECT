@@ -110,7 +110,7 @@
             // btnProjects
             // 
             this.btnProjects.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnProjects.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnProjects.FlatAppearance.BorderSize = 5;
             this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -125,7 +125,7 @@
             // btnEmployees
             // 
             this.btnEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmployees.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEmployees.FlatAppearance.BorderSize = 5;
@@ -142,7 +142,7 @@
             // btnDepartments
             // 
             this.btnDepartments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnDepartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDepartments.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDepartments.FlatAppearance.BorderSize = 5;
@@ -329,7 +329,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panelDasboard.ResumeLayout(false);
             this.panelDasboard.PerformLayout();
             this.panel2.ResumeLayout(false);
