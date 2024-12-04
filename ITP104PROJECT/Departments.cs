@@ -302,5 +302,10 @@ namespace ITP104PROJECT
             dashboardForm.Show();
             this.Hide();
         }
+
+        private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

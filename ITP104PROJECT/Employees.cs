@@ -17,57 +17,69 @@ namespace ITP104PROJECT
         public Employees()
         {
             InitializeComponent();
+            btnDashboard.Click += new EventHandler(btnSide_Click);
+            btnSideDep.Click += new EventHandler(btnSide_Click);
+            btnSideProj.Click += new EventHandler(btnSide_Click);
+            btnSettings.Click += new EventHandler(btnSide_Click);
+            btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
-        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void btnSide_Click(object sender, EventArgs e)
         {
+            Button clickedButton = sender as Button;
 
+            if (clickedButton != null)
+            {
+                if(clickedButton.Name == "btnDashboard")
+                {
+                    Dashboard dashboardForm = new Dashboard(admin);
+                    dashboardForm.Show();
+                    this.Hide();
+                }
+                else if(clickedButton.Name == "btnSideDep")
+                {
+                    Departments departmentsForm = new Departments(admin);
+                    departmentsForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSideProj")
+                {
+                    Project projectForm = new Project();
+                    projectForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSettings")
+                {
+                    Settings settingsForm = new Settings();
+                    settingsForm.Show();
+                    this.Hide();
+                }
+                else if(clickedButton.Name == "btnLogout")
+                {
+                    var result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if(result == DialogResult.Yes)
+                    {
+
+                        MessageBox.Show("You are now logging out. Please wait...",
+                                 "Logging Out",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+
+                        this.Hide();
+
+                        Login loginForm = new Login();
+                        loginForm.Show();
+                    }
+
+                }
+
+
+            }
         }
+       
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSideDep_Click(object sender, EventArgs e)
-        {
-            Departments departmentsForm = new Departments(admin);
-            departmentsForm.Show();
-            this.Hide();
-        }
-
-        private void btnSideEmp_Click(object sender, EventArgs e)
-        {
-            Employees employeesForm = new Employees();
-            employeesForm.Show();
-            this.Hide();
-        }
-
-        private void btnSideProj_Click(object sender, EventArgs e)
-        {
-            Project projectForm = new Project();
-            projectForm.Show();
-            this.Hide();
-        }
     }
 }

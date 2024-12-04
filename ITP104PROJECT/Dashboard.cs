@@ -16,7 +16,7 @@ namespace ITP104PROJECT
         public Dashboard(Admin admin)
         {
             InitializeComponent();
-            this.admin = admin; 
+            this.admin = admin;
         }
 
         //private void Dashboard_Load(object sender, EventArgs e)

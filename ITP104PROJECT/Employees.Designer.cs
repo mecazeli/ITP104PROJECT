@@ -131,7 +131,7 @@
             this.btnSideProj.TabIndex = 5;
             this.btnSideProj.Text = "Projects";
             this.btnSideProj.UseVisualStyleBackColor = true;
-            this.btnSideProj.Click += new System.EventHandler(this.btnSideProj_Click);
+
             // 
             // btnSideEmp
             // 
@@ -146,7 +146,7 @@
             this.btnSideEmp.TabIndex = 4;
             this.btnSideEmp.Text = "Employees";
             this.btnSideEmp.UseVisualStyleBackColor = true;
-            this.btnSideEmp.Click += new System.EventHandler(this.btnSideEmp_Click);
+            
             // 
             // btnSideDep
             // 
@@ -161,7 +161,7 @@
             this.btnSideDep.TabIndex = 3;
             this.btnSideDep.Text = "Departments";
             this.btnSideDep.UseVisualStyleBackColor = true;
-            this.btnSideDep.Click += new System.EventHandler(this.btnSideDep_Click);
+
             // 
             // btnDashboard
             // 
@@ -345,7 +345,7 @@
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.textBox5.Location = new System.Drawing.Point(659, 197);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(225, 27);
             this.textBox5.TabIndex = 22;
@@ -355,7 +355,7 @@
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(373, 100);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(225, 27);
             this.textBox11.TabIndex = 6;
@@ -377,7 +377,7 @@
             this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.textBox10.Location = new System.Drawing.Point(373, 197);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(225, 27);
             this.textBox10.TabIndex = 9;
@@ -387,7 +387,7 @@
             this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(659, 100);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(225, 27);
             this.textBox6.TabIndex = 20;
@@ -415,14 +415,13 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Department";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(949, 100);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(225, 27);
             this.textBox9.TabIndex = 11;
@@ -432,11 +431,10 @@
             this.comboBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(1243, 197);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(225, 31);
             this.comboBox2.TabIndex = 17;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -455,7 +453,7 @@
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.textBox8.Location = new System.Drawing.Point(949, 197);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(225, 27);
             this.textBox8.TabIndex = 13;
@@ -471,7 +469,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Salary";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -490,11 +487,10 @@
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(1243, 100);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(225, 27);
             this.textBox7.TabIndex = 15;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // panelSideBar
             // 
@@ -539,7 +535,7 @@
             this.dgvEmployees.RowTemplate.Height = 24;
             this.dgvEmployees.Size = new System.Drawing.Size(1924, 751);
             this.dgvEmployees.TabIndex = 5;
-            this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
+        
             // 
             // lblEmployees
             // 
@@ -565,7 +561,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1666, 75);
             this.panel7.TabIndex = 7;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // btnSearch
             // 
