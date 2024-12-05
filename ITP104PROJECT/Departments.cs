@@ -11,18 +11,83 @@ namespace ITP104PROJECT
         public MySqlConnection conn;
         public Admin admin;
 
-        public Departments(Admin admin)
+        public Departments()
         {
             InitializeComponent();
             conn = new MySqlConnection(connection);
-            this.admin = admin;
-            lblName.Text = string.IsNullOrEmpty(admin.name) ? "Welcome!" : admin.name;
+            //lblName.Text = string.IsNullOrEmpty(admin.name) ? "Welcome!" : admin.name;
+            btnDashboard.Click += new EventHandler(btnSide_Click);
+            btnSideDep.Click += new EventHandler(btnSide_Click);
+            btnSideProj.Click += new EventHandler(btnSide_Click);
+            btnSettings.Click += new EventHandler(btnSide_Click);
+            btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
         private void Departments_Load(object sender, EventArgs e)
         {
             lblName.Text = admin.name;
         }
+
+        private void btnSide_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+
+            if (clickedButton != null)
+            {
+                if (clickedButton.Name == "btnDashboard")
+                {
+                    Dashboard dashboardForm = new Dashboard();
+                    dashboardForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSideDep")
+                {
+                    Departments departmentsForm = new Departments();
+                    departmentsForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSideEmp")
+                {
+                    Employees employeesForm = new Employees();
+                    employeesForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSideProj")
+                {
+                    Project projectForm = new Project();
+                    projectForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSettings")
+                {
+                    Settings settingsForm = new Settings();
+                    settingsForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnLogout")
+                {
+                    var result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+
+                        MessageBox.Show("You are now logging out. Please wait...",
+                                 "Logging Out",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+
+                        this.Hide();
+
+                        Login loginForm = new Login();
+                        loginForm.Show();
+                    }
+
+                }
+
+
+            }
+        }
+
 
         private void btnView_Click(object sender, EventArgs e)
         {
@@ -184,19 +249,7 @@ namespace ITP104PROJECT
             }
         }
 
-        private void btnSideDep_Click(object sender, EventArgs e)
-        {
-            Departments departmentsForm = new Departments(admin);
-            departmentsForm.Show();
-            this.Hide();
-        }
-
-        private void btnSideEmp_Click(object sender, EventArgs e)
-        {
-            Employees employeesForm = new Employees();
-            employeesForm.Show();
-            this.Hide();
-        }
+       
         public bool IsDepartmentNameExists(string depName)
         {
             try
@@ -289,23 +342,5 @@ namespace ITP104PROJECT
             }
         }
 
-        private void btnSideEmp_Click_1(object sender, EventArgs e)
-        {
-            Employees employeesForm = new Employees();
-            employeesForm.Show();
-            this.Hide();
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboardForm = new Dashboard(admin);
-            dashboardForm.Show();
-            this.Hide();
-        }
-
-        private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

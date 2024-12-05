@@ -24,23 +24,28 @@ namespace ITP104PROJECT
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
-
         private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
 
             if (clickedButton != null)
             {
-                if(clickedButton.Name == "btnDashboard")
+                if (clickedButton.Name == "btnDashboard")
                 {
-                    Dashboard dashboardForm = new Dashboard(admin);
+                    Dashboard dashboardForm = new Dashboard();
                     dashboardForm.Show();
                     this.Hide();
                 }
-                else if(clickedButton.Name == "btnSideDep")
+                else if (clickedButton.Name == "btnSideDep")
                 {
-                    Departments departmentsForm = new Departments(admin);
+                    Departments departmentsForm = new Departments();
                     departmentsForm.Show();
+                    this.Hide();
+                }
+                else if (clickedButton.Name == "btnSideEmp")
+                {
+                    Employees employeesForm = new Employees();
+                    employeesForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideProj")
@@ -55,11 +60,11 @@ namespace ITP104PROJECT
                     settingsForm.Show();
                     this.Hide();
                 }
-                else if(clickedButton.Name == "btnLogout")
+                else if (clickedButton.Name == "btnLogout")
                 {
                     var result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if(result == DialogResult.Yes)
+                    if (result == DialogResult.Yes)
                     {
 
                         MessageBox.Show("You are now logging out. Please wait...",
@@ -74,12 +79,15 @@ namespace ITP104PROJECT
                     }
 
                 }
-
-
             }
-        }
-       
+         }
+
+
+
+
 
 
     }
+
 }
+
