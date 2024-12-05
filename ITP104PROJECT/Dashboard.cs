@@ -19,6 +19,7 @@ namespace ITP104PROJECT
             this.admin = admin;
         }
 
+        //ad
         //private void Dashboard_Load(object sender, EventArgs e)
         //{
         //    lblName.Text = admin.name;
