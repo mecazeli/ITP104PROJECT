@@ -41,27 +41,30 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnViewEmployees = new System.Windows.Forms.Button();
             this.panelDepFooter = new System.Windows.Forms.Panel();
-            this.dateHiredPicker = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblAddEmplyoee = new System.Windows.Forms.Label();
+            this.panelDepLFooter = new System.Windows.Forms.Panel();
+            this.dateHiredPicker = new System.Windows.Forms.DateTimePicker();
             this.btnAddEmployees = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblAddEmplyoee = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtEmpName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmpAge = new System.Windows.Forms.TextBox();
-            this.txtEmpEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEmpAddress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboEmpDep = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEmpPosition = new System.Windows.Forms.TextBox();
+            this.txtEmpAge = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtEmpSalary = new System.Windows.Forms.TextBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEmpPosition = new System.Windows.Forms.TextBox();
+            this.txtEmpEmail = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmpAddress = new System.Windows.Forms.TextBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
@@ -69,16 +72,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelDepLFooter = new System.Windows.Forms.Panel();
-            this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.panelDepFooter.SuspendLayout();
+            this.panelDepLFooter.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panelDepLFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAdmin
@@ -245,35 +245,25 @@
             this.panelDepFooter.Size = new System.Drawing.Size(1176, 216);
             this.panelDepFooter.TabIndex = 6;
             // 
-            // dateHiredPicker
+            // btnUpdateEmployee
             // 
-            this.dateHiredPicker.CalendarFont = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateHiredPicker.CalendarTitleBackColor = System.Drawing.Color.RosyBrown;
-            this.dateHiredPicker.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateHiredPicker.Location = new System.Drawing.Point(494, 71);
-            this.dateHiredPicker.Name = "dateHiredPicker";
-            this.dateHiredPicker.Size = new System.Drawing.Size(175, 25);
-            this.dateHiredPicker.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label1.Location = new System.Drawing.Point(496, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Date Hired";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Location = new System.Drawing.Point(133, 126);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(95, 26);
-            this.cmbGender.TabIndex = 25;
+            this.btnUpdateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnUpdateEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnUpdateEmployee.FlatAppearance.BorderSize = 3;
+            this.btnUpdateEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateEmployee.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(979, 106);
+            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(177, 41);
+            this.btnUpdateEmployee.TabIndex = 25;
+            this.btnUpdateEmployee.Text = "UPDATE EMPLOYEES";
+            this.btnUpdateEmployee.UseVisualStyleBackColor = false;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
             // panel3
             // 
@@ -285,17 +275,45 @@
             this.panel3.Size = new System.Drawing.Size(218, 36);
             this.panel3.TabIndex = 24;
             // 
-            // lblAddEmplyoee
+            // panelDepLFooter
             // 
-            this.lblAddEmplyoee.AutoSize = true;
-            this.lblAddEmplyoee.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold);
-            this.lblAddEmplyoee.ForeColor = System.Drawing.Color.White;
-            this.lblAddEmplyoee.Location = new System.Drawing.Point(369, 3);
-            this.lblAddEmplyoee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddEmplyoee.Name = "lblAddEmplyoee";
-            this.lblAddEmplyoee.Size = new System.Drawing.Size(232, 27);
-            this.lblAddEmplyoee.TabIndex = 3;
-            this.lblAddEmplyoee.Text = "Add A New Employee";
+            this.panelDepLFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDepLFooter.Controls.Add(this.dateHiredPicker);
+            this.panelDepLFooter.Controls.Add(this.btnAddEmployees);
+            this.panelDepLFooter.Controls.Add(this.panel5);
+            this.panelDepLFooter.Controls.Add(this.label9);
+            this.panelDepLFooter.Controls.Add(this.label8);
+            this.panelDepLFooter.Controls.Add(this.label4);
+            this.panelDepLFooter.Controls.Add(this.label1);
+            this.panelDepLFooter.Controls.Add(this.comboEmpDep);
+            this.panelDepLFooter.Controls.Add(this.txtEmpAge);
+            this.panelDepLFooter.Controls.Add(this.label5);
+            this.panelDepLFooter.Controls.Add(this.txtEmpSalary);
+            this.panelDepLFooter.Controls.Add(this.cmbGender);
+            this.panelDepLFooter.Controls.Add(this.txtEmpName);
+            this.panelDepLFooter.Controls.Add(this.label2);
+            this.panelDepLFooter.Controls.Add(this.label3);
+            this.panelDepLFooter.Controls.Add(this.txtEmpPosition);
+            this.panelDepLFooter.Controls.Add(this.txtEmpEmail);
+            this.panelDepLFooter.Controls.Add(this.label7);
+            this.panelDepLFooter.Controls.Add(this.label6);
+            this.panelDepLFooter.Controls.Add(this.txtEmpAddress);
+            this.panelDepLFooter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelDepLFooter.Location = new System.Drawing.Point(0, 0);
+            this.panelDepLFooter.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDepLFooter.Name = "panelDepLFooter";
+            this.panelDepLFooter.Size = new System.Drawing.Size(956, 214);
+            this.panelDepLFooter.TabIndex = 7;
+            // 
+            // dateHiredPicker
+            // 
+            this.dateHiredPicker.CalendarFont = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHiredPicker.CalendarTitleBackColor = System.Drawing.Color.RosyBrown;
+            this.dateHiredPicker.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHiredPicker.Location = new System.Drawing.Point(494, 71);
+            this.dateHiredPicker.Name = "dateHiredPicker";
+            this.dateHiredPicker.Size = new System.Drawing.Size(175, 25);
+            this.dateHiredPicker.TabIndex = 27;
             // 
             // btnAddEmployees
             // 
@@ -317,16 +335,28 @@
             this.btnAddEmployees.UseVisualStyleBackColor = false;
             this.btnAddEmployees.Click += new System.EventHandler(this.btnAddEmployees_Click);
             // 
-            // label2
+            // panel5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label2.Location = new System.Drawing.Point(130, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Gender";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.panel5.Controls.Add(this.lblAddEmplyoee);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(954, 35);
+            this.panel5.TabIndex = 5;
+            // 
+            // lblAddEmplyoee
+            // 
+            this.lblAddEmplyoee.AutoSize = true;
+            this.lblAddEmplyoee.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold);
+            this.lblAddEmplyoee.ForeColor = System.Drawing.Color.White;
+            this.lblAddEmplyoee.Location = new System.Drawing.Point(369, 3);
+            this.lblAddEmplyoee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddEmplyoee.Name = "lblAddEmplyoee";
+            this.lblAddEmplyoee.Size = new System.Drawing.Size(232, 27);
+            this.lblAddEmplyoee.TabIndex = 3;
+            this.lblAddEmplyoee.Text = "Add A New Employee";
             // 
             // label9
             // 
@@ -338,45 +368,6 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmpName
-            // 
-            this.txtEmpName.BackColor = System.Drawing.Color.White;
-            this.txtEmpName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpName.Location = new System.Drawing.Point(60, 71);
-            this.txtEmpName.Name = "txtEmpName";
-            this.txtEmpName.Size = new System.Drawing.Size(170, 25);
-            this.txtEmpName.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(275, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Email";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmpAge
-            // 
-            this.txtEmpAge.BackColor = System.Drawing.Color.White;
-            this.txtEmpAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtEmpAge.Location = new System.Drawing.Point(60, 127);
-            this.txtEmpAge.Multiline = true;
-            this.txtEmpAge.Name = "txtEmpAge";
-            this.txtEmpAge.Size = new System.Drawing.Size(54, 26);
-            this.txtEmpAge.TabIndex = 9;
-            // 
-            // txtEmpEmail
-            // 
-            this.txtEmpEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmpEmail.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpEmail.Location = new System.Drawing.Point(275, 71);
-            this.txtEmpEmail.Name = "txtEmpEmail";
-            this.txtEmpEmail.Size = new System.Drawing.Size(170, 25);
-            this.txtEmpEmail.TabIndex = 20;
             // 
             // label8
             // 
@@ -400,14 +391,16 @@
             this.label4.Text = "Department";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtEmpAddress
+            // label1
             // 
-            this.txtEmpAddress.BackColor = System.Drawing.Color.White;
-            this.txtEmpAddress.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpAddress.Location = new System.Drawing.Point(275, 128);
-            this.txtEmpAddress.Name = "txtEmpAddress";
-            this.txtEmpAddress.Size = new System.Drawing.Size(170, 25);
-            this.txtEmpAddress.TabIndex = 11;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label1.Location = new System.Drawing.Point(496, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Date Hired";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // comboEmpDep
             // 
@@ -418,25 +411,15 @@
             this.comboEmpDep.Size = new System.Drawing.Size(170, 26);
             this.comboEmpDep.TabIndex = 17;
             // 
-            // label7
+            // txtEmpAge
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(275, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Address";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmpPosition
-            // 
-            this.txtEmpPosition.BackColor = System.Drawing.Color.White;
-            this.txtEmpPosition.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpPosition.Location = new System.Drawing.Point(494, 127);
-            this.txtEmpPosition.Name = "txtEmpPosition";
-            this.txtEmpPosition.Size = new System.Drawing.Size(170, 25);
-            this.txtEmpPosition.TabIndex = 13;
+            this.txtEmpAge.BackColor = System.Drawing.Color.White;
+            this.txtEmpAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.txtEmpAge.Location = new System.Drawing.Point(60, 127);
+            this.txtEmpAge.Multiline = true;
+            this.txtEmpAge.Name = "txtEmpAge";
+            this.txtEmpAge.Size = new System.Drawing.Size(54, 26);
+            this.txtEmpAge.TabIndex = 9;
             // 
             // label5
             // 
@@ -449,6 +432,84 @@
             this.label5.Text = "Salary";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // txtEmpSalary
+            // 
+            this.txtEmpSalary.BackColor = System.Drawing.Color.White;
+            this.txtEmpSalary.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpSalary.Location = new System.Drawing.Point(717, 71);
+            this.txtEmpSalary.Name = "txtEmpSalary";
+            this.txtEmpSalary.Size = new System.Drawing.Size(170, 25);
+            this.txtEmpSalary.TabIndex = 15;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Location = new System.Drawing.Point(133, 126);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(95, 26);
+            this.cmbGender.TabIndex = 25;
+            // 
+            // txtEmpName
+            // 
+            this.txtEmpName.BackColor = System.Drawing.Color.White;
+            this.txtEmpName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(60, 71);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(170, 25);
+            this.txtEmpName.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label2.Location = new System.Drawing.Point(130, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Gender";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(275, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Email";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtEmpPosition
+            // 
+            this.txtEmpPosition.BackColor = System.Drawing.Color.White;
+            this.txtEmpPosition.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpPosition.Location = new System.Drawing.Point(494, 127);
+            this.txtEmpPosition.Name = "txtEmpPosition";
+            this.txtEmpPosition.Size = new System.Drawing.Size(170, 25);
+            this.txtEmpPosition.TabIndex = 13;
+            // 
+            // txtEmpEmail
+            // 
+            this.txtEmpEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmpEmail.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpEmail.Location = new System.Drawing.Point(275, 71);
+            this.txtEmpEmail.Name = "txtEmpEmail";
+            this.txtEmpEmail.Size = new System.Drawing.Size(170, 25);
+            this.txtEmpEmail.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(275, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Address";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -460,14 +521,14 @@
             this.label6.Text = "Position";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtEmpSalary
+            // txtEmpAddress
             // 
-            this.txtEmpSalary.BackColor = System.Drawing.Color.White;
-            this.txtEmpSalary.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpSalary.Location = new System.Drawing.Point(717, 71);
-            this.txtEmpSalary.Name = "txtEmpSalary";
-            this.txtEmpSalary.Size = new System.Drawing.Size(170, 25);
-            this.txtEmpSalary.TabIndex = 15;
+            this.txtEmpAddress.BackColor = System.Drawing.Color.White;
+            this.txtEmpAddress.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpAddress.Location = new System.Drawing.Point(275, 128);
+            this.txtEmpAddress.Name = "txtEmpAddress";
+            this.txtEmpAddress.Size = new System.Drawing.Size(170, 25);
+            this.txtEmpAddress.TabIndex = 11;
             // 
             // panelSideBar
             // 
@@ -583,66 +644,6 @@
             this.textBox4.Size = new System.Drawing.Size(174, 26);
             this.textBox4.TabIndex = 0;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel5.Controls.Add(this.lblAddEmplyoee);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(954, 35);
-            this.panel5.TabIndex = 5;
-            // 
-            // panelDepLFooter
-            // 
-            this.panelDepLFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDepLFooter.Controls.Add(this.dateHiredPicker);
-            this.panelDepLFooter.Controls.Add(this.btnAddEmployees);
-            this.panelDepLFooter.Controls.Add(this.panel5);
-            this.panelDepLFooter.Controls.Add(this.label9);
-            this.panelDepLFooter.Controls.Add(this.label8);
-            this.panelDepLFooter.Controls.Add(this.label4);
-            this.panelDepLFooter.Controls.Add(this.label1);
-            this.panelDepLFooter.Controls.Add(this.comboEmpDep);
-            this.panelDepLFooter.Controls.Add(this.txtEmpAge);
-            this.panelDepLFooter.Controls.Add(this.label5);
-            this.panelDepLFooter.Controls.Add(this.txtEmpSalary);
-            this.panelDepLFooter.Controls.Add(this.cmbGender);
-            this.panelDepLFooter.Controls.Add(this.txtEmpName);
-            this.panelDepLFooter.Controls.Add(this.label2);
-            this.panelDepLFooter.Controls.Add(this.label3);
-            this.panelDepLFooter.Controls.Add(this.txtEmpPosition);
-            this.panelDepLFooter.Controls.Add(this.txtEmpEmail);
-            this.panelDepLFooter.Controls.Add(this.label7);
-            this.panelDepLFooter.Controls.Add(this.label6);
-            this.panelDepLFooter.Controls.Add(this.txtEmpAddress);
-            this.panelDepLFooter.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelDepLFooter.Location = new System.Drawing.Point(0, 0);
-            this.panelDepLFooter.Margin = new System.Windows.Forms.Padding(2);
-            this.panelDepLFooter.Name = "panelDepLFooter";
-            this.panelDepLFooter.Size = new System.Drawing.Size(956, 214);
-            this.panelDepLFooter.TabIndex = 7;
-            // 
-            // btnUpdateEmployee
-            // 
-            this.btnUpdateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnUpdateEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.btnUpdateEmployee.FlatAppearance.BorderSize = 3;
-            this.btnUpdateEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateEmployee.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(979, 106);
-            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
-            this.btnUpdateEmployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnUpdateEmployee.Size = new System.Drawing.Size(177, 41);
-            this.btnUpdateEmployee.TabIndex = 25;
-            this.btnUpdateEmployee.Text = "UPDATE EMPLOYEES";
-            this.btnUpdateEmployee.UseVisualStyleBackColor = false;
-            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,16 +661,16 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Employees_Load);
             this.panelDepFooter.ResumeLayout(false);
+            this.panelDepLFooter.ResumeLayout(false);
+            this.panelDepLFooter.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panelDepLFooter.ResumeLayout(false);
-            this.panelDepLFooter.PerformLayout();
             this.ResumeLayout(false);
 
         }
