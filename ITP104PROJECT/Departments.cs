@@ -7,7 +7,8 @@ namespace ITP104PROJECT
 {
     public partial class Departments : Form
     {
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+        //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
         public Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
 
@@ -110,6 +111,7 @@ namespace ITP104PROJECT
 
         private void ViewDepartments(string message)
         {
+            conn.Close();
             dgvDepartments.Rows.Clear();
 
             dgvDepartments.ColumnCount = 3;
@@ -255,21 +257,13 @@ namespace ITP104PROJECT
                 MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             
             int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
 
-            string depId = selectedRow.Cells["departmentId"].Value?.ToString();
-            string newDepName = selectedRow.Cells["departmentName"].Value?.ToString()?.Trim();
-            string newDescription = selectedRow.Cells["description"].Value?.ToString()?.Trim();
-
-         
-            if (string.IsNullOrEmpty(depId))
-            {
-                MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            int depId = Convert.ToInt32(dgvDepartments.SelectedRows[0].Cells["Id"].Value);
+            string newDepName = txtDepName.Text.Trim();
+            string newDescription = txtDescription.Text.Trim();
 
             try
             {
@@ -288,10 +282,14 @@ namespace ITP104PROJECT
                         return;
                     }
 
-                    string currentDepName = reader["departmentName"].ToString().Trim();
-                    string currentDescription = reader["description"].ToString().Trim();
+                    string currentDepName = reader["departmentName"] != DBNull.Value
+                                            ? reader["departmentName"].ToString().Trim()
+                                            : string.Empty;
 
-                 
+                    string currentDescription = reader["description"] != DBNull.Value
+                                                 ? reader["description"].ToString().Trim()
+                                                 : string.Empty;
+
                     reader.Close();
 
                    
@@ -340,7 +338,7 @@ namespace ITP104PROJECT
 
         }
 
-        private bool UpdateDepartmentQuery(string departmentId, string newName, string newDescription)
+        private bool UpdateDepartmentQuery(int departmentId, string newName, string newDescription)
         {
             using (MySqlConnection updateConn = new MySqlConnection(conn.ConnectionString))
             {
