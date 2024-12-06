@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -38,15 +40,17 @@
             this.lblName = new System.Windows.Forms.Label();
             this.panelDepLFooter = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnViewEmployees = new System.Windows.Forms.Button();
             this.panelDepFooter = new System.Windows.Forms.Panel();
+            this.dateHiredPicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblAddEmplyoee = new System.Windows.Forms.Label();
             this.btnAddEmployees = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtEmpGender = new System.Windows.Forms.TextBox();
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmpAge = new System.Windows.Forms.TextBox();
@@ -192,7 +196,7 @@
             // 
             this.panelDepLFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDepLFooter.Controls.Add(this.panel5);
-            this.panelDepLFooter.Controls.Add(this.button2);
+            this.panelDepLFooter.Controls.Add(this.btnDelete);
             this.panelDepLFooter.Controls.Add(this.btnViewEmployees);
             this.panelDepLFooter.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDepLFooter.Location = new System.Drawing.Point(0, 0);
@@ -211,22 +215,23 @@
             this.panel5.Size = new System.Drawing.Size(246, 35);
             this.panel5.TabIndex = 5;
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(40, 145);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.button2.Size = new System.Drawing.Size(165, 40);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Delete Employee";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnDelete.FlatAppearance.BorderSize = 3;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(40, 145);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnDelete.Size = new System.Drawing.Size(165, 40);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete Employees";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnViewEmployees
             // 
@@ -250,12 +255,14 @@
             // 
             this.panelDepFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.panelDepFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDepFooter.Controls.Add(this.dateHiredPicker);
+            this.panelDepFooter.Controls.Add(this.label1);
+            this.panelDepFooter.Controls.Add(this.cmbGender);
             this.panelDepFooter.Controls.Add(this.panel3);
             this.panelDepFooter.Controls.Add(this.btnAddEmployees);
             this.panelDepFooter.Controls.Add(this.label2);
             this.panelDepFooter.Controls.Add(this.panelDepLFooter);
             this.panelDepFooter.Controls.Add(this.label9);
-            this.panelDepFooter.Controls.Add(this.txtEmpGender);
             this.panelDepFooter.Controls.Add(this.txtEmpName);
             this.panelDepFooter.Controls.Add(this.label3);
             this.panelDepFooter.Controls.Add(this.txtEmpAge);
@@ -270,11 +277,40 @@
             this.panelDepFooter.Controls.Add(this.label6);
             this.panelDepFooter.Controls.Add(this.txtEmpSalary);
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDepFooter.Location = new System.Drawing.Point(194, 394);
+            this.panelDepFooter.Location = new System.Drawing.Point(194, 484);
             this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2);
             this.panelDepFooter.Name = "panelDepFooter";
             this.panelDepFooter.Size = new System.Drawing.Size(1249, 216);
             this.panelDepFooter.TabIndex = 6;
+            // 
+            // dateHiredPicker
+            // 
+            this.dateHiredPicker.CalendarFont = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHiredPicker.CalendarTitleBackColor = System.Drawing.Color.RosyBrown;
+            this.dateHiredPicker.Location = new System.Drawing.Point(612, 176);
+            this.dateHiredPicker.Name = "dateHiredPicker";
+            this.dateHiredPicker.Size = new System.Drawing.Size(217, 20);
+            this.dateHiredPicker.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.label1.Location = new System.Drawing.Point(513, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Date Hired";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Location = new System.Drawing.Point(494, 137);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(170, 26);
+            this.cmbGender.TabIndex = 25;
             // 
             // panel3
             // 
@@ -307,7 +343,7 @@
             this.btnAddEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnAddEmployees.FlatAppearance.BorderSize = 3;
             this.btnAddEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddEmployees.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAddEmployees.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmployees.ForeColor = System.Drawing.Color.White;
             this.btnAddEmployees.Location = new System.Drawing.Point(1131, 108);
             this.btnAddEmployees.Margin = new System.Windows.Forms.Padding(2);
@@ -315,7 +351,7 @@
             this.btnAddEmployees.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnAddEmployees.Size = new System.Drawing.Size(108, 41);
             this.btnAddEmployees.TabIndex = 5;
-            this.btnAddEmployees.Text = "Add Employee";
+            this.btnAddEmployees.Text = "Add ";
             this.btnAddEmployees.UseVisualStyleBackColor = false;
             this.btnAddEmployees.Click += new System.EventHandler(this.btnAddEmployees_Click);
             // 
@@ -323,7 +359,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label2.Location = new System.Drawing.Point(490, 142);
+            this.label2.Location = new System.Drawing.Point(490, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 21;
@@ -340,15 +376,6 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtEmpGender
-            // 
-            this.txtEmpGender.BackColor = System.Drawing.Color.White;
-            this.txtEmpGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtEmpGender.Location = new System.Drawing.Point(494, 160);
-            this.txtEmpGender.Name = "txtEmpGender";
-            this.txtEmpGender.Size = new System.Drawing.Size(170, 23);
-            this.txtEmpGender.TabIndex = 22;
             // 
             // txtEmpName
             // 
@@ -374,7 +401,7 @@
             // 
             this.txtEmpAge.BackColor = System.Drawing.Color.White;
             this.txtEmpAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtEmpAge.Location = new System.Drawing.Point(280, 160);
+            this.txtEmpAge.Location = new System.Drawing.Point(280, 137);
             this.txtEmpAge.Name = "txtEmpAge";
             this.txtEmpAge.Size = new System.Drawing.Size(170, 23);
             this.txtEmpAge.TabIndex = 9;
@@ -392,7 +419,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label8.Location = new System.Drawing.Point(277, 141);
+            this.label8.Location = new System.Drawing.Point(277, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 20);
             this.label8.TabIndex = 8;
@@ -403,7 +430,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label4.Location = new System.Drawing.Point(928, 137);
+            this.label4.Location = new System.Drawing.Point(928, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 18;
@@ -423,7 +450,7 @@
             // 
             this.comboEmpDep.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.comboEmpDep.FormattingEnabled = true;
-            this.comboEmpDep.Location = new System.Drawing.Point(932, 160);
+            this.comboEmpDep.Location = new System.Drawing.Point(932, 137);
             this.comboEmpDep.Name = "comboEmpDep";
             this.comboEmpDep.Size = new System.Drawing.Size(170, 26);
             this.comboEmpDep.TabIndex = 17;
@@ -443,7 +470,7 @@
             // 
             this.txtEmpPosition.BackColor = System.Drawing.Color.White;
             this.txtEmpPosition.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.txtEmpPosition.Location = new System.Drawing.Point(712, 160);
+            this.txtEmpPosition.Location = new System.Drawing.Point(712, 137);
             this.txtEmpPosition.Name = "txtEmpPosition";
             this.txtEmpPosition.Size = new System.Drawing.Size(170, 23);
             this.txtEmpPosition.TabIndex = 13;
@@ -463,7 +490,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.label6.Location = new System.Drawing.Point(708, 142);
+            this.label6.Location = new System.Drawing.Point(708, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 12;
@@ -497,7 +524,7 @@
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(194, 610);
+            this.panelSideBar.Size = new System.Drawing.Size(194, 700);
             this.panelSideBar.TabIndex = 4;
             // 
             // pictureBox1
@@ -517,13 +544,29 @@
             this.dgvEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dgvEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmployees.Location = new System.Drawing.Point(194, 58);
             this.dgvEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersWidth = 51;
             this.dgvEmployees.RowTemplate.Height = 24;
-            this.dgvEmployees.Size = new System.Drawing.Size(1249, 339);
+            this.dgvEmployees.Size = new System.Drawing.Size(1249, 429);
             this.dgvEmployees.TabIndex = 5;
             // 
             // lblEmployees
@@ -582,7 +625,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1443, 610);
+            this.ClientSize = new System.Drawing.Size(1443, 700);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panelSideBar);
@@ -630,7 +673,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddEmployees;
-        private System.Windows.Forms.TextBox txtEmpGender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmpEmail;
         private System.Windows.Forms.Label label4;
@@ -645,8 +687,11 @@
         private System.Windows.Forms.TextBox txtEmpAge;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEmpName;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblAddEmplyoee;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateHiredPicker;
     }
 }

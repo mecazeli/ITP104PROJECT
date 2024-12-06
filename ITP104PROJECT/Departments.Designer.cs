@@ -201,7 +201,7 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnView.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(35, 84);
+            this.btnView.Location = new System.Drawing.Point(35, 76);
             this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -219,7 +219,7 @@
             this.btnDelDep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelDep.ForeColor = System.Drawing.Color.White;
-            this.btnDelDep.Location = new System.Drawing.Point(35, 138);
+            this.btnDelDep.Location = new System.Drawing.Point(35, 128);
             this.btnDelDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelDep.Name = "btnDelDep";
             this.btnDelDep.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -432,43 +432,40 @@
             // 
             // dgvDepartments
             // 
-            this.dgvDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDepartments.AllowUserToOrderColumns = true;
+            this.dgvDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDepartments.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dgvDepartments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDepartments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDepartments.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDepartments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDepartments.Location = new System.Drawing.Point(194, 0);
-            this.dgvDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDepartments.Location = new System.Drawing.Point(194, 58);
+            this.dgvDepartments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDepartments.Name = "dgvDepartments";
-            this.dgvDepartments.RowHeadersWidth = 51;
-            this.dgvDepartments.RowTemplate.Height = 24;
-            this.dgvDepartments.Size = new System.Drawing.Size(1249, 433);
-            this.dgvDepartments.TabIndex = 2;
-            this.dgvDepartments.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartments_CellEndEdit);
+            this.dgvDepartments.Size = new System.Drawing.Size(1249, 383);
+            this.dgvDepartments.TabIndex = 5;
             // 
             // Departments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 649);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.dgvDepartments);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panelSideBar);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -493,8 +490,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDepartments;
 
         private System.Windows.Forms.Panel panelSideBar;
         private System.Windows.Forms.Button button1;
@@ -527,6 +522,7 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvDepartments;
         //private System.Windows.Forms.PictureBox pictureBox1;
         //private System.Windows.Forms.Label lblName;
         //private System.Windows.Forms.Button btnDashboard;
