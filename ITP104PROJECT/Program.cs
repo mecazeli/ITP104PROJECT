@@ -21,7 +21,7 @@ namespace ITP104PROJECT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Dashboard(admin));
+            Application.Run(new Dashboard());
         }
     }
 }
