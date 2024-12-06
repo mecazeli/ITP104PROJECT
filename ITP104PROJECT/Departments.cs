@@ -129,7 +129,7 @@ namespace ITP104PROJECT
                 DataTable departmentsTable = new DataTable();
                 departmentsTable.Load(rd);
 
-          
+
                 if (departmentsTable.Rows.Count > 0)
                 {
                     foreach (DataRow row in departmentsTable.Rows)
@@ -248,29 +248,128 @@ namespace ITP104PROJECT
             }
         }
 
-        public void UpdateDepartment(string depId, string fieldName,string newValue)
+        private void UpdateDepartment()
         {
+            if (dgvDepartments.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Please select a department to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            int selectedRowCell = dgvDepartments.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvDepartments.Rows[selectedRowCell];
+
+            string depId = selectedRow.Cells["departmentId"].Value?.ToString();
+            string newDepName = selectedRow.Cells["departmentName"].Value?.ToString()?.Trim();
+            string newDescription = selectedRow.Cells["description"].Value?.ToString()?.Trim();
+
+         
+            if (string.IsNullOrEmpty(depId))
+            {
+                MessageBox.Show("Invalid department selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 conn.Open();
 
-                string query = $"UPDATE department SET {fieldName} = @newValue WHERE departmentId = @id";
-                MySqlCommand command = new MySqlCommand(query, conn);
+               
+                string fetchQuery = "SELECT departmentName, description FROM department WHERE departmentId = @id";
+                MySqlCommand fetchCommand = new MySqlCommand(fetchQuery, conn);
+                fetchCommand.Parameters.AddWithValue("@id", depId);
 
-                command.Parameters.AddWithValue("@newValue",newValue);
-                command.Parameters.AddWithValue("@id", depId);
+                using (MySqlDataReader reader = fetchCommand.ExecuteReader())
+                {
+                    if (!reader.Read())
+                    {
+                        MessageBox.Show("Department not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                command.ExecuteNonQuery();
+                    string currentDepName = reader["departmentName"].ToString().Trim();
+                    string currentDescription = reader["description"].ToString().Trim();
+
+                 
+                    reader.Close();
+
+                   
+                    if (currentDepName == newDepName && currentDescription == newDescription)
+                    {
+                        MessageBox.Show("No changes detected to update.", "No Update Needed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+              
+                    DialogResult dialogResult = MessageBox.Show(
+                        $"Are you sure you want to update Department ID {depId}?\n\n" +
+                        $"Old Name: {currentDepName}\nNew Name: {newDepName}\n\n" +
+                        $"Old Description: {currentDescription}\nNew Description: {newDescription}",
+                        "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Update cancelled by the user.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    bool isUpdated = UpdateDepartmentQuery(depId, newDepName, newDescription);
+                    if (isUpdated)
+                    {
+                        MessageBox.Show("Department updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ViewDepartments("Department list updated after modification.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows were updated. Please check the input and try again.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while updating the department: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                conn.Close();
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+        }
+
+    
+
+
+
+        private bool UpdateDepartmentQuery(string departmentId, string newName, string newDescription)
+        {
+            using (MySqlConnection updateConn = new MySqlConnection(conn.ConnectionString))
+            {
+                try
+                {
+                    updateConn.Open();
+
+                    string updateQuery = "UPDATE department SET departmentName = @newName, description = @newDesc WHERE departmentId = @id";
+
+                    MySqlCommand updateCommand = new MySqlCommand(updateQuery, updateConn);
+                    updateCommand.Parameters.AddWithValue("@newName", newName);
+                    updateCommand.Parameters.AddWithValue("@newDesc", newDescription);
+                    updateCommand.Parameters.AddWithValue("@id", departmentId);
+
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while updating the department: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
         }
+       
 
        
         public bool IsDepartmentNameExists(string depName)
@@ -308,49 +407,9 @@ namespace ITP104PROJECT
             return true;
         }
 
-        private void dgvDepartments_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            int columnIndex = e.ColumnIndex;
-
-            if (rowIndex >= 0 && columnIndex >= 0)
-            {
-               
-                string depID = dgvDepartments.Rows[rowIndex].Cells["Id"].Value?.ToString();
-                string fieldName = dgvDepartments.Columns[columnIndex].HeaderText.Replace(" ", ""); 
-                string newValue = dgvDepartments.Rows[rowIndex].Cells[columnIndex].Value?.ToString();
-
-               
-                if (string.IsNullOrEmpty(depID) || string.IsNullOrEmpty(fieldName) || string.IsNullOrEmpty(newValue))
-                {
-                    MessageBox.Show("Invalid data. Please check the values.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-               
-                DialogResult dialogResult = MessageBox.Show(
-                    $"Are you sure you want to update the '{fieldName}' for Department ID {depID} to '{newValue}'?",
-                    "Confirm Update",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                );
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    try
-                    {
-                        UpdateDepartment(depID, fieldName, newValue);
-                        ViewDepartments("Department list updated.");
-                        MessageBox.Show("Information updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error updating department: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            UpdateDepartment();
         }
-
-
     }
 }
