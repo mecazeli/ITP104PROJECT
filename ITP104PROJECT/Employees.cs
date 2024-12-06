@@ -15,7 +15,7 @@ namespace ITP104PROJECT
     {
 
         public Admin admin;
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         public MySqlConnection conn;
         public Employees()
         {
@@ -172,12 +172,95 @@ namespace ITP104PROJECT
             }
         }
 
+        public bool ValidateEmployeeInput(string empName, string empAddress, string empAge, string empEmail, string empPosition, string empGender, string empSalary)
+        {
+            if (string.IsNullOrEmpty(empName) || string.IsNullOrEmpty(empAddress) || string.IsNullOrEmpty(empAge) ||
+                string.IsNullOrEmpty(empEmail) || string.IsNullOrEmpty(empPosition) || string.IsNullOrEmpty(empGender) || string.IsNullOrEmpty(empSalary))
+            {
+                MessageBox.Show("You missed some inputs. Please Try Again.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
+            return true;
+        }
+        public bool IsEmployeeNameExists(string empName)
+        {
+            try
+            {
+                conn.Open();
+
+                string checkQuery = "SELECT COUNT(*) FROM employee WHERE employeeName = @name";
+                MySqlCommand command = new MySqlCommand(checkQuery, conn);
+                command.Parameters.AddWithValue("@name", empName);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while checking the employee name: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void AddingEmployee()
+        {
+            string empName = txtEmpName.Text.Trim();
+            string empAddress = txtEmpAddress.Text.Trim();
+            string empAge = txtEmpAge.Text.Trim();
+            string empEmail = txtEmpEmail.Text.Trim();
+            string empPosition = txtEmpPosition.Text.Trim();
+            string empGender = txtEmpGender.Text.Trim();
+            string empSalary = txtEmpSalary.Text.Trim(); //dapat int o double itong salary pero wla pa time
+
+            if (!ValidateEmployeeInput(empName, empAddress, empAge, empEmail, empPosition, empGender, empSalary))
+            {
+                return;
+            }
+
+            if (IsEmployeeNameExists(empName))
+            {
+                MessageBox.Show("This employee name already exists. Please use a different employee name.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                conn.Open();
+
+                string query = "INSERT INTO employee(WIP) VALUES(WIP)";
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                //command.Parameters.AddWithValue("@name", );
+                //command.Parameters.AddWithValue("@description", );
+                
+                //WIP
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
 
         private void btnViewEmployees_Click(object sender, EventArgs e)
         {
             ViewEmployees();
+        }
+
+        private void btnAddEmployees_Click(object sender, EventArgs e)
+        {
+            AddingEmployee();
         }
     }
 

@@ -43,23 +43,23 @@
             this.panelDepFooter = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblAddEmplyoee = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddEmployees = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtEmpGender = new System.Windows.Forms.TextBox();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtEmpAge = new System.Windows.Forms.TextBox();
+            this.txtEmpEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtEmpAddress = new System.Windows.Forms.TextBox();
+            this.comboEmpDep = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtEmpPosition = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEmpSalary = new System.Windows.Forms.TextBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
@@ -251,24 +251,24 @@
             this.panelDepFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.panelDepFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDepFooter.Controls.Add(this.panel3);
-            this.panelDepFooter.Controls.Add(this.button3);
+            this.panelDepFooter.Controls.Add(this.btnAddEmployees);
             this.panelDepFooter.Controls.Add(this.label2);
             this.panelDepFooter.Controls.Add(this.panelDepLFooter);
             this.panelDepFooter.Controls.Add(this.label9);
-            this.panelDepFooter.Controls.Add(this.textBox5);
-            this.panelDepFooter.Controls.Add(this.textBox11);
+            this.panelDepFooter.Controls.Add(this.txtEmpGender);
+            this.panelDepFooter.Controls.Add(this.txtEmpName);
             this.panelDepFooter.Controls.Add(this.label3);
-            this.panelDepFooter.Controls.Add(this.textBox10);
-            this.panelDepFooter.Controls.Add(this.textBox6);
+            this.panelDepFooter.Controls.Add(this.txtEmpAge);
+            this.panelDepFooter.Controls.Add(this.txtEmpEmail);
             this.panelDepFooter.Controls.Add(this.label8);
             this.panelDepFooter.Controls.Add(this.label4);
-            this.panelDepFooter.Controls.Add(this.textBox9);
-            this.panelDepFooter.Controls.Add(this.comboBox2);
+            this.panelDepFooter.Controls.Add(this.txtEmpAddress);
+            this.panelDepFooter.Controls.Add(this.comboEmpDep);
             this.panelDepFooter.Controls.Add(this.label7);
-            this.panelDepFooter.Controls.Add(this.textBox8);
+            this.panelDepFooter.Controls.Add(this.txtEmpPosition);
             this.panelDepFooter.Controls.Add(this.label5);
             this.panelDepFooter.Controls.Add(this.label6);
-            this.panelDepFooter.Controls.Add(this.textBox7);
+            this.panelDepFooter.Controls.Add(this.txtEmpSalary);
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDepFooter.Location = new System.Drawing.Point(194, 394);
             this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2);
@@ -299,24 +299,25 @@
             this.lblAddEmplyoee.TabIndex = 3;
             this.lblAddEmplyoee.Text = "Add A New Employee";
             // 
-            // button3
+            // btnAddEmployees
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnAddEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1131, 108);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.button3.Size = new System.Drawing.Size(108, 41);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Add Employee";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAddEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnAddEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
+            this.btnAddEmployees.FlatAppearance.BorderSize = 3;
+            this.btnAddEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddEmployees.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAddEmployees.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployees.Location = new System.Drawing.Point(1131, 108);
+            this.btnAddEmployees.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmployees.Name = "btnAddEmployees";
+            this.btnAddEmployees.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnAddEmployees.Size = new System.Drawing.Size(108, 41);
+            this.btnAddEmployees.TabIndex = 5;
+            this.btnAddEmployees.Text = "Add Employee";
+            this.btnAddEmployees.UseVisualStyleBackColor = false;
+            this.btnAddEmployees.Click += new System.EventHandler(this.btnAddEmployees_Click);
             // 
             // label2
             // 
@@ -340,23 +341,23 @@
             this.label9.Text = "Name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox5
+            // txtEmpGender
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.textBox5.Location = new System.Drawing.Point(494, 160);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 23);
-            this.textBox5.TabIndex = 22;
+            this.txtEmpGender.BackColor = System.Drawing.Color.White;
+            this.txtEmpGender.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.txtEmpGender.Location = new System.Drawing.Point(494, 160);
+            this.txtEmpGender.Name = "txtEmpGender";
+            this.txtEmpGender.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpGender.TabIndex = 22;
             // 
-            // textBox11
+            // txtEmpName
             // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(280, 81);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(170, 23);
-            this.textBox11.TabIndex = 6;
+            this.txtEmpName.BackColor = System.Drawing.Color.White;
+            this.txtEmpName.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(280, 81);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpName.TabIndex = 6;
             // 
             // label3
             // 
@@ -369,23 +370,23 @@
             this.label3.Text = "Email";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox10
+            // txtEmpAge
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.textBox10.Location = new System.Drawing.Point(280, 160);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(170, 23);
-            this.textBox10.TabIndex = 9;
+            this.txtEmpAge.BackColor = System.Drawing.Color.White;
+            this.txtEmpAge.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.txtEmpAge.Location = new System.Drawing.Point(280, 160);
+            this.txtEmpAge.Name = "txtEmpAge";
+            this.txtEmpAge.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpAge.TabIndex = 9;
             // 
-            // textBox6
+            // txtEmpEmail
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(494, 81);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(170, 23);
-            this.textBox6.TabIndex = 20;
+            this.txtEmpEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmpEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpEmail.Location = new System.Drawing.Point(494, 81);
+            this.txtEmpEmail.Name = "txtEmpEmail";
+            this.txtEmpEmail.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpEmail.TabIndex = 20;
             // 
             // label8
             // 
@@ -409,23 +410,23 @@
             this.label4.Text = "Department";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox9
+            // txtEmpAddress
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(712, 81);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(170, 23);
-            this.textBox9.TabIndex = 11;
+            this.txtEmpAddress.BackColor = System.Drawing.Color.White;
+            this.txtEmpAddress.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpAddress.Location = new System.Drawing.Point(712, 81);
+            this.txtEmpAddress.Name = "txtEmpAddress";
+            this.txtEmpAddress.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpAddress.TabIndex = 11;
             // 
-            // comboBox2
+            // comboEmpDep
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(932, 160);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(170, 26);
-            this.comboBox2.TabIndex = 17;
+            this.comboEmpDep.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.comboEmpDep.FormattingEnabled = true;
+            this.comboEmpDep.Location = new System.Drawing.Point(932, 160);
+            this.comboEmpDep.Name = "comboEmpDep";
+            this.comboEmpDep.Size = new System.Drawing.Size(170, 26);
+            this.comboEmpDep.TabIndex = 17;
             // 
             // label7
             // 
@@ -438,14 +439,14 @@
             this.label7.Text = "Address";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox8
+            // txtEmpPosition
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.textBox8.Location = new System.Drawing.Point(712, 160);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(170, 23);
-            this.textBox8.TabIndex = 13;
+            this.txtEmpPosition.BackColor = System.Drawing.Color.White;
+            this.txtEmpPosition.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.txtEmpPosition.Location = new System.Drawing.Point(712, 160);
+            this.txtEmpPosition.Name = "txtEmpPosition";
+            this.txtEmpPosition.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpPosition.TabIndex = 13;
             // 
             // label5
             // 
@@ -469,14 +470,14 @@
             this.label6.Text = "Position";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox7
+            // txtEmpSalary
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(932, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(170, 23);
-            this.textBox7.TabIndex = 15;
+            this.txtEmpSalary.BackColor = System.Drawing.Color.White;
+            this.txtEmpSalary.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpSalary.Location = new System.Drawing.Point(932, 81);
+            this.txtEmpSalary.Name = "txtEmpSalary";
+            this.txtEmpSalary.Size = new System.Drawing.Size(170, 23);
+            this.txtEmpSalary.TabIndex = 15;
             // 
             // panelSideBar
             // 
@@ -510,16 +511,19 @@
             // 
             // dgvEmployees
             // 
+            this.dgvEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dgvEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmployees.Location = new System.Drawing.Point(0, 0);
+            this.dgvEmployees.Location = new System.Drawing.Point(194, 58);
             this.dgvEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersWidth = 51;
             this.dgvEmployees.RowTemplate.Height = 24;
-            this.dgvEmployees.Size = new System.Drawing.Size(1443, 610);
+            this.dgvEmployees.Size = new System.Drawing.Size(1249, 339);
             this.dgvEmployees.TabIndex = 5;
             // 
             // lblEmployees
@@ -625,22 +629,22 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnAddEmployees;
+        private System.Windows.Forms.TextBox txtEmpGender;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtEmpEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboEmpDep;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEmpSalary;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtEmpPosition;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtEmpAddress;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtEmpAge;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtEmpName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblAddEmplyoee;
