@@ -15,7 +15,7 @@ namespace ITP104PROJECT
     {
 
         public Admin admin;
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company port=3307;";
+        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         public MySqlConnection conn;
         public Employees()
