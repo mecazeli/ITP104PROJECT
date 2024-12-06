@@ -490,19 +490,18 @@
             this.lblBackupRestore.TabIndex = 0;
             this.lblBackupRestore.Text = "Backup and Restore";
             // 
-            this.SuspendLayout();
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(1924, 799);
+            this.ClientSize = new System.Drawing.Size(1924, 862);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelSideBar);
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSideBar.ResumeLayout(false);
@@ -523,9 +522,6 @@
             this.gpBackup.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.ClientSize = new System.Drawing.Size(1400, 570);
-            this.Name = "Settings";
-            this.Text = "Settings";
             this.ResumeLayout(false);
 
         }
