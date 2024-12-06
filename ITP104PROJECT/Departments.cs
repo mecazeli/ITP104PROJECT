@@ -9,7 +9,7 @@ namespace ITP104PROJECT
     {
         public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
-        public Admin admin;
+        public Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
 
         public Departments()
         {
