@@ -244,6 +244,7 @@
             this.btnViewEmployees.TabIndex = 4;
             this.btnViewEmployees.Text = "View Employees";
             this.btnViewEmployees.UseVisualStyleBackColor = false;
+            this.btnViewEmployees.Click += new System.EventHandler(this.btnViewEmployees_Click);
             // 
             // panelDepFooter
             // 
@@ -520,7 +521,6 @@
             this.dgvEmployees.RowTemplate.Height = 24;
             this.dgvEmployees.Size = new System.Drawing.Size(1443, 610);
             this.dgvEmployees.TabIndex = 5;
-        
             // 
             // lblEmployees
             // 
@@ -588,6 +588,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Employees";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Employees_Load);
             this.panelDepLFooter.ResumeLayout(false);
             this.panelDepFooter.ResumeLayout(false);
             this.panelDepFooter.PerformLayout();
