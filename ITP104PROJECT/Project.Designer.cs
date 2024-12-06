@@ -48,13 +48,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDepFooter = new System.Windows.Forms.Panel();
+            this.btnUpdateProject = new System.Windows.Forms.Button();
+            this.projectTargetDate = new System.Windows.Forms.DateTimePicker();
             this.btnDeleteProject = new System.Windows.Forms.Button();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.txtProjName = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblAddEmplyoee = new System.Windows.Forms.Label();
             this.panelDepLFooter = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdateTask = new System.Windows.Forms.Button();
+            this.taskTargetDate = new System.Windows.Forms.DateTimePicker();
+            this.btnDeleteTask = new System.Windows.Forms.Button();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,10 +67,6 @@
             this.cbEmployee = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.taskTargetDate = new System.Windows.Forms.DateTimePicker();
-            this.projectTargetDate = new System.Windows.Forms.DateTimePicker();
-            this.btnUpdateProject = new System.Windows.Forms.Button();
-            this.btnUpdateTask = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
             this.panel7.SuspendLayout();
             this.panelSideBar.SuspendLayout();
@@ -79,13 +79,16 @@
             // 
             // dgvProject
             // 
+            this.dgvProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProject.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProject.Location = new System.Drawing.Point(0, 0);
+            this.dgvProject.Location = new System.Drawing.Point(194, 54);
             this.dgvProject.Name = "dgvProject";
             this.dgvProject.RowHeadersWidth = 51;
-            this.dgvProject.Size = new System.Drawing.Size(1370, 610);
+            this.dgvProject.Size = new System.Drawing.Size(1176, 341);
             this.dgvProject.TabIndex = 1;
             // 
             // lblTargetDate
@@ -130,6 +133,7 @@
             this.btnAddProject.TabIndex = 3;
             this.btnAddProject.Text = "ADD";
             this.btnAddProject.UseVisualStyleBackColor = false;
+            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
             // 
             // panel7
             // 
@@ -347,6 +351,28 @@
             this.panelDepFooter.Size = new System.Drawing.Size(1176, 216);
             this.panelDepFooter.TabIndex = 10;
             // 
+            // btnUpdateProject
+            // 
+            this.btnUpdateProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnUpdateProject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateProject.Location = new System.Drawing.Point(428, 167);
+            this.btnUpdateProject.Name = "btnUpdateProject";
+            this.btnUpdateProject.Size = new System.Drawing.Size(93, 35);
+            this.btnUpdateProject.TabIndex = 35;
+            this.btnUpdateProject.Text = "UPDATE";
+            this.btnUpdateProject.UseVisualStyleBackColor = false;
+            this.btnUpdateProject.Click += new System.EventHandler(this.btnUpdateProject_Click);
+            // 
+            // projectTargetDate
+            // 
+            this.projectTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectTargetDate.Location = new System.Drawing.Point(231, 136);
+            this.projectTargetDate.Name = "projectTargetDate";
+            this.projectTargetDate.Size = new System.Drawing.Size(291, 25);
+            this.projectTargetDate.TabIndex = 34;
+            // 
             // btnDeleteProject
             // 
             this.btnDeleteProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
@@ -359,6 +385,7 @@
             this.btnDeleteProject.TabIndex = 30;
             this.btnDeleteProject.Text = "DELETE";
             this.btnDeleteProject.UseVisualStyleBackColor = false;
+            this.btnDeleteProject.Click += new System.EventHandler(this.btnDeleteProject_Click);
             // 
             // cbDepartment
             // 
@@ -407,7 +434,7 @@
             this.panelDepLFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDepLFooter.Controls.Add(this.btnUpdateTask);
             this.panelDepLFooter.Controls.Add(this.taskTargetDate);
-            this.panelDepLFooter.Controls.Add(this.button2);
+            this.panelDepLFooter.Controls.Add(this.btnDeleteTask);
             this.panelDepLFooter.Controls.Add(this.btnAddTask);
             this.panelDepLFooter.Controls.Add(this.label2);
             this.panelDepLFooter.Controls.Add(this.label6);
@@ -422,18 +449,41 @@
             this.panelDepLFooter.Size = new System.Drawing.Size(648, 214);
             this.panelDepLFooter.TabIndex = 29;
             // 
-            // button2
+            // btnUpdateTask
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(308, 166);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 35);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "DELETE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdateTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnUpdateTask.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateTask.Location = new System.Drawing.Point(407, 166);
+            this.btnUpdateTask.Name = "btnUpdateTask";
+            this.btnUpdateTask.Size = new System.Drawing.Size(93, 35);
+            this.btnUpdateTask.TabIndex = 34;
+            this.btnUpdateTask.Text = "UPDATE";
+            this.btnUpdateTask.UseVisualStyleBackColor = false;
+            this.btnUpdateTask.Click += new System.EventHandler(this.btnUpdateTask_Click);
+            // 
+            // taskTargetDate
+            // 
+            this.taskTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskTargetDate.Location = new System.Drawing.Point(208, 130);
+            this.taskTargetDate.Name = "taskTargetDate";
+            this.taskTargetDate.Size = new System.Drawing.Size(291, 25);
+            this.taskTargetDate.TabIndex = 33;
+            // 
+            // btnDeleteTask
+            // 
+            this.btnDeleteTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnDeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDeleteTask.Location = new System.Drawing.Point(308, 166);
+            this.btnDeleteTask.Name = "btnDeleteTask";
+            this.btnDeleteTask.Size = new System.Drawing.Size(93, 35);
+            this.btnDeleteTask.TabIndex = 32;
+            this.btnDeleteTask.Text = "DELETE";
+            this.btnDeleteTask.UseVisualStyleBackColor = false;
+            this.btnDeleteTask.Click += new System.EventHandler(this.btnDeleteTask_Click);
             // 
             // btnAddTask
             // 
@@ -447,6 +497,7 @@
             this.btnAddTask.TabIndex = 31;
             this.btnAddTask.Text = "ADD";
             this.btnAddTask.UseVisualStyleBackColor = false;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
             // label2
             // 
@@ -518,48 +569,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Assign Task";
             // 
-            // taskTargetDate
-            // 
-            this.taskTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTargetDate.Location = new System.Drawing.Point(208, 130);
-            this.taskTargetDate.Name = "taskTargetDate";
-            this.taskTargetDate.Size = new System.Drawing.Size(291, 25);
-            this.taskTargetDate.TabIndex = 33;
-            // 
-            // projectTargetDate
-            // 
-            this.projectTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectTargetDate.Location = new System.Drawing.Point(231, 136);
-            this.projectTargetDate.Name = "projectTargetDate";
-            this.projectTargetDate.Size = new System.Drawing.Size(291, 25);
-            this.projectTargetDate.TabIndex = 34;
-            // 
-            // btnUpdateProject
-            // 
-            this.btnUpdateProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnUpdateProject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdateProject.Location = new System.Drawing.Point(428, 167);
-            this.btnUpdateProject.Name = "btnUpdateProject";
-            this.btnUpdateProject.Size = new System.Drawing.Size(93, 35);
-            this.btnUpdateProject.TabIndex = 35;
-            this.btnUpdateProject.Text = "UPDATE";
-            this.btnUpdateProject.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateTask
-            // 
-            this.btnUpdateTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnUpdateTask.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdateTask.Location = new System.Drawing.Point(407, 166);
-            this.btnUpdateTask.Name = "btnUpdateTask";
-            this.btnUpdateTask.Size = new System.Drawing.Size(93, 35);
-            this.btnUpdateTask.TabIndex = 34;
-            this.btnUpdateTask.Text = "UPDATE";
-            this.btnUpdateTask.UseVisualStyleBackColor = false;
-            // 
             // Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,7 +636,7 @@
         private System.Windows.Forms.ComboBox cbEmployee;
         private System.Windows.Forms.Button btnDeleteProject;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDeleteTask;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.DateTimePicker taskTargetDate;
         private System.Windows.Forms.DateTimePicker projectTargetDate;
