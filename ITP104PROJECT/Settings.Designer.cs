@@ -490,6 +490,8 @@
             this.lblBackupRestore.TabIndex = 0;
             this.lblBackupRestore.Text = "Backup and Restore";
             // 
+            this.SuspendLayout();
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -521,6 +523,9 @@
             this.gpBackup.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(1400, 570);
+            this.Name = "Settings";
+            this.Text = "Settings";
             this.ResumeLayout(false);
 
         }

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ProjectName.My_Classes;
 
-
 namespace ITP104PROJECT
 {
     public partial class Settings : Form
@@ -66,5 +65,6 @@ namespace ITP104PROJECT
         {
 
         }
+
     }
 }
