@@ -106,11 +106,6 @@ namespace ITP104PROJECT
             ViewDepartments("Deleted Database Successfully!");
         }
 
-        //private void btnUpdDep_Click(object sender, EventArgs e)
-        //{
-        //    UpdatingDepartment();
-        //    ViewDepartments("Updated Database Successfully!");
-        //}
 
         private void ViewDepartments(string message)
         {
