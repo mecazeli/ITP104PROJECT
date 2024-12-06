@@ -340,10 +340,6 @@ namespace ITP104PROJECT
 
         }
 
-    
-
-
-
         private bool UpdateDepartmentQuery(string departmentId, string newName, string newDescription)
         {
             using (MySqlConnection updateConn = new MySqlConnection(conn.ConnectionString))
