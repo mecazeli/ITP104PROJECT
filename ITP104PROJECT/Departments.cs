@@ -19,6 +19,7 @@ namespace ITP104PROJECT
             //lblName.Text = string.IsNullOrEmpty(admin.name) ? "Welcome!" : admin.name;
             btnDashboard.Click += new EventHandler(btnSide_Click);
             btnSideDep.Click += new EventHandler(btnSide_Click);
+            btnSideEmp.Click += new EventHandler(btnSide_Click);
             btnSideProj.Click += new EventHandler(btnSide_Click);
             btnSettings.Click += new EventHandler(btnSide_Click);
             btnLogout.Click += new EventHandler(btnSide_Click);

@@ -25,15 +25,10 @@ namespace ITP104PROJECT
             InitializeComponent();
             btnDashboard.Click += new EventHandler(btnSide_Click);
             btnSideDep.Click += new EventHandler(btnSide_Click);
+            btnSideEmp.Click += new EventHandler(btnSide_Click);
             btnSideProj.Click += new EventHandler(btnSide_Click);
             btnSettings.Click += new EventHandler(btnSide_Click);
             btnLogout.Click += new EventHandler(btnSide_Click);
-        }
-
-      
-        private void Project_Load(object sender, EventArgs e)
-        {
-            label4.Text = admin.name;
         }
 
         private void btnSide_Click(object sender, EventArgs e)
@@ -96,6 +91,110 @@ namespace ITP104PROJECT
             }
         }
 
+
+
+        private void Project_Load(object sender, EventArgs e)
+        {
+            label4.Text = admin.name;
+            ViewProjectAndTasks("View Project and Tasks");
+        }
+
+      
+
+
+        private void ViewProjectAndTasks(string message)
+        {
+            conn.Close();
+            dgvProject.Rows.Clear();
+            dgvProject.Columns.Clear();
+
+            dgvProject.ColumnCount = 6;
+            dgvProject.Columns[0].Name = "Project ID";
+            dgvProject.Columns[1].Name = "Project Name";
+            dgvProject.Columns[2].Name = "Project Start Date";
+            dgvProject.Columns[3].Name = "Project End Date";
+            dgvProject.Columns[4].Name = "Task ID";
+            dgvProject.Columns[5].Name = "Task Name";
+            dgvProject.Columns[6].Name = "Employee ID";
+
+            DataGridViewComboBoxColumn statusColumn = new DataGridViewComboBoxColumn();
+            statusColumn.Name = "Project Status";
+            statusColumn.HeaderText = "Project Status";
+            statusColumn.Items.AddRange("Pending", "In Progress", "Completed");
+            dgvProject.Columns.Add(statusColumn);
+
+
+            try
+            {
+               
+                conn.Open();
+                MessageBox.Show(message);
+
+               
+                string query = @"
+             SELECT 
+                p.projectId,
+                p.projectName,
+                p.startDate AS ProjectStartDate,
+                p.endDate AS ProjectEndDate,
+                t.taskId,
+                t.taskName,
+                t.employeeId,
+                p.status AS projectStatus
+            FROM 
+                project p
+            LEFT JOIN 
+                task t ON p.projectId = t.projectId;
+           ";
+
+              
+                MySqlCommand command = new MySqlCommand(query, conn);
+                MySqlDataReader reader = command.ExecuteReader();
+
+              
+                DataTable projectTaskTable = new DataTable();
+                projectTaskTable.Load(reader);
+
+              
+                if (projectTaskTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in projectTaskTable.Rows)
+                    {
+                        
+                        int rowIndex = dgvProject.Rows.Add(
+                            row["projectId"],
+                            row["projectName"],
+                            row["ProjectStartDate"],
+                            row["ProjectEndDate"],
+                            row["taskId"] != DBNull.Value ? row["taskId"] : null,
+                            row["taskName"] != DBNull.Value ? row["taskName"] : null,
+                            row["employeeId"] != DBNull.Value ? row["employeeId"] : null
+                        );
+
+                       
+                        dgvProject.Rows[rowIndex].Cells["Project Status"].Value = row["projectStatus"] != DBNull.Value
+                            ? row["projectStatus"].ToString()
+                            : "Pending";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No projects found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot connect to the database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
 
         private void AddProject()
         {
