@@ -63,7 +63,7 @@
             this.btnAddTask = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTask = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbEmployee = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -453,7 +453,7 @@
             this.panelDepLFooter.Controls.Add(this.btnAddTask);
             this.panelDepLFooter.Controls.Add(this.label2);
             this.panelDepLFooter.Controls.Add(this.label6);
-            this.panelDepLFooter.Controls.Add(this.textBox2);
+            this.panelDepLFooter.Controls.Add(this.txtTask);
             this.panelDepLFooter.Controls.Add(this.label7);
             this.panelDepLFooter.Controls.Add(this.cbEmployee);
             this.panelDepLFooter.Controls.Add(this.panel5);
@@ -542,14 +542,14 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Employee";
             // 
-            // textBox2
+            // txtTask
             // 
-            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.textBox2.Location = new System.Drawing.Point(277, 66);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 29);
-            this.textBox2.TabIndex = 11;
+            this.txtTask.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.txtTask.Location = new System.Drawing.Point(277, 66);
+            this.txtTask.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTask.Name = "txtTask";
+            this.txtTask.Size = new System.Drawing.Size(387, 29);
+            this.txtTask.TabIndex = 11;
             // 
             // label7
             // 
@@ -657,7 +657,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTask;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbEmployee;
         private System.Windows.Forms.Button btnDeleteProject;

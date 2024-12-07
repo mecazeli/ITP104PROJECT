@@ -98,9 +98,68 @@ namespace ITP104PROJECT
         {
             label4.Text = admin.name;
             ViewProjectAndTasks("View Project and Tasks");
+            PopulateDepartmentComboBox();
+            PopulateEmployee();
         }
 
-      
+        private void PopulateDepartmentComboBox()
+        {
+            try
+            {
+                string query = "SELECT departmentId, departmentName FROM department";
+                DataTable dep = new DataTable();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        conn.Open();
+                        adapter.Fill(dep);
+                    }
+                }
+
+                cbDepartment.DataSource = dep;
+                cbDepartment.ValueMember = "departmentId";
+                cbDepartment.DisplayMember = "departmentName";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error populating departments: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
+        private void PopulateEmployee()
+        {
+            try
+            {
+                string query = "SELECT e.employeeId, e.employeeName FROM employee e";
+                DataTable employees = new DataTable();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        conn.Open();
+                        adapter.Fill(employees);
+                    }
+                }
+                cbEmployee.DataSource = employees;
+                cbEmployee.ValueMember = "employeeId";
+                cbEmployee.DisplayMember = "employeeName";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error populating employee comboBox: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
 
         private void ViewProjectAndTasks(string message)
@@ -198,7 +257,28 @@ namespace ITP104PROJECT
 
         private void AddProject()
         {
-            
+            string projName = txtProjName.Text.Trim(); 
+            string selectedDepId = cbDepartment.SelectedValue.ToString(); 
+            DateTime targetDate = projectTargetDate.Value;
+
+            if (string.IsNullOrEmpty(projName) || string.IsNullOrEmpty(selectedDepId))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                string query = @"
+                         INSERT INTO project (projectName, departmentId, startDate, endDate, status)
+                         VALUES (@projectName, @departmentId, @startDate, @endDate, 'Pending');";
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         private void DeleteProejct()
         {
