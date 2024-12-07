@@ -25,7 +25,7 @@ namespace ITP104PROJECT
             btnSettings.Click += new EventHandler(btnSide_Click);
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
-          private void btnSide_Click(object sender, EventArgs e)
+        private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
 
@@ -72,6 +72,10 @@ namespace ITP104PROJECT
                                  "Logging Out",
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
 
         private void BackupDatabase(string backupFilePath)
         {

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProject = new System.Windows.Forms.DataGridView();
             this.lblTargetDate = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDepFooter = new System.Windows.Forms.Panel();
             this.btnUpdateProject = new System.Windows.Forms.Button();
             this.projectTargetDate = new System.Windows.Forms.DateTimePicker();
@@ -68,15 +68,14 @@
             this.cbEmployee = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
             this.panel7.SuspendLayout();
             this.panelSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDepFooter.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelDepLFooter.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProject
@@ -95,10 +94,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProject.Location = new System.Drawing.Point(194, 54);
+            this.dgvProject.Location = new System.Drawing.Point(258, 65);
             this.dgvProject.Name = "dgvProject";
             this.dgvProject.RowHeadersWidth = 51;
-            this.dgvProject.Size = new System.Drawing.Size(1568, 420);
+            this.dgvProject.Size = new System.Drawing.Size(1569, 422);
             this.dgvProject.TabIndex = 1;
             // 
             // lblTargetDate
@@ -141,7 +140,7 @@
             this.btnAddProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddProject.Location = new System.Drawing.Point(308, 206);
-            this.btnAddProject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddProject.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddProject.Name = "btnAddProject";
             this.btnAddProject.Size = new System.Drawing.Size(125, 43);
             this.btnAddProject.TabIndex = 3;
@@ -332,10 +331,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(61, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 41);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -368,7 +369,7 @@
             this.btnUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateProject.Location = new System.Drawing.Point(571, 206);
-            this.btnUpdateProject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateProject.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateProject.Name = "btnUpdateProject";
             this.btnUpdateProject.Size = new System.Drawing.Size(124, 43);
             this.btnUpdateProject.TabIndex = 35;
@@ -380,10 +381,12 @@
             // 
             this.projectTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectTargetDate.Location = new System.Drawing.Point(308, 167);
-            this.projectTargetDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.projectTargetDate.Margin = new System.Windows.Forms.Padding(4);
+            this.projectTargetDate.MinDate = new System.DateTime(2024, 12, 7, 14, 16, 16, 0);
             this.projectTargetDate.Name = "projectTargetDate";
             this.projectTargetDate.Size = new System.Drawing.Size(387, 29);
             this.projectTargetDate.TabIndex = 34;
+            this.projectTargetDate.Value = new System.DateTime(2024, 12, 7, 14, 16, 16, 0);
             // 
             // btnDeleteProject
             // 
@@ -392,7 +395,7 @@
             this.btnDeleteProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeleteProject.Location = new System.Drawing.Point(440, 206);
-            this.btnDeleteProject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteProject.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteProject.Name = "btnDeleteProject";
             this.btnDeleteProject.Size = new System.Drawing.Size(124, 43);
             this.btnDeleteProject.TabIndex = 30;
@@ -468,7 +471,7 @@
             this.btnUpdateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateTask.Location = new System.Drawing.Point(543, 204);
-            this.btnUpdateTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateTask.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateTask.Name = "btnUpdateTask";
             this.btnUpdateTask.Size = new System.Drawing.Size(124, 43);
             this.btnUpdateTask.TabIndex = 34;
@@ -480,10 +483,12 @@
             // 
             this.taskTargetDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTargetDate.Location = new System.Drawing.Point(277, 160);
-            this.taskTargetDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.taskTargetDate.Margin = new System.Windows.Forms.Padding(4);
+            this.taskTargetDate.MinDate = new System.DateTime(2024, 12, 7, 14, 16, 4, 0);
             this.taskTargetDate.Name = "taskTargetDate";
             this.taskTargetDate.Size = new System.Drawing.Size(387, 29);
             this.taskTargetDate.TabIndex = 33;
+            this.taskTargetDate.Value = new System.DateTime(2024, 12, 7, 14, 16, 4, 0);
             // 
             // btnDeleteTask
             // 
@@ -492,7 +497,7 @@
             this.btnDeleteTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeleteTask.Location = new System.Drawing.Point(411, 204);
-            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(124, 43);
             this.btnDeleteTask.TabIndex = 32;
@@ -507,7 +512,7 @@
             this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddTask.Location = new System.Drawing.Point(279, 204);
-            this.btnAddTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddTask.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(124, 43);
             this.btnAddTask.TabIndex = 31;
@@ -541,7 +546,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.textBox2.Location = new System.Drawing.Point(277, 66);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(387, 29);
             this.textBox2.TabIndex = 11;
@@ -562,7 +567,7 @@
             this.cbEmployee.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.cbEmployee.FormattingEnabled = true;
             this.cbEmployee.Location = new System.Drawing.Point(277, 112);
-            this.cbEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.cbEmployee.Name = "cbEmployee";
             this.cbEmployee.Size = new System.Drawing.Size(387, 31);
             this.cbEmployee.TabIndex = 9;
@@ -589,17 +594,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Assign Task";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -610,7 +604,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.dgvProject);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Project";
             this.Text = "Project";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -620,6 +614,7 @@
             this.panel7.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDepFooter.ResumeLayout(false);
             this.panelDepFooter.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -628,7 +623,6 @@
             this.panelDepLFooter.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
