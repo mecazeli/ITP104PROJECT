@@ -10,14 +10,21 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ProjectName.My_Classes;
 using System.Diagnostics;
+using MySqlConnector;
+
 
 namespace ITP104PROJECT
 {
     public partial class Settings : Form
     {
+
+        public static string connection = "server=localhost; user=root; password=; database=company; port=3306;";
+        public MySqlConnection conn;
+
         public Settings()
         {
             InitializeComponent();
+            conn = new MySqlConnection(connection);
             btnDashboard.Click += new EventHandler(btnSide_Click);
             btnSideDep.Click += new EventHandler(btnSide_Click);
             btnSideProj.Click += new EventHandler(btnSide_Click);
@@ -83,8 +90,7 @@ namespace ITP104PROJECT
             {
                 string mysqldumpPath = @"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe";
 
-                string command = $@"""{mysqldumpPath}"" --user=root --host=localhost company --result-
-                file=""{backupFilePath}"" --no-tablespaces --skip-column-statistics";
+                string command = $@"""{mysqldumpPath}"" --user=root --host=localhost company --result-file=""{backupFilePath}"" --no-tablespaces --skip-column-statistics";
 
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -130,8 +136,7 @@ namespace ITP104PROJECT
         {
             try
             {
-                string command = $@"mysql --user=root --password= --host=localhost company <
-                ""{backupFilePath}""";
+                string command = $@"mysql --user=root --password= --host=localhost company < ""{backupFilePath}""";
             
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -184,25 +189,13 @@ namespace ITP104PROJECT
             //    DB_General obj = new DB_General();
             //    obj.general_query(query);
 
-            //    MessageBox.Show("Database backup completed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        //}
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBackup_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
                 sfd.Filter = "SQL Files (.sql)|.sql";
                 sfd.Title = "Save Database Backup";
-                sfd.FileName = "sales_inventory_backup.sql";
+                sfd.FileName = "company_backup.sql";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     string backupFilePath = sfd.FileName;
@@ -237,15 +230,6 @@ namespace ITP104PROJECT
             }
         }
 
-        //private void btnRestore_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        private void btnBrowse2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnChangeUsername_Click(object sender, EventArgs e)
         {
@@ -278,5 +262,26 @@ namespace ITP104PROJECT
 
         }
 
+        private void LoadUsersDetails()
+        {
+            using (conn)
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM employee";
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dgvUserDetails.DataSource = dt;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }
