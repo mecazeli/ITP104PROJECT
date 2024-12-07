@@ -103,7 +103,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(0, 492);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(193, 42);
             this.btnLogout.TabIndex = 7;
@@ -117,7 +117,7 @@
             this.btnSettings.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Location = new System.Drawing.Point(0, 439);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(193, 42);
             this.btnSettings.TabIndex = 6;
@@ -131,7 +131,7 @@
             this.btnSideProj.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideProj.ForeColor = System.Drawing.Color.White;
             this.btnSideProj.Location = new System.Drawing.Point(0, 385);
-            this.btnSideProj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideProj.Margin = new System.Windows.Forms.Padding(2);
             this.btnSideProj.Name = "btnSideProj";
             this.btnSideProj.Size = new System.Drawing.Size(193, 42);
             this.btnSideProj.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.btnSideEmp.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideEmp.ForeColor = System.Drawing.Color.White;
             this.btnSideEmp.Location = new System.Drawing.Point(0, 332);
-            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSideEmp.Name = "btnSideEmp";
             this.btnSideEmp.Size = new System.Drawing.Size(193, 42);
             this.btnSideEmp.TabIndex = 4;
@@ -160,7 +160,7 @@
             this.btnSideDep.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideDep.ForeColor = System.Drawing.Color.White;
             this.btnSideDep.Location = new System.Drawing.Point(2, 279);
-            this.btnSideDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSideDep.Margin = new System.Windows.Forms.Padding(2);
             this.btnSideDep.Name = "btnSideDep";
             this.btnSideDep.Size = new System.Drawing.Size(190, 42);
             this.btnSideDep.TabIndex = 3;
@@ -174,7 +174,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Location = new System.Drawing.Point(0, 224);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(190, 42);
             this.btnDashboard.TabIndex = 2;
@@ -220,7 +220,7 @@
             this.btnViewEmployees.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewEmployees.ForeColor = System.Drawing.Color.White;
             this.btnViewEmployees.Location = new System.Drawing.Point(979, 50);
-            this.btnViewEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewEmployees.Name = "btnViewEmployees";
             this.btnViewEmployees.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnViewEmployees.Size = new System.Drawing.Size(177, 41);
@@ -240,7 +240,7 @@
             this.panelDepFooter.Controls.Add(this.panelDepLFooter);
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDepFooter.Location = new System.Drawing.Point(194, 484);
-            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2);
             this.panelDepFooter.Name = "panelDepFooter";
             this.panelDepFooter.Size = new System.Drawing.Size(1176, 216);
             this.panelDepFooter.TabIndex = 6;
@@ -256,7 +256,7 @@
             this.btnUpdateEmployee.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateEmployee.ForeColor = System.Drawing.Color.White;
             this.btnUpdateEmployee.Location = new System.Drawing.Point(979, 106);
-            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
             this.btnUpdateEmployee.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnUpdateEmployee.Size = new System.Drawing.Size(177, 41);
@@ -270,7 +270,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(956, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 36);
             this.panel3.TabIndex = 24;
@@ -300,7 +300,7 @@
             this.panelDepLFooter.Controls.Add(this.txtEmpAddress);
             this.panelDepLFooter.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDepLFooter.Location = new System.Drawing.Point(0, 0);
-            this.panelDepLFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDepLFooter.Margin = new System.Windows.Forms.Padding(2);
             this.panelDepLFooter.Name = "panelDepLFooter";
             this.panelDepLFooter.Size = new System.Drawing.Size(956, 214);
             this.panelDepLFooter.TabIndex = 7;
@@ -326,7 +326,7 @@
             this.btnAddEmployees.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmployees.ForeColor = System.Drawing.Color.White;
             this.btnAddEmployees.Location = new System.Drawing.Point(394, 162);
-            this.btnAddEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEmployees.Name = "btnAddEmployees";
             this.btnAddEmployees.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnAddEmployees.Size = new System.Drawing.Size(170, 41);
@@ -341,7 +341,7 @@
             this.panel5.Controls.Add(this.lblAddEmplyoee);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(954, 35);
             this.panel5.TabIndex = 5;
@@ -546,15 +546,17 @@
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.Size = new System.Drawing.Size(194, 700);
             this.panelSideBar.TabIndex = 4;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(46, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 103);
             this.pictureBox1.TabIndex = 0;
@@ -586,7 +588,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployees.Location = new System.Drawing.Point(194, 58);
-            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersWidth = 51;
             this.dgvEmployees.RowTemplate.Height = 24;
@@ -614,7 +616,7 @@
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(194, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1176, 61);
             this.panel7.TabIndex = 7;
@@ -626,7 +628,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.btnSearch.Location = new System.Drawing.Point(1083, 15);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 33);
             this.btnSearch.TabIndex = 1;
@@ -639,7 +641,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(891, 20);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(174, 26);
             this.textBox4.TabIndex = 0;
@@ -654,7 +656,7 @@
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.dgvEmployees);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Employees";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Employees";

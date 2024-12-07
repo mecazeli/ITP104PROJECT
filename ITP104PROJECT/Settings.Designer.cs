@@ -215,6 +215,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(45, 40);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -242,9 +244,8 @@
             this.panel7.Location = new System.Drawing.Point(194, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1249, 75);
+            this.panel7.Size = new System.Drawing.Size(1176, 75);
             this.panel7.TabIndex = 5;
-           
             // 
             // lblSettings
             // 
@@ -263,7 +264,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(1148, 26);
+            this.btnSearch.Location = new System.Drawing.Point(1075, 26);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 33);
@@ -276,7 +277,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox1.Location = new System.Drawing.Point(903, 28);
+            this.textBox1.Location = new System.Drawing.Point(830, 28);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 26);
@@ -385,7 +386,7 @@
             this.panel5.Controls.Add(this.gpBackup);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(767, 75);
+            this.panel5.Location = new System.Drawing.Point(694, 75);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(676, 625);
@@ -418,7 +419,6 @@
             this.btnRestore.TabIndex = 3;
             this.btnRestore.Text = "Restore Database";
             this.btnRestore.UseVisualStyleBackColor = false;
-        
             // 
             // btnBrowse2
             // 
@@ -432,7 +432,6 @@
             this.btnBrowse2.TabIndex = 2;
             this.btnBrowse2.Text = "Browse";
             this.btnBrowse2.UseVisualStyleBackColor = false;
-         
             // 
             // textBox3
             // 
@@ -523,7 +522,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(1443, 700);
+            this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
