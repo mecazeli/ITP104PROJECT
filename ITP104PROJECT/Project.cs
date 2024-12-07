@@ -23,6 +23,7 @@ namespace ITP104PROJECT
         public Project()
         {
             InitializeComponent();
+            conn = new MySqlConnection(connection);
             btnDashboard.Click += new EventHandler(btnSide_Click);
             btnSideDep.Click += new EventHandler(btnSide_Click);
             btnSideEmp.Click += new EventHandler(btnSide_Click);
@@ -103,12 +104,11 @@ namespace ITP104PROJECT
 
 
         private void ViewProjectAndTasks(string message)
-        {
-            conn.Close();
+        {;
             dgvProject.Rows.Clear();
             dgvProject.Columns.Clear();
 
-            dgvProject.ColumnCount = 6;
+            dgvProject.ColumnCount = 7;
             dgvProject.Columns[0].Name = "Project ID";
             dgvProject.Columns[1].Name = "Project Name";
             dgvProject.Columns[2].Name = "Project Start Date";
