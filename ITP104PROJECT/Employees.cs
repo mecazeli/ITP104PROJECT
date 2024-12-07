@@ -15,8 +15,8 @@ namespace ITP104PROJECT
     {
 
         public Admin admin;
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
-        //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+        //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        public static string connection = "server=localhost; user=root; password=091203; database=company";
         public MySqlConnection conn;
         public Employees()
         {
@@ -293,9 +293,8 @@ namespace ITP104PROJECT
             string empAge = txtEmpAge.Text.Trim();
             string empEmail = txtEmpEmail.Text.Trim();
             string empPosition = txtEmpPosition.Text.Trim();
-            string empGender = cmbGender.SelectedItem?.ToString();
+            string empGender = cmbGender.SelectedIndex.ToString();
             string empSalary = txtEmpSalary.Text.Trim();
-            DateTime empDateHired = dateHiredPicker.Value;
 
             if (!ValidateEmployeeInput(empName, empAddress, empAge, empEmail, empPosition, empGender, empSalary))
             {
@@ -308,27 +307,22 @@ namespace ITP104PROJECT
                 return;
             }
 
+            // Get the selected department ID from the ComboBox
             string depId = GetSelectedDepartmentId();
 
             if (string.IsNullOrEmpty(depId))
             {
                 MessageBox.Show("Please select a department for the employee.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return; // Prevent adding the employee if no department is selected
             }
-
-            if (string.IsNullOrEmpty(empGender))
-            {
-                MessageBox.Show("Please select a gender for the employee.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
 
             try
             {
                 conn.Open();
 
-                string query = "INSERT INTO employee (employeeName, address, age, email, position, gender, salary, departmentId,dateHired) " +
-                               "VALUES (@name, @address, @age, @email, @position, @gender, @salary, @departmentId,@dateHired)";
+                // Insert employee data into the database
+                string query = "INSERT INTO employee (employeeName, address, age, email, position, gender, salary, departmentId) " +
+                               "VALUES (@name, @address, @age, @email, @position, @gender, @salary, @departmentId)";
 
                 MySqlCommand command = new MySqlCommand(query, conn);
                 command.Parameters.AddWithValue("@name", empName);
@@ -338,13 +332,10 @@ namespace ITP104PROJECT
                 command.Parameters.AddWithValue("@position", empPosition);
                 command.Parameters.AddWithValue("@gender", empGender);
                 command.Parameters.AddWithValue("@salary", empSalary);
-                command.Parameters.AddWithValue("@departmentId", depId);
-                command.Parameters.AddWithValue("@dateHired", empDateHired);
+                command.Parameters.AddWithValue("@departmentId", depId); // Department ID as foreign key
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Employee added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ViewEmployees("Employee added successfully!");
-
             }
             catch (Exception ex)
             {
@@ -352,12 +343,10 @@ namespace ITP104PROJECT
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
+                conn.Close();
             }
-        }  
+        }
+
 
         private void DeletingEmployee()
         {
