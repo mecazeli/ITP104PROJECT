@@ -12,7 +12,8 @@ namespace ITP104PROJECT
 {
     public partial class Dashboard : Form
     {
-        public Admin admin;
+        public Admin _admin;
+
         public Dashboard()
         {
             InitializeComponent();
@@ -23,9 +24,11 @@ namespace ITP104PROJECT
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+
+        public Dashboard(Admin admin) : this()
         {
-          
+
+            _admin = admin;
         }
 
         private void btnSide_Click(object sender, EventArgs e)
@@ -34,58 +37,44 @@ namespace ITP104PROJECT
 
             if (clickedButton != null)
             {
-                if (clickedButton.Name == "btnDashboard")
+                switch (clickedButton.Name)
                 {
-                    Dashboard dashboardForm = new Dashboard();
-                    dashboardForm.Show();
-                    this.Hide();
-                }
-                else if (clickedButton.Name == "btnSideDep")
-                {
-                    Departments departmentsForm = new Departments();
-                    departmentsForm.Show();
-                    this.Hide();
-                }
-                else if (clickedButton.Name == "btnSideEmp")
-                {
-                    Employees employeesForm = new Employees();
-                    employeesForm.Show();
-                    this.Hide();
-                }
-                else if (clickedButton.Name == "btnSideProj")
-                {
-                    Project projectForm = new Project();
-                    projectForm.Show();
-                    this.Hide();
-                }
-                else if (clickedButton.Name == "btnSettings")
-                {
-                    Settings settingsForm = new Settings();
-                    settingsForm.Show();
-                    this.Hide();
-                }
-                else if (clickedButton.Name == "btnLogout")
-                {
-                    var result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
-                    {
-
-                        MessageBox.Show("You are now logging out. Please wait...",
-                                 "Logging Out",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
-
+                    case "btnDashboard":
+                        MessageBox.Show("You are already on the Dashboard.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                       
+                    case "btnSideDep":
+                        Departments departmentsForm = new Departments(_admin);
+                        departmentsForm.Show();
                         this.Hide();
+                        break;
 
-                        Login loginForm = new Login();
-                        loginForm.Show();
-                    }
+                    case "btnSideProj":
+                        Project projectForm = new Project(_admin);
+                        projectForm.Show();
+                        this.Hide();
+                        break;
 
+                    case "btnSettings":
+                        // Pass _admin to the Settings form
+                        Settings settingsForm = new Settings(_admin);
+                        settingsForm.Show();
+                        this.Hide();
+                        break;
+
+                    case "btnLogout":
+                        var result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            MessageBox.Show("Logging out...", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            Login loginForm = new Login(_admin);
+                            loginForm.Show();
+                        }
+                        break;
                 }
             }
         }
-
-
     }
 }

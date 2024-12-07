@@ -52,20 +52,20 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblDep = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvDepartments = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDepFooter.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDepFooter
@@ -80,20 +80,20 @@
             this.panelDepFooter.Controls.Add(this.panel4);
             this.panelDepFooter.Controls.Add(this.panel2);
             this.panelDepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDepFooter.Location = new System.Drawing.Point(258, 534);
-            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDepFooter.Location = new System.Drawing.Point(194, 433);
+            this.panelDepFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDepFooter.Name = "panelDepFooter";
-            this.panelDepFooter.Size = new System.Drawing.Size(1569, 265);
+            this.panelDepFooter.Size = new System.Drawing.Size(1176, 216);
             this.panelDepFooter.TabIndex = 3;
             // 
             // lblDepartmentName
             // 
             this.lblDepartmentName.AutoSize = true;
             this.lblDepartmentName.Font = new System.Drawing.Font("Trebuchet MS", 11.8F);
-            this.lblDepartmentName.Location = new System.Drawing.Point(359, 75);
-            this.lblDepartmentName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDepartmentName.Location = new System.Drawing.Point(269, 61);
+            this.lblDepartmentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(178, 26);
+            this.lblDepartmentName.Size = new System.Drawing.Size(139, 22);
             this.lblDepartmentName.TabIndex = 17;
             this.lblDepartmentName.Text = "Department Name";
             this.lblDepartmentName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -102,20 +102,20 @@
             // 
             this.txtDepName.BackColor = System.Drawing.Color.White;
             this.txtDepName.Font = new System.Drawing.Font("Trebuchet MS", 13F);
-            this.txtDepName.Location = new System.Drawing.Point(364, 112);
-            this.txtDepName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDepName.Location = new System.Drawing.Point(273, 91);
+            this.txtDepName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDepName.Name = "txtDepName";
-            this.txtDepName.Size = new System.Drawing.Size(300, 33);
+            this.txtDepName.Size = new System.Drawing.Size(226, 28);
             this.txtDepName.TabIndex = 18;
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Trebuchet MS", 11.8F);
-            this.lblDescription.Location = new System.Drawing.Point(731, 71);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDescription.Location = new System.Drawing.Point(548, 58);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(114, 26);
+            this.lblDescription.Size = new System.Drawing.Size(91, 22);
             this.lblDescription.TabIndex = 15;
             this.lblDescription.Text = "Description";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -124,10 +124,10 @@
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.Font = new System.Drawing.Font("Trebuchet MS", 13F);
-            this.txtDescription.Location = new System.Drawing.Point(735, 111);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Location = new System.Drawing.Point(551, 90);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(300, 33);
+            this.txtDescription.Size = new System.Drawing.Size(226, 28);
             this.txtDescription.TabIndex = 16;
             // 
             // btnAddDep
@@ -138,11 +138,11 @@
             this.btnAddDep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDep.ForeColor = System.Drawing.Color.White;
-            this.btnAddDep.Location = new System.Drawing.Point(573, 180);
-            this.btnAddDep.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnAddDep.Location = new System.Drawing.Point(430, 146);
+            this.btnAddDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddDep.Name = "btnAddDep";
-            this.btnAddDep.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnAddDep.Size = new System.Drawing.Size(245, 50);
+            this.btnAddDep.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnAddDep.Size = new System.Drawing.Size(184, 41);
             this.btnAddDep.TabIndex = 13;
             this.btnAddDep.Text = "ADD DEPARTMENT";
             this.btnAddDep.UseVisualStyleBackColor = false;
@@ -154,9 +154,9 @@
             this.panel4.Controls.Add(this.lblAddDep);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1252, 54);
+            this.panel4.Size = new System.Drawing.Size(937, 44);
             this.panel4.TabIndex = 14;
             // 
             // lblAddDep
@@ -164,9 +164,10 @@
             this.lblAddDep.AutoSize = true;
             this.lblAddDep.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold);
             this.lblAddDep.ForeColor = System.Drawing.Color.White;
-            this.lblAddDep.Location = new System.Drawing.Point(529, 11);
+            this.lblAddDep.Location = new System.Drawing.Point(397, 9);
+            this.lblAddDep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddDep.Name = "lblAddDep";
-            this.lblAddDep.Size = new System.Drawing.Size(312, 35);
+            this.lblAddDep.Size = new System.Drawing.Size(255, 27);
             this.lblAddDep.TabIndex = 2;
             this.lblAddDep.Text = "Add A New Department";
             // 
@@ -178,10 +179,10 @@
             this.panel2.Controls.Add(this.btnView);
             this.panel2.Controls.Add(this.btnDelDep);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1252, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(937, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 263);
+            this.panel2.Size = new System.Drawing.Size(237, 214);
             this.panel2.TabIndex = 8;
             // 
             // btnUpdate
@@ -192,11 +193,11 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(40, 132);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(30, 107);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnUpdate.Size = new System.Drawing.Size(245, 50);
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(184, 41);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "UPDATE DEPARTMENT";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -207,9 +208,9 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(313, 53);
+            this.panel5.Size = new System.Drawing.Size(235, 43);
             this.panel5.TabIndex = 7;
             // 
             // btnView
@@ -220,11 +221,11 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnView.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(41, 73);
-            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnView.Location = new System.Drawing.Point(31, 59);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.btnView.Size = new System.Drawing.Size(245, 50);
+            this.btnView.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnView.Size = new System.Drawing.Size(184, 41);
             this.btnView.TabIndex = 4;
             this.btnView.Text = "VIEW DEPARTMENTS";
             this.btnView.UseVisualStyleBackColor = false;
@@ -238,11 +239,11 @@
             this.btnDelDep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelDep.ForeColor = System.Drawing.Color.White;
-            this.btnDelDep.Location = new System.Drawing.Point(40, 191);
-            this.btnDelDep.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnDelDep.Location = new System.Drawing.Point(30, 155);
+            this.btnDelDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelDep.Name = "btnDelDep";
-            this.btnDelDep.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnDelDep.Size = new System.Drawing.Size(247, 50);
+            this.btnDelDep.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnDelDep.Size = new System.Drawing.Size(185, 41);
             this.btnDelDep.TabIndex = 6;
             this.btnDelDep.Text = "DELETE DEPARTMENT";
             this.btnDelDep.UseVisualStyleBackColor = false;
@@ -264,9 +265,9 @@
             this.panelSideBar.Controls.Add(this.lblAdmin);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(258, 799);
+            this.panelSideBar.Size = new System.Drawing.Size(194, 649);
             this.panelSideBar.TabIndex = 1;
             // 
             // label1
@@ -277,9 +278,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(100, 210);
+            this.label1.Location = new System.Drawing.Point(75, 171);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 23);
+            this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Admin";
             // 
@@ -289,10 +291,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(-1, 606);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(-1, 492);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(257, 52);
+            this.btnLogout.Size = new System.Drawing.Size(193, 42);
             this.btnLogout.TabIndex = 16;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -303,10 +305,10 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(-1, 539);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Location = new System.Drawing.Point(-1, 438);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(257, 52);
+            this.btnSettings.Size = new System.Drawing.Size(193, 42);
             this.btnSettings.TabIndex = 15;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -317,10 +319,10 @@
             this.btnSideProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideProj.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideProj.ForeColor = System.Drawing.Color.White;
-            this.btnSideProj.Location = new System.Drawing.Point(-1, 473);
-            this.btnSideProj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSideProj.Location = new System.Drawing.Point(-1, 384);
+            this.btnSideProj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSideProj.Name = "btnSideProj";
-            this.btnSideProj.Size = new System.Drawing.Size(257, 52);
+            this.btnSideProj.Size = new System.Drawing.Size(193, 42);
             this.btnSideProj.TabIndex = 14;
             this.btnSideProj.Text = "Projects";
             this.btnSideProj.UseVisualStyleBackColor = true;
@@ -331,10 +333,10 @@
             this.btnSideEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideEmp.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideEmp.ForeColor = System.Drawing.Color.White;
-            this.btnSideEmp.Location = new System.Drawing.Point(-1, 407);
-            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSideEmp.Location = new System.Drawing.Point(-1, 331);
+            this.btnSideEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSideEmp.Name = "btnSideEmp";
-            this.btnSideEmp.Size = new System.Drawing.Size(257, 52);
+            this.btnSideEmp.Size = new System.Drawing.Size(193, 42);
             this.btnSideEmp.TabIndex = 13;
             this.btnSideEmp.Text = "Employees";
             this.btnSideEmp.UseVisualStyleBackColor = true;
@@ -346,10 +348,10 @@
             this.btnSideDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideDep.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideDep.ForeColor = System.Drawing.Color.White;
-            this.btnSideDep.Location = new System.Drawing.Point(3, 342);
-            this.btnSideDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSideDep.Location = new System.Drawing.Point(2, 278);
+            this.btnSideDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSideDep.Name = "btnSideDep";
-            this.btnSideDep.Size = new System.Drawing.Size(253, 52);
+            this.btnSideDep.Size = new System.Drawing.Size(190, 42);
             this.btnSideDep.TabIndex = 12;
             this.btnSideDep.Text = "Departments";
             this.btnSideDep.UseVisualStyleBackColor = true;
@@ -360,10 +362,10 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(-1, 274);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(-1, 223);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(253, 52);
+            this.btnDashboard.Size = new System.Drawing.Size(190, 42);
             this.btnDashboard.TabIndex = 11;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -373,18 +375,21 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(63, 188);
+            this.lblName.Location = new System.Drawing.Point(47, 153);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(140, 24);
+            this.lblName.Size = new System.Drawing.Size(111, 20);
             this.lblName.TabIndex = 10;
             this.lblName.Text = "Jessa Cariñaga";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 84);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -394,9 +399,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdmin.Location = new System.Drawing.Point(0, 0);
-            this.lblAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(48, 1);
+            this.lblAdmin.Size = new System.Drawing.Size(36, 0);
             this.lblAdmin.TabIndex = 0;
             // 
             // panel7
@@ -406,10 +410,10 @@
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.textBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(258, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel7.Location = new System.Drawing.Point(194, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1569, 85);
+            this.panel7.Size = new System.Drawing.Size(1176, 69);
             this.panel7.TabIndex = 4;
             // 
             // lblDep
@@ -417,10 +421,9 @@
             this.lblDep.AutoSize = true;
             this.lblDep.Font = new System.Drawing.Font("Trebuchet MS", 25F);
             this.lblDep.ForeColor = System.Drawing.Color.White;
-            this.lblDep.Location = new System.Drawing.Point(23, 16);
-            this.lblDep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDep.Location = new System.Drawing.Point(17, 13);
             this.lblDep.Name = "lblDep";
-            this.lblDep.Size = new System.Drawing.Size(499, 52);
+            this.lblDep.Size = new System.Drawing.Size(405, 43);
             this.lblDep.TabIndex = 2;
             this.lblDep.Text = "Department Management";
             // 
@@ -430,10 +433,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(1434, 32);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearch.Location = new System.Drawing.Point(1075, 26);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 33);
+            this.btnSearch.Size = new System.Drawing.Size(84, 27);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -443,10 +446,10 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox1.Location = new System.Drawing.Point(996, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Location = new System.Drawing.Point(746, 28);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 31);
+            this.textBox1.Size = new System.Drawing.Size(307, 26);
             this.textBox1.TabIndex = 0;
             // 
             // dgvDepartments
@@ -475,35 +478,24 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDepartments.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDepartments.Location = new System.Drawing.Point(259, 80);
-            this.dgvDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDepartments.Location = new System.Drawing.Point(194, 65);
+            this.dgvDepartments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDepartments.Name = "dgvDepartments";
             this.dgvDepartments.RowHeadersWidth = 51;
-            this.dgvDepartments.Size = new System.Drawing.Size(1568, 455);
+            this.dgvDepartments.Size = new System.Drawing.Size(1176, 370);
             this.dgvDepartments.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // Departments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(1827, 799);
+            this.ClientSize = new System.Drawing.Size(1370, 649);
             this.Controls.Add(this.dgvDepartments);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panelSideBar);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Departments";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Departments";
@@ -516,10 +508,10 @@
             this.panel2.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
