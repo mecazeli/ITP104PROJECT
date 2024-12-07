@@ -78,6 +78,26 @@ namespace ITP104PROJECT
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = txtUsername.Text;
+            string enteredPassword = txtPassword.Text;
+            string correctUsername = "admin101";
+            string correctPassword = "password123";
+
+            if (enteredUsername == correctUsername && enteredPassword == correctPassword)
+            {
+                this.Hide();
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
+        }
+
     }
 
     public class Admin

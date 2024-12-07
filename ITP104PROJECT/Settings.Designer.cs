@@ -62,6 +62,10 @@
             this.txtBackPath = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblBackupRestore = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNewUsername = new System.Windows.Forms.TextBox();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -93,7 +97,7 @@
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(258, 799);
+            this.panelSideBar.Size = new System.Drawing.Size(258, 862);
             this.panelSideBar.TabIndex = 2;
             // 
             // lblTitle
@@ -222,7 +226,7 @@
             this.lblAdmin.Location = new System.Drawing.Point(0, 0);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(48, 0);
+            this.lblAdmin.Size = new System.Drawing.Size(48, 63);
             this.lblAdmin.TabIndex = 0;
             // 
             // panel7
@@ -283,7 +287,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(258, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(918, 707);
+            this.panel1.Size = new System.Drawing.Size(918, 770);
             this.panel1.TabIndex = 6;
             // 
             // panel4
@@ -309,35 +313,38 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtNewPassword);
+            this.panel2.Controls.Add(this.txtNewUsername);
             this.panel2.Controls.Add(this.btnChangeUsername);
             this.panel2.Controls.Add(this.btnChangePassword);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 366);
+            this.panel2.Location = new System.Drawing.Point(0, 381);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(916, 339);
+            this.panel2.Size = new System.Drawing.Size(916, 387);
             this.panel2.TabIndex = 9;
             // 
             // btnChangeUsername
             // 
             this.btnChangeUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnChangeUsername.Font = new System.Drawing.Font("Trebuchet MS", 15F);
+            this.btnChangeUsername.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.btnChangeUsername.ForeColor = System.Drawing.Color.White;
-            this.btnChangeUsername.Location = new System.Drawing.Point(121, 181);
+            this.btnChangeUsername.Location = new System.Drawing.Point(114, 270);
             this.btnChangeUsername.Name = "btnChangeUsername";
-            this.btnChangeUsername.Size = new System.Drawing.Size(278, 63);
+            this.btnChangeUsername.Size = new System.Drawing.Size(234, 55);
             this.btnChangeUsername.TabIndex = 17;
             this.btnChangeUsername.Text = "Change Username";
             this.btnChangeUsername.UseVisualStyleBackColor = false;
+            this.btnChangeUsername.Click += new System.EventHandler(this.btnChangeUsername_Click);
             // 
             // btnChangePassword
             // 
             this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnChangePassword.Font = new System.Drawing.Font("Trebuchet MS", 15F);
+            this.btnChangePassword.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(457, 181);
+            this.btnChangePassword.Location = new System.Drawing.Point(450, 270);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(278, 63);
+            this.btnChangePassword.Size = new System.Drawing.Size(234, 55);
             this.btnChangePassword.TabIndex = 14;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -372,7 +379,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(1024, 92);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(900, 707);
+            this.panel5.Size = new System.Drawing.Size(900, 770);
             this.panel5.TabIndex = 7;
             // 
             // gpRestore
@@ -399,7 +406,7 @@
             this.btnRestore.TabIndex = 3;
             this.btnRestore.Text = "Restore Database";
             this.btnRestore.UseVisualStyleBackColor = false;
-            this.btnRestore.Click += new System.EventHandler(this.button1_Click);
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // btnBrowse2
             // 
@@ -490,12 +497,44 @@
             this.lblBackupRestore.TabIndex = 0;
             this.lblBackupRestore.Text = "Backup and Restore";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(8, 8);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 9;
+            // 
+            // txtNewUsername
+            // 
+            this.txtNewUsername.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.txtNewUsername.Location = new System.Drawing.Point(96, 172);
+            this.txtNewUsername.Name = "txtNewUsername";
+            this.txtNewUsername.Size = new System.Drawing.Size(269, 31);
+            this.txtNewUsername.TabIndex = 18;
+            // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.txtNewPassword.Location = new System.Drawing.Point(432, 172);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(269, 31);
+            this.txtNewPassword.TabIndex = 19;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1924, 862);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
@@ -513,6 +552,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -523,6 +563,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -562,5 +603,9 @@
         private System.Windows.Forms.Button btnBrowse2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.TextBox txtNewPassword;
+        private System.Windows.Forms.TextBox txtNewUsername;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
