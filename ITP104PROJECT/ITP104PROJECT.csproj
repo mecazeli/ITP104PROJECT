@@ -223,6 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\download.jpg" />
+    <None Include="Resources\Screenshot 2024-12-07 084511.png" />
+    <None Include="Resources\Shared workspace Customizable Isometric Illustrations _ Amico Style.jpg" />
+    <None Include="Resources\#desk.jpg" />
+    <None Include="Resources\Businesswoman free icons designed by Freepik.jpg" />
+    <None Include="Resources\Premium Vector _ Portrait of a beautiful young woman.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

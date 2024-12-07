@@ -73,9 +73,39 @@ namespace ITP104PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _desk {
+            get {
+                object obj = ResourceManager.GetObject("#desk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Businesswoman_free_icons_designed_by_Freepik {
+            get {
+                object obj = ResourceManager.GetObject("Businesswoman free icons designed by Freepik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap department {
             get {
                 object obj = ResourceManager.GetObject("department", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,36 @@ namespace ITP104PROJECT.Properties {
         internal static System.Drawing.Bitmap make_up_left {
             get {
                 object obj = ResourceManager.GetObject("make up left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Premium_Vector___Portrait_of_a_beautiful_young_woman {
+            get {
+                object obj = ResourceManager.GetObject("Premium Vector _ Portrait of a beautiful young woman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_07_084511 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-07 084511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shared_workspace_Customizable_Isometric_Illustrations___Amico_Style {
+            get {
+                object obj = ResourceManager.GetObject("Shared workspace Customizable Isometric Illustrations _ Amico Style", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
