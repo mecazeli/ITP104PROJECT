@@ -307,7 +307,7 @@ namespace ITP104PROJECT
                 return;
             }
 
-            // Get the selected department ID from the ComboBox
+            
             string depId = GetSelectedDepartmentId();
 
             if (string.IsNullOrEmpty(depId))
@@ -332,7 +332,7 @@ namespace ITP104PROJECT
                 command.Parameters.AddWithValue("@position", empPosition);
                 command.Parameters.AddWithValue("@gender", empGender);
                 command.Parameters.AddWithValue("@salary", empSalary);
-                command.Parameters.AddWithValue("@departmentId", depId); // Department ID as foreign key
+                command.Parameters.AddWithValue("@departmentId", depId); 
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Employee added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

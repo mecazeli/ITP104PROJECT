@@ -8,7 +8,8 @@ namespace ITP104PROJECT
     public partial class Departments : Form
     {
         //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+        public static string connection = "server=localhost; user=root; password=091203; database=company";
         public MySqlConnection conn;
         public Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
 
