@@ -10,14 +10,24 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ProjectName.My_Classes;
 using System.Diagnostics;
+using MySqlConnector;
+
 
 namespace ITP104PROJECT
 {
     public partial class Settings : Form
     {
+
+        private Admin _admin;
+        public static string connection = "server=localhost; user=root; password=; database=company; port=3306;";
+        public MySqlConnection conn;
+        
+
+
         public Settings()
         {
             InitializeComponent();
+            conn = new MySqlConnection(connection);
             btnDashboard.Click += new EventHandler(btnSide_Click);
             btnSideDep.Click += new EventHandler(btnSide_Click);
             btnSideProj.Click += new EventHandler(btnSide_Click);
@@ -25,6 +35,18 @@ namespace ITP104PROJECT
             btnSettings.Click += new EventHandler(btnSide_Click);
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
+        public Settings(Admin admin) : this()
+        {
+            _admin = admin;
+
+            if (admin == null)
+            {
+                MessageBox.Show("Error: Admin object is null. Returning to Dashboard.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            _admin = admin;
+        }
+
         private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -33,7 +55,7 @@ namespace ITP104PROJECT
             {
                 if (clickedButton.Name == "btnDashboard")
                 {
-                    Dashboard dashboardForm = new Dashboard();
+                    Dashboard dashboardForm = new Dashboard(_admin);
                     dashboardForm.Show();
                     this.Hide();
                 }
@@ -57,7 +79,7 @@ namespace ITP104PROJECT
                 }
                 else if (clickedButton.Name == "btnSettings")
                 {
-                    Settings settingsForm = new Settings();
+                    Settings settingsForm = new Settings(_admin);
                     settingsForm.Show();
                     this.Hide();
                 }
@@ -72,6 +94,9 @@ namespace ITP104PROJECT
                                  "Logging Out",
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
+                        this.Hide();
+                        Login login = new Login(_admin);
+                        login.Show();
                     }
                 }
             }
@@ -83,8 +108,7 @@ namespace ITP104PROJECT
             {
                 string mysqldumpPath = @"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe";
 
-                string command = $@"""{mysqldumpPath}"" --user=root --host=localhost company --result-
-                file=""{backupFilePath}"" --no-tablespaces --skip-column-statistics";
+                string command = $@"""{mysqldumpPath}"" --user=root --host=localhost company --result-file=""{backupFilePath}"" --no-tablespaces --skip-column-statistics";
 
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -130,8 +154,7 @@ namespace ITP104PROJECT
         {
             try
             {
-                string command = $@"mysql --user=root --password= --host=localhost company <
-                ""{backupFilePath}""";
+                string command = $@"mysql --user=root --password= --host=localhost company < ""{backupFilePath}""";
             
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -184,25 +207,13 @@ namespace ITP104PROJECT
             //    DB_General obj = new DB_General();
             //    obj.general_query(query);
 
-            //    MessageBox.Show("Database backup completed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        //}
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBackup_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
                 sfd.Filter = "SQL Files (.sql)|.sql";
                 sfd.Title = "Save Database Backup";
-                sfd.FileName = "sales_inventory_backup.sql";
+                sfd.FileName = "company_backup.sql";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     string backupFilePath = sfd.FileName;
@@ -213,70 +224,92 @@ namespace ITP104PROJECT
         }
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "SQL Files (.sql)|.sql";
-                ofd.Title = "Select Database Backup";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    string backupFilePath = ofd.FileName;
-                    RestoreDatabase(txtBackPath.Text);
-                }
-            }
+           
+            RestoreDatabase(txtBackPath.Text);
+
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.AddExtension = true;
-            saveFileDialog.Filter = "Backup Files (*.bak)|*.bak";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.AddExtension = true;
+            ofd.Filter = "SQL Files (*.sql)|*.sql";
 
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                txtBackPath.Text = saveFileDialog.FileName;
+                txtBackPath.Text = ofd.FileName;
             }
         }
 
-        //private void btnRestore_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        private void btnBrowse2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnChangeUsername_Click(object sender, EventArgs e)
         {
-        //    txtNewUsername.Visible = true; // Show the textbox for new username
-        //    btnConfirmNewUsername.Visible = true; // Show the confirm button (you can create it)
-        //}
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to change the username?",
+                "Confirm Username Change",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
-        //private void btnConfirmNewUsername_Click(object sender, EventArgs e)
-        //{
-        //    string newUsername = txtNewUsername.Text;
-
-        //    if (!string.IsNullOrEmpty(newUsername))
-        //    {
-        //        // Update the username (store it in a variable, file, or database as needed)
-        //        string updatedUsername = newUsername;
-        //        MessageBox.Show("Username successfully updated.");
-
-        //        // Optional: Hide the textbox and button after updating
-        //        txtNewUsername.Visible = false;
-        //        btnConfirmNewUsername.Visible = false;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Please enter a valid username.");
-        //    }
+            if (result == DialogResult.Yes)
+            {
+                _admin.username = txtNewUsername.Text; 
+                MessageBox.Show("Username changed successfully!");
+                LoadAdminDetails();
+            }
+            else
+            {
+                MessageBox.Show("Username change canceled.");
+            }
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to change the password?",
+                "Confirm Password Change",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                _admin.password = txtNewPassword.Text; 
+                MessageBox.Show("Password changed successfully!");
+                LoadAdminDetails();
+            }
+            else
+            {
+                MessageBox.Show("Password change canceled.");
+            }
+        }
+
 
         private void Settings_Load(object sender, EventArgs e)
         {
-
+            LoadAdminDetails();
         }
 
+        private void LoadAdminDetails()
+        {
+            if (_admin == null)
+            {
+                MessageBox.Show("No admin details to display.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Age");
+            dt.Columns.Add("Gender");
+            dt.Columns.Add("Username");
+            dt.Columns.Add("Password");
+
+            dt.Rows.Add(_admin.name, _admin.age, _admin.gender, _admin.username, _admin.password);
+
+            dgvAdmin.DataSource = dt;
+        }
+
+       
     }
 }
