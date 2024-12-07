@@ -58,8 +58,6 @@
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtBackPath = new System.Windows.Forms.TextBox();
-            this.gpBackup = new System.Windows.Forms.GroupBox();
-            this.btnBackup = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblBackupRestore = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -78,7 +76,6 @@
             this.gpRestore.SuspendLayout();
             this.gpBackup.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideBar
@@ -247,9 +244,10 @@
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.textBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(258, 0);
+            this.panel7.Location = new System.Drawing.Point(343, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1185, 61);
+            this.panel7.Size = new System.Drawing.Size(1581, 92);
             this.panel7.TabIndex = 5;
             // 
             // lblSettings
@@ -269,7 +267,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(1109, 21);
+            this.btnSearch.Location = new System.Drawing.Point(1446, 32);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 33);
             this.btnSearch.TabIndex = 1;
@@ -281,7 +280,8 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox1.Location = new System.Drawing.Point(925, 23);
+            this.textBox1.Location = new System.Drawing.Point(1120, 34);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 26);
             this.textBox1.TabIndex = 0;
@@ -292,13 +292,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgvAdmin);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(258, 61);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(343, 92);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(705, 796);
+            this.panel1.Size = new System.Drawing.Size(1223, 963);
             this.panel1.TabIndex = 6;
             // 
             // panel4
@@ -309,7 +309,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(703, 44);
+            this.panel4.Size = new System.Drawing.Size(1221, 66);
             this.panel4.TabIndex = 17;
             // 
             // lblAdminDetails
@@ -317,8 +317,7 @@
             this.lblAdminDetails.AutoSize = true;
             this.lblAdminDetails.Font = new System.Drawing.Font("Trebuchet MS", 22F);
             this.lblAdminDetails.ForeColor = System.Drawing.Color.White;
-            this.lblAdminDetails.Location = new System.Drawing.Point(240, 6);
-            this.lblAdminDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdminDetails.Location = new System.Drawing.Point(78, 12);
             this.lblAdminDetails.Name = "lblAdminDetails";
             this.lblAdminDetails.Size = new System.Drawing.Size(203, 38);
             this.lblAdminDetails.TabIndex = 0;
@@ -332,28 +331,28 @@
             this.panel2.Controls.Add(this.btnChangePassword);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 519);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 544);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 275);
+            this.panel2.Size = new System.Drawing.Size(1221, 417);
             this.panel2.TabIndex = 9;
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.txtNewPassword.Location = new System.Drawing.Point(356, 114);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewPassword.Location = new System.Drawing.Point(576, 212);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(278, 26);
+            this.txtNewPassword.Size = new System.Drawing.Size(357, 31);
             this.txtNewPassword.TabIndex = 19;
             // 
             // txtNewUsername
             // 
             this.txtNewUsername.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.txtNewUsername.Location = new System.Drawing.Point(47, 114);
-            this.txtNewUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewUsername.Location = new System.Drawing.Point(128, 212);
+            this.txtNewUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewUsername.Name = "txtNewUsername";
-            this.txtNewUsername.Size = new System.Drawing.Size(278, 26);
+            this.txtNewUsername.Size = new System.Drawing.Size(357, 31);
             this.txtNewUsername.TabIndex = 18;
             // 
             // btnChangeUsername
@@ -390,7 +389,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(703, 44);
+            this.panel3.Size = new System.Drawing.Size(1221, 66);
             this.panel3.TabIndex = 16;
             // 
             // lblUserManagement
@@ -398,8 +397,7 @@
             this.lblUserManagement.AutoSize = true;
             this.lblUserManagement.Font = new System.Drawing.Font("Trebuchet MS", 22F);
             this.lblUserManagement.ForeColor = System.Drawing.Color.White;
-            this.lblUserManagement.Location = new System.Drawing.Point(220, 6);
-            this.lblUserManagement.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserManagement.Location = new System.Drawing.Point(245, 12);
             this.lblUserManagement.Name = "lblUserManagement";
             this.lblUserManagement.Size = new System.Drawing.Size(254, 38);
             this.lblUserManagement.TabIndex = 0;
@@ -414,10 +412,11 @@
             this.panel5.Controls.Add(this.gpRestore);
             this.panel5.Controls.Add(this.gpBackup);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(955, 61);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(725, 92);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(488, 796);
+            this.panel5.Size = new System.Drawing.Size(1199, 963);
             this.panel5.TabIndex = 7;
             // 
             // gpRestore
@@ -426,8 +425,8 @@
             this.gpRestore.Controls.Add(this.btnBrowse);
             this.gpRestore.Controls.Add(this.txtBackPath);
             this.gpRestore.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold);
-            this.gpRestore.Location = new System.Drawing.Point(42, 249);
-            this.gpRestore.Margin = new System.Windows.Forms.Padding(2);
+            this.gpRestore.Location = new System.Drawing.Point(160, 380);
+            this.gpRestore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpRestore.Name = "gpRestore";
             this.gpRestore.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gpRestore.Size = new System.Drawing.Size(434, 145);
@@ -449,35 +448,34 @@
             this.btnRestore.UseVisualStyleBackColor = false;
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
-            // btnBrowse
+            // btnBrowse2
             // 
-            this.btnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnBrowse.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.btnBrowse.ForeColor = System.Drawing.Color.White;
-            this.btnBrowse.Location = new System.Drawing.Point(297, 52);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(77, 37);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = false;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.btnBrowse2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnBrowse2.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.btnBrowse2.ForeColor = System.Drawing.Color.White;
+            this.btnBrowse2.Location = new System.Drawing.Point(437, 55);
+            this.btnBrowse2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrowse2.Name = "btnBrowse2";
+            this.btnBrowse2.Size = new System.Drawing.Size(103, 46);
+            this.btnBrowse2.TabIndex = 2;
+            this.btnBrowse2.Text = "Browse";
+            this.btnBrowse2.UseVisualStyleBackColor = false;
             // 
             // txtBackPath
             // 
-            this.txtBackPath.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.txtBackPath.Location = new System.Drawing.Point(84, 57);
-            this.txtBackPath.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBackPath.Name = "txtBackPath";
-            this.txtBackPath.Size = new System.Drawing.Size(188, 25);
-            this.txtBackPath.TabIndex = 1;
+            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.textBox3.Location = new System.Drawing.Point(89, 64);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(332, 29);
+            this.textBox3.TabIndex = 1;
             // 
             // gpBackup
             // 
             this.gpBackup.Controls.Add(this.btnBackup);
             this.gpBackup.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Bold);
-            this.gpBackup.Location = new System.Drawing.Point(42, 92);
-            this.gpBackup.Margin = new System.Windows.Forms.Padding(2);
+            this.gpBackup.Location = new System.Drawing.Point(160, 143);
+            this.gpBackup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpBackup.Name = "gpBackup";
             this.gpBackup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gpBackup.Size = new System.Drawing.Size(434, 145);
@@ -490,14 +488,37 @@
             this.btnBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.btnBackup.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.btnBackup.ForeColor = System.Drawing.Color.White;
-            this.btnBackup.Location = new System.Drawing.Point(84, 43);
-            this.btnBackup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackup.Location = new System.Drawing.Point(149, 108);
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(290, 67);
+            this.btnBackup.Size = new System.Drawing.Size(227, 52);
             this.btnBackup.TabIndex = 3;
             this.btnBackup.Text = "Backup Database";
             this.btnBackup.UseVisualStyleBackColor = false;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
+            this.btnBrowse.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.btnBrowse.ForeColor = System.Drawing.Color.White;
+            this.btnBrowse.Location = new System.Drawing.Point(437, 55);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(103, 46);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // txtBackPath
+            // 
+            this.txtBackPath.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.txtBackPath.Location = new System.Drawing.Point(89, 64);
+            this.txtBackPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBackPath.Name = "txtBackPath";
+            this.txtBackPath.Size = new System.Drawing.Size(332, 29);
+            this.txtBackPath.TabIndex = 1;
             // 
             // panel6
             // 
@@ -507,7 +528,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(486, 44);
+            this.panel6.Size = new System.Drawing.Size(1197, 66);
             this.panel6.TabIndex = 18;
             // 
             // lblBackupRestore
@@ -535,38 +556,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 9;
-            // 
-            // btnBrowse2
-            // 
-            this.btnBrowse2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.btnBrowse2.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.btnBrowse2.ForeColor = System.Drawing.Color.White;
-            this.btnBrowse2.Location = new System.Drawing.Point(328, 45);
-            this.btnBrowse2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBrowse2.Name = "btnBrowse2";
-            this.btnBrowse2.Size = new System.Drawing.Size(77, 37);
-            this.btnBrowse2.TabIndex = 2;
-            this.btnBrowse2.Text = "Browse";
-            this.btnBrowse2.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.textBox3.Location = new System.Drawing.Point(67, 52);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 25);
-            this.textBox3.TabIndex = 1;
-            // 
-            // dgvAdmin
-            // 
-            this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdmin.Location = new System.Drawing.Point(-1, 47);
-            this.dgvAdmin.Name = "dgvAdmin";
-            this.dgvAdmin.Size = new System.Drawing.Size(697, 472);
-            this.dgvAdmin.TabIndex = 18;
             // 
             // Settings
             // 
@@ -602,7 +591,6 @@
             this.gpBackup.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -646,8 +634,5 @@
         private System.Windows.Forms.TextBox txtNewUsername;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dgvUserDetails;
-        private System.Windows.Forms.DataGridView dgvAdmin;
     }
 }
