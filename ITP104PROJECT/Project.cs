@@ -15,10 +15,11 @@ namespace ITP104PROJECT
     public partial class Project : Form
     {
 
-        public static string connection = "server=localhost; user=root; password=091203; database=company;";
+        public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+        //public static string connection = "server=localhost; user=root; password=091203; database=company;";
         //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
-        public Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
+        public Admin _admin;
 
         public Project()
         {
@@ -32,6 +33,11 @@ namespace ITP104PROJECT
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
+        public Project(Admin admin) : this()
+        {
+            _admin = admin;
+        }
+
         private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -40,31 +46,31 @@ namespace ITP104PROJECT
             {
                 if (clickedButton.Name == "btnDashboard")
                 {
-                    Dashboard dashboardForm = new Dashboard();
+                    Dashboard dashboardForm = new Dashboard(_admin);
                     dashboardForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideDep")
                 {
-                    Departments departmentsForm = new Departments();
+                    Departments departmentsForm = new Departments(_admin);
                     departmentsForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideEmp")
                 {
-                    Employees employeesForm = new Employees();
+                    Employees employeesForm = new Employees(_admin);
                     employeesForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideProj")
                 {
-                    Project projectForm = new Project();
+                    Project projectForm = new Project(_admin);
                     projectForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSettings")
                 {
-                    Settings settingsForm = new Settings();
+                    Settings settingsForm = new Settings(_admin);
                     settingsForm.Show();
                     this.Hide();
                 }
@@ -82,7 +88,7 @@ namespace ITP104PROJECT
 
                         this.Hide();
 
-                        Login loginForm = new Login();
+                        Login loginForm = new Login(_admin);
                         loginForm.Show();
                     }
 
@@ -96,7 +102,7 @@ namespace ITP104PROJECT
 
         private void Project_Load(object sender, EventArgs e)
         {
-            label4.Text = admin.name;
+            label4.Text = _admin.name;
             ViewProjectAndTasks("View Project and Tasks");
             PopulateDepartmentComboBox();
             PopulateEmployee();

@@ -61,19 +61,19 @@ namespace ITP104PROJECT
                 }
                 else if (clickedButton.Name == "btnSideDep")
                 {
-                    Departments departmentsForm = new Departments();
+                    Departments departmentsForm = new Departments(_admin);
                     departmentsForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideEmp")
                 {
-                    Employees employeesForm = new Employees();
+                    Employees employeesForm = new Employees(_admin);
                     employeesForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideProj")
                 {
-                    Project projectForm = new Project();
+                    Project projectForm = new Project(_admin);
                     projectForm.Show();
                     this.Hide();
                 }

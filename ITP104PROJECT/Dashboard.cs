@@ -44,13 +44,13 @@ namespace ITP104PROJECT
                         break;
                        
                     case "btnSideDep":
-                        Departments departmentsForm = new Departments();
+                        Departments departmentsForm = new Departments(_admin);
                         departmentsForm.Show();
                         this.Hide();
                         break;
 
                     case "btnSideProj":
-                        Project projectForm = new Project();
+                        Project projectForm = new Project(_admin);
                         projectForm.Show();
                         this.Hide();
                         break;
@@ -69,7 +69,7 @@ namespace ITP104PROJECT
                         {
                             MessageBox.Show("Logging out...", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
-                            Login loginForm = new Login();
+                            Login loginForm = new Login(_admin);
                             loginForm.Show();
                         }
                         break;
