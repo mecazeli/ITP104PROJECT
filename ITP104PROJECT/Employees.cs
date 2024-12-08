@@ -178,7 +178,7 @@ namespace ITP104PROJECT
         }
 
 
-
+        //
         public void ViewEmployees(string message = "")
         {
             // Only reinitialize columns if needed, such as when the form loads
