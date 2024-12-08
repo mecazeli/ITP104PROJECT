@@ -224,8 +224,15 @@ namespace ITP104PROJECT
         }
         private void btnRestore_Click(object sender, EventArgs e)
         {
-           
-            RestoreDatabase(txtBackPath.Text);
+            if (!string.IsNullOrEmpty(txtBackPath.Text))
+             {
+                RestoreDatabase(txtBackPath.Text);
+            } else
+            {
+                MessageBox.Show("Please Browse a Path for Restoring");
+            }
+        
+            
 
         }
 
@@ -241,15 +248,28 @@ namespace ITP104PROJECT
             }
         }
 
-
-        //}
-
-        private void btnBrowse2_Click(object sender, EventArgs e)
+        private void btnChangeUsername_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to change the username?",
+                "Confirm Username Change",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                _admin.username = txtNewUsername.Text;
+                MessageBox.Show("Username changed successfully!");
+                LoadAdminDetails();
+            }
+            else
+            {
+                MessageBox.Show("Username change canceled.");
+            }
         }
 
-        private void btnChangeUsername_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
                 "Are you sure you want to change the password?",
@@ -260,7 +280,7 @@ namespace ITP104PROJECT
 
             if (result == DialogResult.Yes)
             {
-                _admin.password = txtNewPassword.Text; 
+                _admin.password = txtNewPassword.Text;
                 MessageBox.Show("Password changed successfully!");
                 LoadAdminDetails();
             }

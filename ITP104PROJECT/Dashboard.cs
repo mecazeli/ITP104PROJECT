@@ -48,7 +48,11 @@ namespace ITP104PROJECT
                         departmentsForm.Show();
                         this.Hide();
                         break;
-
+                    case "btnSideEmp":
+                        Employees employeesForm = new Employees(_admin);
+                        employeesForm.Show();
+                        this.Hide();
+                        break;
                     case "btnSideProj":
                         Project projectForm = new Project(_admin);
                         projectForm.Show();
@@ -56,7 +60,6 @@ namespace ITP104PROJECT
                         break;
 
                     case "btnSettings":
-                        // Pass _admin to the Settings form
                         Settings settingsForm = new Settings(_admin);
                         settingsForm.Show();
                         this.Hide();
@@ -76,29 +79,26 @@ namespace ITP104PROJECT
                 }
             }
         }
-<<<<<<< HEAD
 
         private void btnDepartments_Click(object sender, EventArgs e)
         {
-            Departments departmentForm = new Departments();
+            Departments departmentForm = new Departments(_admin);
             this.Hide();
             departmentForm.Show();
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            Employees employeesForm = new Employees();
+            Employees employeesForm = new Employees(_admin);
             this.Hide();
             employeesForm.Show();
         }
 
         private void btnProjects_Click(object sender, EventArgs e)
         {
-            Project projectForm = new Project();
+            Project projectForm = new Project(_admin);
             this.Hide();
             projectForm.Show();
         }
-=======
->>>>>>> 8f88a6b2a9807e6a42c8803cf417aa2dc19b7443
     }
 }
