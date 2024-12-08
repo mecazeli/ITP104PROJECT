@@ -14,8 +14,8 @@ namespace ITP104PROJECT
 {
     public partial class Project : Form
     {
-        public static string connection = "server=localhost; user=root; password=091203; database=company;";
-        // public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+        //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
+         public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
         public Admin _admin;
@@ -102,7 +102,6 @@ namespace ITP104PROJECT
         private void Project_Load(object sender, EventArgs e)
         {
             label4.Text = _admin.name;
-            ViewProjectAndTasks();
             PopulateDepartmentComboBox();
             PopulateEmployee();
         }
@@ -233,6 +232,7 @@ namespace ITP104PROJECT
                 }
             }
         }
+
 
         private void AddProject()
         {

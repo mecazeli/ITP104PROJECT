@@ -17,7 +17,7 @@
             {
                 components.Dispose();
             }
-            base.Dispose(disposing); 
+            base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -125,6 +125,7 @@
             this.btnProjects.Size = new System.Drawing.Size(220, 178);
             this.btnProjects.TabIndex = 3;
             this.btnProjects.UseVisualStyleBackColor = false;
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
             // btnEmployees
             // 
@@ -142,6 +143,7 @@
             this.btnEmployees.Size = new System.Drawing.Size(220, 178);
             this.btnEmployees.TabIndex = 2;
             this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnDepartments
             // 
@@ -159,6 +161,7 @@
             this.btnDepartments.Size = new System.Drawing.Size(220, 178);
             this.btnDepartments.TabIndex = 1;
             this.btnDepartments.UseVisualStyleBackColor = false;
+            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click);
             // 
             // panel2
             // 
@@ -337,7 +340,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load_1);
             this.panelDasboard.ResumeLayout(false);
             this.panelDasboard.PerformLayout();
             this.panel2.ResumeLayout(false);

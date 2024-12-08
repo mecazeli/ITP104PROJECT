@@ -87,8 +87,18 @@ namespace ITP104PROJECT
             departmentForm.Show();
         }
 
-        private void Dashboard_Load_1(object sender, EventArgs e)
+        private void btnEmployees_Click(object sender, EventArgs e)
         {
+            Employees employeesForm = new Employees(_admin);
+            this.Hide();
+            employeesForm.Show();
+        }
 
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            Project projectForm = new Project(_admin);
+            this.Hide();
+            projectForm.Show();
+        }
     }
 }

@@ -59,6 +59,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblDep = new System.Windows.Forms.Label();
             this.dgvDepartments = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDepFooter.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -191,7 +192,7 @@
             this.btnUpdate.FlatAppearance.BorderSize = 3;
             this.btnUpdate.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(28, 107);
+            this.btnUpdate.Location = new System.Drawing.Point(30, 107);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -218,7 +219,7 @@
             this.btnView.FlatAppearance.BorderSize = 3;
             this.btnView.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(29, 59);
+            this.btnView.Location = new System.Drawing.Point(31, 59);
             this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -235,7 +236,7 @@
             this.btnDelDep.FlatAppearance.BorderSize = 3;
             this.btnDelDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelDep.ForeColor = System.Drawing.Color.White;
-            this.btnDelDep.Location = new System.Drawing.Point(28, 155);
+            this.btnDelDep.Location = new System.Drawing.Point(30, 155);
             this.btnDelDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelDep.Name = "btnDelDep";
             this.btnDelDep.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -378,6 +379,17 @@
             this.lblName.TabIndex = 10;
             this.lblName.Text = "Jessa Cariñaga";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 84);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblAdmin
             // 
             this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -468,16 +480,16 @@
             this.dgvDepartments.Size = new System.Drawing.Size(1176, 370);
             this.dgvDepartments.TabIndex = 5;
             // 
-            // pictureBox1
+            // textBox1
             // 
-            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.textBox1.Location = new System.Drawing.Point(746, 28);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(307, 26);
+            this.textBox1.TabIndex = 0;
             // 
             // Departments
             // 

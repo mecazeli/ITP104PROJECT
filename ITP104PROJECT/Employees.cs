@@ -15,7 +15,7 @@ namespace ITP104PROJECT
     public partial class Employees : Form
     {
 
-        public Admin admin;
+        public Admin _admin;
 
         public static string connection = "server=localhost; user=root; password=091203; database=company;";
         // public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
@@ -178,7 +178,7 @@ namespace ITP104PROJECT
         }
 
 
-
+        //
         public void ViewEmployees(string message = "")
         {
             // Only reinitialize columns if needed, such as when the form loads
