@@ -81,14 +81,15 @@
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
-            //this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Trebuchet MS", 11.8F);
             this.txtPassword.Location = new System.Drawing.Point(121, 320);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(257, 30);
+            this.txtPassword.PasswordChar = '#';
+            this.txtPassword.Size = new System.Drawing.Size(257, 26);
             this.txtPassword.TabIndex = 5;
             // 
             // txtUsername
@@ -96,7 +97,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Trebuchet MS", 11.8F);
             this.txtUsername.Location = new System.Drawing.Point(121, 223);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(257, 30);
+            this.txtUsername.Size = new System.Drawing.Size(257, 26);
             this.txtUsername.TabIndex = 4;
             // 
             // lblPassword
@@ -105,7 +106,7 @@
             this.lblPassword.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(117, 295);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(88, 23);
+            this.lblPassword.Size = new System.Drawing.Size(72, 20);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password";
             // 
@@ -115,7 +116,7 @@
             this.lblUsername.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(117, 198);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(94, 23);
+            this.lblUsername.Size = new System.Drawing.Size(79, 20);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username";
             // 
@@ -125,7 +126,7 @@
             this.lblAdmin.Font = new System.Drawing.Font("Trebuchet MS", 18.2F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.Location = new System.Drawing.Point(195, 118);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(109, 39);
+            this.lblAdmin.Size = new System.Drawing.Size(88, 32);
             this.lblAdmin.TabIndex = 1;
             this.lblAdmin.Text = "Admin";
             // 
@@ -136,13 +137,13 @@
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.lblLogin.Location = new System.Drawing.Point(99, 34);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(338, 49);
+            this.lblLogin.Size = new System.Drawing.Size(270, 40);
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login to Velvaire";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1292, 715);

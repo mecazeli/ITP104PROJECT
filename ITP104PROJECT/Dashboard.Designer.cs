@@ -17,7 +17,7 @@
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            base.Dispose(disposing); 
         }
 
         #region Windows Form Designer generated code
@@ -32,6 +32,9 @@
             this.lblProjects = new System.Windows.Forms.Label();
             this.lblEmployees = new System.Windows.Forms.Label();
             this.lblDepartments = new System.Windows.Forms.Label();
+            this.btnProjects = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
+            this.btnDepartments = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panelSideBar = new System.Windows.Forms.Panel();
@@ -43,9 +46,6 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnProjects = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
-            this.btnDepartments = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDasboard.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,6 +108,57 @@
             this.lblDepartments.Size = new System.Drawing.Size(135, 26);
             this.lblDepartments.TabIndex = 4;
             this.lblDepartments.Text = "Departments";
+            // 
+            // btnProjects
+            // 
+            this.btnProjects.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnProjects.BackgroundImage = global::ITP104PROJECT.Properties.Resources.download;
+            this.btnProjects.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProjects.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnProjects.FlatAppearance.BorderSize = 5;
+            this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjects.Location = new System.Drawing.Point(727, 206);
+            this.btnProjects.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProjects.Name = "btnProjects";
+            this.btnProjects.Size = new System.Drawing.Size(220, 178);
+            this.btnProjects.TabIndex = 3;
+            this.btnProjects.UseVisualStyleBackColor = false;
+            // 
+            // btnEmployees
+            // 
+            this.btnEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnEmployees.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Shared_workspace_Customizable_Isometric_Illustrations___Amico_Style;
+            this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmployees.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEmployees.FlatAppearance.BorderSize = 5;
+            this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployees.Location = new System.Drawing.Point(439, 206);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(220, 178);
+            this.btnEmployees.TabIndex = 2;
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            // 
+            // btnDepartments
+            // 
+            this.btnDepartments.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnDepartments.BackgroundImage = global::ITP104PROJECT.Properties.Resources._desk;
+            this.btnDepartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDepartments.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDepartments.FlatAppearance.BorderSize = 5;
+            this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepartments.Location = new System.Drawing.Point(142, 206);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDepartments.Name = "btnDepartments";
+            this.btnDepartments.Size = new System.Drawing.Size(220, 178);
+            this.btnDepartments.TabIndex = 1;
+            this.btnDepartments.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -262,57 +313,6 @@
             this.lblName.TabIndex = 19;
             this.lblName.Text = "Jessa Cariñaga";
             // 
-            // btnProjects
-            // 
-            this.btnProjects.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnProjects.BackgroundImage = global::ITP104PROJECT.Properties.Resources.download;
-            this.btnProjects.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProjects.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnProjects.FlatAppearance.BorderSize = 5;
-            this.btnProjects.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjects.Location = new System.Drawing.Point(727, 206);
-            this.btnProjects.Margin = new System.Windows.Forms.Padding(2);
-            this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(220, 178);
-            this.btnProjects.TabIndex = 3;
-            this.btnProjects.UseVisualStyleBackColor = false;
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnEmployees.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Shared_workspace_Customizable_Isometric_Illustrations___Amico_Style;
-            this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEmployees.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEmployees.FlatAppearance.BorderSize = 5;
-            this.btnEmployees.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Location = new System.Drawing.Point(439, 206);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(220, 178);
-            this.btnEmployees.TabIndex = 2;
-            this.btnEmployees.UseVisualStyleBackColor = false;
-            // 
-            // btnDepartments
-            // 
-            this.btnDepartments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
-            this.btnDepartments.BackgroundImage = global::ITP104PROJECT.Properties.Resources._desk;
-            this.btnDepartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDepartments.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDepartments.FlatAppearance.BorderSize = 5;
-            this.btnDepartments.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartments.Location = new System.Drawing.Point(142, 206);
-            this.btnDepartments.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(220, 178);
-            this.btnDepartments.TabIndex = 1;
-            this.btnDepartments.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
@@ -336,6 +336,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load_1);
             this.panelDasboard.ResumeLayout(false);
             this.panelDasboard.PerformLayout();
             this.panel2.ResumeLayout(false);

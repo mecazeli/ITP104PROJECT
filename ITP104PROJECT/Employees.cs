@@ -15,7 +15,9 @@ namespace ITP104PROJECT
     {
 
         public Admin admin;
-        public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
+
+        public static string connection = "server=localhost; user=root; password=091203; database=company;";
+        // public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         //public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         public MySqlConnection conn;
         public Employees()
@@ -110,12 +112,13 @@ namespace ITP104PROJECT
                     }
                 }
 
+                // Bind the ComboBox and set the default selection to the first row
                 comboEmpDep.DataSource = dep;
-                comboEmpDep.ValueMember = "departmentId";   
+                comboEmpDep.ValueMember = "departmentId";
                 comboEmpDep.DisplayMember = "departmentName";
-
+                comboEmpDep.SelectedIndex = -1; // Set the first item as the default selected item
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error populating departments: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -127,6 +130,7 @@ namespace ITP104PROJECT
                 }
             }
         }
+
 
         private void PopulateGenderComboBox()
         {
@@ -170,50 +174,46 @@ namespace ITP104PROJECT
 
 
 
-        private void ViewEmployees(String message)
+        public void ViewEmployees(string message = "")
         {
-            dgvEmployees.Rows.Clear();
+            // Only reinitialize columns if needed, such as when the form loads
+            if (dgvEmployees.ColumnCount == 0)
+            {
+                dgvEmployees.ColumnCount = 9;
+                dgvEmployees.Columns[0].Name = "Employee ID";
+                dgvEmployees.Columns[1].Name = "Employee Name";
+                dgvEmployees.Columns[2].Name = "Age";
+                dgvEmployees.Columns[3].Name = "Gender";
+                dgvEmployees.Columns[4].Name = "Address";
+                dgvEmployees.Columns[5].Name = "Email";
+                dgvEmployees.Columns[6].Name = "Position";
+                dgvEmployees.Columns[7].Name = "Date Hired";
+                dgvEmployees.Columns[8].Name = "Salary";
+                dgvEmployees.Columns.Add("Department", "Department Name");
+            }
 
-            dgvEmployees.ColumnCount = 9;
-            dgvEmployees.Columns[0].Name = "Employee ID";
-            dgvEmployees.Columns[1].Name = "Employee Name";
-            dgvEmployees.Columns[2].Name = "Age";
-            dgvEmployees.Columns[3].Name = "Gender";
-            dgvEmployees.Columns[4].Name = "Address";
-            dgvEmployees.Columns[5].Name = "Email";
-            dgvEmployees.Columns[6].Name = "Position";
-            dgvEmployees.Columns[7].Name = "Date Hired";
-            dgvEmployees.Columns[8].Name = "Salary";
-            dgvEmployees.Columns.Add("Department", "Department Name"); 
+            dgvEmployees.Rows.Clear();
 
             try
             {
                 conn.Open();
-
-   
                 string query = @"
-                SELECT 
-                   e.employeeId, e.employeeName, e.age, e.gender, e.address,
-                   e.email, e.position, e.datehired, e.salary, d.departmentName
-                FROM employee e
-                JOIN department d ON e.departmentId = d.departmentId;
-                ";
+            SELECT 
+                e.employeeId, e.employeeName, e.age, e.gender, e.address,
+                e.email, e.position, e.datehired, e.salary, d.departmentName
+            FROM employee e
+            JOIN department d ON e.departmentId = d.departmentId;
+        ";
 
-               
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, conn);
                 DataTable employeesTable = new DataTable();
                 dataAdapter.Fill(employeesTable);
 
-              
                 if (employeesTable.Rows.Count > 0)
                 {
-                   
                     foreach (DataRow row in employeesTable.Rows)
                     {
-                       
                         string formattedSalary = "₱" + Convert.ToDecimal(row["salary"]).ToString("N2");
-
-                      
                         dgvEmployees.Rows.Add(
                             row["employeeId"],
                             row["employeeName"],
@@ -223,8 +223,8 @@ namespace ITP104PROJECT
                             row["email"],
                             row["position"],
                             row["datehired"],
-                            formattedSalary, 
-                            row["departmentName"] 
+                            formattedSalary,
+                            row["departmentName"]
                         );
                     }
                 }
@@ -232,21 +232,22 @@ namespace ITP104PROJECT
                 {
                     MessageBox.Show("No employees found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
+                
             }
             catch (Exception ex)
             {
-               
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-           
                 if (conn.State == ConnectionState.Open)
                 {
                     conn.Close();
                 }
             }
         }
+
 
         public bool ValidateEmployeeInput(string empName, string empAddress, string empAge, string empEmail, string empPosition, string empGender, string empSalary)
         {
@@ -403,143 +404,7 @@ namespace ITP104PROJECT
             }
         }
 
-        private void UpdateEmployee()
-        {
-            if (dgvEmployees.SelectedCells.Count == 0)
-            {
-                MessageBox.Show("Please select an employee to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int selectedRowCell = dgvEmployees.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dgvEmployees.Rows[selectedRowCell];
-
-            int empId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["Employee ID"].Value);
-            string newEmpName = txtEmpName.Text.Trim();
-            int newAge = Convert.ToInt32(txtEmpAge.Text.Trim());
-            string newGender = cmbGender.SelectedItem?.ToString();
-            string newAddress = txtEmpAddress.Text.Trim();
-            string newEmail = txtEmpEmail.Text.Trim();
-            string newPosition = txtEmpPosition.Text.Trim();
-            DateTime newDateHired = dateHiredPicker.Value;
-            decimal newSalary = Convert.ToDecimal(txtEmpSalary.Text.Trim());
-            string newDepId = GetSelectedDepartmentId();
-
-            if (newDepId == null)
-            {
-                MessageBox.Show("Please select a department.", "No Department Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                conn.Open();
-
-                string fetchQuery = "SELECT employeeName, age, gender, address, email, position, datehired, salary, departmentId FROM employee WHERE employeeId = @id";
-                MySqlCommand fetchCommand = new MySqlCommand(fetchQuery, conn);
-                fetchCommand.Parameters.AddWithValue("@id", empId);
-
-                using(MySqlDataReader reader = fetchCommand.ExecuteReader())
-                {
-                    if (!reader.Read())
-                    {
-                        MessageBox.Show("Employee not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    string currentEmpName = reader["employeeName"].ToString().Trim();
-                    int currentAge = Convert.ToInt32(reader["age"]);
-                    string currentGender = reader["gender"].ToString().Trim();
-                    string currentAddress = reader["address"].ToString().Trim();
-                    string currentEmail = reader["email"].ToString().Trim();
-                    string currentPosition = reader["position"].ToString().Trim();
-                    DateTime currentDateHired = Convert.ToDateTime(reader["datehired"]);
-                    decimal currentSalary = Convert.ToDecimal(reader["salary"]);
-                    int currentDepId = Convert.ToInt32(reader["departmentId"]);
-
-                    reader.Close();
-
-                    if (currentEmpName == newEmpName && currentAge == newAge && currentGender == newGender && currentAddress == newAddress &&
-                        currentEmail == newEmail && currentPosition == newPosition && currentDateHired == newDateHired &&
-                        currentSalary == newSalary && currentDepId == Convert.ToInt32(newDepId))
-                    {
-                        MessageBox.Show("No changes detected to update.", "No Update Needed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-
-                    DialogResult dialogResult = MessageBox.Show(
-                        $"Are you sure you want to update Employee ID {empId}?\n\n" +
-                        $"Old Name: {currentEmpName}\nNew Name: {newEmpName}\n\n" +
-                        $"Old Department: {currentDepId}\nNew Department: {newDepId}",
-                        "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question
-                        );
-
-                    if (dialogResult == DialogResult.No)
-                    {
-                        MessageBox.Show("Update cancelled by the user.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-
-                    bool isUpdated = UpdateEmployeeQuery(empId, newEmpName, newAge, newGender, newAddress, newEmail, newPosition, newDateHired, newSalary, newDepId);
-                    if (isUpdated)
-                    {
-                        MessageBox.Show("Employee updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ViewEmployees("Employee list updated after modification.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No rows were updated. Please check the input and try again.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
-        }
-
-        private bool UpdateEmployeeQuery(int empId, string newEmpName, int newAge, string newGender, string newAddress, string newEmail, string newPosition, DateTime newDateHired, decimal newSalary, string newDepId)
-        {
-            using (MySqlConnection updateConn = new MySqlConnection(conn.ConnectionString))
-            {
-                try
-                {
-                    updateConn.Open();
-
-                    string updateQuery = "UPDATE employee SET employeeName = @newEmpName, age = @newAge, gender = @newGender, address = @newAddress, email = @newEmail, " +
-                                         "position = @newPosition, datehired = @newDateHired, salary = @newSalary, departmentId = @newDepId WHERE employeeId = @id";
-
-                    MySqlCommand updateCommand = new MySqlCommand(updateQuery, updateConn);
-                    updateCommand.Parameters.AddWithValue("@newEmpName", newEmpName);
-                    updateCommand.Parameters.AddWithValue("@newAge", newAge);
-                    updateCommand.Parameters.AddWithValue("@newGender", newGender);
-                    updateCommand.Parameters.AddWithValue("@newAddress", newAddress);
-                    updateCommand.Parameters.AddWithValue("@newEmail", newEmail);
-                    updateCommand.Parameters.AddWithValue("@newPosition", newPosition);
-                    updateCommand.Parameters.AddWithValue("@newDateHired", newDateHired);
-                    updateCommand.Parameters.AddWithValue("@newSalary", newSalary);
-                    updateCommand.Parameters.AddWithValue("@newDepId", newDepId);
-                    updateCommand.Parameters.AddWithValue("@id", empId);
-
-                    int rowsAffected = updateCommand.ExecuteNonQuery();
-                    return rowsAffected > 0;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred while updating the employee: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-            }
-        }
+    
 
         private string GetSelectedDepartmentId()
         {
@@ -568,7 +433,8 @@ namespace ITP104PROJECT
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e)
         {
-            UpdateEmployee();
+            Update updateForm = new Update(this);
+            updateForm.ShowDialog();
         }
     }
 
