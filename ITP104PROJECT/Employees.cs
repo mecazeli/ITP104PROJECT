@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,10 @@ namespace ITP104PROJECT
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
+        public Employees(Admin admin) :this() { 
+           _admin = admin;
+        }
+
         private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -39,31 +44,31 @@ namespace ITP104PROJECT
             {
                 if (clickedButton.Name == "btnDashboard")
                 {
-                    Dashboard dashboardForm = new Dashboard();
+                    Dashboard dashboardForm = new Dashboard(_admin);
                     dashboardForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideDep")
                 {
-                    Departments departmentsForm = new Departments();
+                    Departments departmentsForm = new Departments(_admin);
                     departmentsForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideEmp")
                 {
-                    Employees employeesForm = new Employees();
+                    Employees employeesForm = new Employees(_admin);
                     employeesForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideProj")
                 {
-                    Project projectForm = new Project();
+                    Project projectForm = new Project(_admin);
                     projectForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSettings")
                 {
-                    Settings settingsForm = new Settings();
+                    Settings settingsForm = new Settings(_admin);
                     settingsForm.Show();
                     this.Hide();
                 }
@@ -81,7 +86,7 @@ namespace ITP104PROJECT
 
                         this.Hide();
 
-                        Login loginForm = new Login();
+                        Login loginForm = new Login(_admin);
                         loginForm.Show();
                     }
 
@@ -294,9 +299,8 @@ namespace ITP104PROJECT
             string empAge = txtEmpAge.Text.Trim();
             string empEmail = txtEmpEmail.Text.Trim();
             string empPosition = txtEmpPosition.Text.Trim();
-            string empGender = cmbGender.SelectedItem?.ToString();
+            string empGender = cmbGender.SelectedIndex.ToString();
             string empSalary = txtEmpSalary.Text.Trim();
-            DateTime empDateHired = dateHiredPicker.Value;
 
             if (!ValidateEmployeeInput(empName, empAddress, empAge, empEmail, empPosition, empGender, empSalary))
             {
@@ -309,27 +313,22 @@ namespace ITP104PROJECT
                 return;
             }
 
+            
             string depId = GetSelectedDepartmentId();
 
             if (string.IsNullOrEmpty(depId))
             {
                 MessageBox.Show("Please select a department for the employee.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return; // Prevent adding the employee if no department is selected
             }
-
-            if (string.IsNullOrEmpty(empGender))
-            {
-                MessageBox.Show("Please select a gender for the employee.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
 
             try
             {
                 conn.Open();
 
-                string query = "INSERT INTO employee (employeeName, address, age, email, position, gender, salary, departmentId,dateHired) " +
-                               "VALUES (@name, @address, @age, @email, @position, @gender, @salary, @departmentId,@dateHired)";
+                // Insert employee data into the database
+                string query = "INSERT INTO employee (employeeName, address, age, email, position, gender, salary, departmentId) " +
+                               "VALUES (@name, @address, @age, @email, @position, @gender, @salary, @departmentId)";
 
                 MySqlCommand command = new MySqlCommand(query, conn);
                 command.Parameters.AddWithValue("@name", empName);
@@ -339,13 +338,10 @@ namespace ITP104PROJECT
                 command.Parameters.AddWithValue("@position", empPosition);
                 command.Parameters.AddWithValue("@gender", empGender);
                 command.Parameters.AddWithValue("@salary", empSalary);
-                command.Parameters.AddWithValue("@departmentId", depId);
-                command.Parameters.AddWithValue("@dateHired", empDateHired);
+                command.Parameters.AddWithValue("@departmentId", depId); 
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Employee added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ViewEmployees("Employee added successfully!");
-
             }
             catch (Exception ex)
             {
@@ -353,12 +349,10 @@ namespace ITP104PROJECT
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
+                conn.Close();
             }
-        }  
+        }
+
 
         private void DeletingEmployee()
         {
@@ -436,7 +430,87 @@ namespace ITP104PROJECT
             Update updateForm = new Update(this);
             updateForm.ShowDialog();
         }
+
+        //-------SEARCH FUNCTION--------
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            SearchEmployees(searchTerm);
+        }
+
+        private void SearchEmployees(string searchTerm)
+        {
+            dgvEmployees.Rows.Clear();
+
+            // Convert the search term to lower case for case-insensitive comparison
+            string lowerSearchTerm = searchTerm.ToLower();
+
+            try
+            {
+                conn.Open();
+
+                // Use a parameterized query to prevent SQL injection
+                string query = @"
+            SELECT 
+                e.employeeId, e.employeeName, e.age, e.gender, e.address,
+                e.email, e.position, e.datehired, e.salary, d.departmentName
+            FROM employee e
+            JOIN department d ON e.departmentId = d.departmentId";
+
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Check if any column contains the search term (case-insensitive)
+                            if (reader["employeeId"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["employeeName"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["age"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["gender"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["address"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["email"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["position"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["datehired"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["salary"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["departmentName"].ToString().ToLower().Contains(lowerSearchTerm))
+                            {
+                                string formattedSalary = "₱" + Convert.ToDecimal(reader["salary"]).ToString("N2");
+
+                                dgvEmployees.Rows.Add(
+                                    reader["employeeId"],
+                                    reader["employeeName"],
+                                    reader["age"],
+                                    reader["gender"],
+                                    reader["address"],
+                                    reader["email"],
+                                    reader["position"],
+                                    reader["datehired"],
+                                    formattedSalary,
+                                    reader["departmentName"]
+                                );
+                            }
+                        }
+                    }
+                }
+
+                if (dgvEmployees.Rows.Count == 0)
+                {
+                    MessageBox.Show("No employees found matching the search criteria.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
-
 }
-
+     

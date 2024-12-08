@@ -18,7 +18,7 @@ namespace ITP104PROJECT
         // public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
-        public Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
+        public Admin _admin;
 
         public Project()
         {
@@ -32,6 +32,11 @@ namespace ITP104PROJECT
             btnLogout.Click += new EventHandler(btnSide_Click);
         }
 
+        public Project(Admin admin) : this()
+        {
+            _admin = admin;
+        }
+
         private void btnSide_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -40,31 +45,31 @@ namespace ITP104PROJECT
             {
                 if (clickedButton.Name == "btnDashboard")
                 {
-                    Dashboard dashboardForm = new Dashboard();
+                    Dashboard dashboardForm = new Dashboard(_admin);
                     dashboardForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideDep")
                 {
-                    Departments departmentsForm = new Departments();
+                    Departments departmentsForm = new Departments(_admin);
                     departmentsForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideEmp")
                 {
-                    Employees employeesForm = new Employees();
+                    Employees employeesForm = new Employees(_admin);
                     employeesForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSideProj")
                 {
-                    Project projectForm = new Project();
+                    Project projectForm = new Project(_admin);
                     projectForm.Show();
                     this.Hide();
                 }
                 else if (clickedButton.Name == "btnSettings")
                 {
-                    Settings settingsForm = new Settings();
+                    Settings settingsForm = new Settings(_admin);
                     settingsForm.Show();
                     this.Hide();
                 }
@@ -82,7 +87,7 @@ namespace ITP104PROJECT
 
                         this.Hide();
 
-                        Login loginForm = new Login();
+                        Login loginForm = new Login(_admin);
                         loginForm.Show();
                     }
 
@@ -96,18 +101,51 @@ namespace ITP104PROJECT
 
         private void Project_Load(object sender, EventArgs e)
         {
-            label4.Text = admin.name;
-            ViewProjectAndTasks("View Project and Tasks");
+            label4.Text = _admin.name;
+            ViewProjectAndTasks();
+            PopulateDepartmentComboBox();
+            PopulateEmployee();
         }
 
-      
-
-
-        private void ViewProjectAndTasks(string message)
+        private void PopulateDepartmentComboBox()
         {
-            //conn.Close();
-            //dgvProject.Rows.Clear();
-            //dgvProject.Columns.Clear();
+            try
+            {
+                string query = "SELECT departmentId, departmentName FROM department";
+                DataTable dep = new DataTable();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        conn.Open();
+                        adapter.Fill(dep);
+                    }
+                }
+
+                cbDepartment.DataSource = dep;
+                cbDepartment.ValueMember = "departmentId";
+                cbDepartment.DisplayMember = "departmentName";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error populating departments: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
+        private void PopulateEmployee()
+        {
+            conn.Close();
+            dgvProject.Rows.Clear();
+            dgvProject.Columns.Clear();
 
             dgvProject.ColumnCount = 7;
             dgvProject.Columns[0].Name = "Project ID";
@@ -129,7 +167,6 @@ namespace ITP104PROJECT
             {
                
                 conn.Open();
-                MessageBox.Show(message);
 
                
                 string query = @"
@@ -199,7 +236,28 @@ namespace ITP104PROJECT
 
         private void AddProject()
         {
-            
+            string projName = txtProjName.Text.Trim(); 
+            string selectedDepId = cbDepartment.SelectedValue.ToString(); 
+            DateTime targetDate = projectTargetDate.Value;
+
+            if (string.IsNullOrEmpty(projName) || string.IsNullOrEmpty(selectedDepId))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                string query = @"
+                         INSERT INTO project (projectName, departmentId, startDate, endDate, status)
+                         VALUES (@projectName, @departmentId, @startDate, @endDate, 'Pending');";
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         private void DeleteProejct()
         {

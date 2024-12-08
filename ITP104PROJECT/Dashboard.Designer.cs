@@ -271,7 +271,7 @@
             this.btnSideEmp.TabIndex = 22;
             this.btnSideEmp.Text = "Employees";
             this.btnSideEmp.UseVisualStyleBackColor = true;
-            this.btnSideEmp.Click += new System.EventHandler(this.btnSide_Click);
+            this.btnSideEmp.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnSideDep
             // 
@@ -300,6 +300,7 @@
             this.btnDashboard.TabIndex = 20;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnSide_Click);
             // 
             // lblName
             // 
