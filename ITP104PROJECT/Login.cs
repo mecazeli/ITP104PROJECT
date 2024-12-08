@@ -14,12 +14,16 @@ namespace ITP104PROJECT
     public partial class Login : Form
     {
 
-        //public static Admin admin;
+        public static Admin _admin = new Admin();
 
         public Login()
         {
             InitializeComponent();
             //admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
+        }
+        public Login(Admin admin) : this()
+        {
+            _admin = admin;
         }
         
         private void Form1_Load(object sender, EventArgs e)
@@ -83,13 +87,24 @@ namespace ITP104PROJECT
         {
             string enteredUsername = txtUsername.Text;
             string enteredPassword = txtPassword.Text;
-            string correctUsername = "admin101";
-            string correctPassword = "password123";
+
+            if(_admin.username == null || _admin.password == null)
+            {
+                _admin.name = "Liezel T. Paciente";
+                _admin.age = 30;
+                _admin.gender = "Female";
+                _admin.username = "admin101";
+                _admin.password = "password123";
+            }
+
+            string correctUsername = _admin.username;
+            string correctPassword = _admin.password;
+
 
             if (enteredUsername == correctUsername && enteredPassword == correctPassword)
             {
                 this.Hide();
-                Dashboard dashboard = new Dashboard();
+                Dashboard dashboard = new Dashboard(_admin);
                 dashboard.Show();
             }
             else
@@ -102,18 +117,22 @@ namespace ITP104PROJECT
 
     public class Admin
     {
-        public string name;
-        public int age;
-        public string gender;
-        public string username;
-        public string password;
+        public string name { get; set; }
+        public int age { get; set; }
+        public string gender { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
 
-        public Admin(string name, int age, string gender, string username, string password)
+        public Admin()
+        {}
+
+        public Admin(string admName, int admAge, string admGender, string admUsername, string admPassword)
         {
-            this.name = name;
-            this.gender = gender;
-            this.username = username;
-            this.password = password;
+            name = admName;
+            age = admAge;
+            gender = admGender;
+            username = admUsername;
+            password = admPassword;
         }
     }
 }
