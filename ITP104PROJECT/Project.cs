@@ -14,9 +14,8 @@ namespace ITP104PROJECT
 {
     public partial class Project : Form
     {
-
-        public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
-        //public static string connection = "server=localhost; user=root; password=091203; database=company;";
+        public static string connection = "server=localhost; user=root; password=091203; database=company;";
+        // public static string connection = "server=localhost; user=root; password=; database=company; port=3306";
         //public static string connection = "server=localhost; user=root; password=liezel11; database=company;";
         public MySqlConnection conn;
         public Admin _admin;
@@ -144,32 +143,7 @@ namespace ITP104PROJECT
 
         private void PopulateEmployee()
         {
-            try
-            {
-                string query = "SELECT e.employeeId, e.employeeName FROM employee e";
-                DataTable employees = new DataTable();
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                    {
-                        conn.Open();
-                        adapter.Fill(employees);
-                    }
-                }
-                cbEmployee.DataSource = employees;
-                cbEmployee.ValueMember = "employeeId";
-                cbEmployee.DisplayMember = "employeeName";
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show($"Error populating employee comboBox: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-
-        private void ViewProjectAndTasks()
-        {;
+            conn.Close();
             dgvProject.Rows.Clear();
             dgvProject.Columns.Clear();
 

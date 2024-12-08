@@ -16,7 +16,7 @@ namespace ITP104PROJECT
 
         static void Main()
         {
-            Admin admin = new Admin("Liezel T. Paciente", 30, "Female", "admin101", "password123");
+           
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
