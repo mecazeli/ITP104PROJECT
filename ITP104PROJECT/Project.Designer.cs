@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProject = new System.Windows.Forms.DataGridView();
             this.lblTargetDate = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -36,8 +37,8 @@
             this.btnAddProject = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblProject = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -80,24 +81,31 @@
             // 
             // dgvProject
             // 
-            this.dgvProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProject.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProject.Location = new System.Drawing.Point(258, 65);
+            this.dgvProject.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProject.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProject.EnableHeadersVisualStyles = false;
+            this.dgvProject.Location = new System.Drawing.Point(258, 75);
             this.dgvProject.Name = "dgvProject";
             this.dgvProject.RowHeadersWidth = 51;
-            this.dgvProject.Size = new System.Drawing.Size(1569, 422);
+            this.dgvProject.Size = new System.Drawing.Size(1569, 411);
             this.dgvProject.TabIndex = 1;
             // 
             // lblTargetDate
@@ -153,8 +161,8 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.lblProject);
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.textBox4);
+            this.panel7.Controls.Add(this.btnSearch);
+            this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(258, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -173,31 +181,30 @@
             this.lblProject.TabIndex = 2;
             this.lblProject.Text = "Project and Task Management";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.button1.Location = new System.Drawing.Point(1445, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 41);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.btnSearch.Location = new System.Drawing.Point(1433, 14);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 41);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtSearch
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(1169, 21);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(255, 31);
-            this.textBox4.TabIndex = 0;
+            this.txtSearch.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(1135, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(277, 31);
+            this.txtSearch.TabIndex = 0;
             // 
             // panelSideBar
             // 
@@ -600,10 +607,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1827, 751);
+            this.Controls.Add(this.dgvProject);
             this.Controls.Add(this.panelDepFooter);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panelSideBar);
-            this.Controls.Add(this.dgvProject);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Project";
             this.Text = "Project";
@@ -636,8 +643,8 @@
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblProject;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panelSideBar;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Button btnLogout;

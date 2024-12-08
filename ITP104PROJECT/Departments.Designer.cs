@@ -52,20 +52,20 @@
             this.btnSideDep = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lblDep = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblDep = new System.Windows.Forms.Label();
             this.dgvDepartments = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDepFooter.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDepFooter
@@ -103,7 +103,7 @@
             this.txtDepName.BackColor = System.Drawing.Color.White;
             this.txtDepName.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.txtDepName.Location = new System.Drawing.Point(364, 112);
-            this.txtDepName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDepName.Margin = new System.Windows.Forms.Padding(5);
             this.txtDepName.Name = "txtDepName";
             this.txtDepName.Size = new System.Drawing.Size(300, 33);
             this.txtDepName.TabIndex = 18;
@@ -125,7 +125,7 @@
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.txtDescription.Location = new System.Drawing.Point(735, 111);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(300, 33);
             this.txtDescription.TabIndex = 16;
@@ -135,7 +135,6 @@
             this.btnAddDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnAddDep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnAddDep.FlatAppearance.BorderSize = 3;
-            this.btnAddDep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDep.ForeColor = System.Drawing.Color.White;
             this.btnAddDep.Location = new System.Drawing.Point(573, 180);
@@ -189,7 +188,6 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnUpdate.FlatAppearance.BorderSize = 3;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(40, 132);
@@ -207,7 +205,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel5.Margin = new System.Windows.Forms.Padding(5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(313, 53);
             this.panel5.TabIndex = 7;
@@ -217,7 +215,6 @@
             this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnView.FlatAppearance.BorderSize = 3;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnView.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
             this.btnView.Location = new System.Drawing.Point(41, 73);
@@ -235,7 +232,6 @@
             this.btnDelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnDelDep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(99)))), ((int)(((byte)(126)))));
             this.btnDelDep.FlatAppearance.BorderSize = 3;
-            this.btnDelDep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelDep.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelDep.ForeColor = System.Drawing.Color.White;
             this.btnDelDep.Location = new System.Drawing.Point(40, 191);
@@ -381,10 +377,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 40);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -402,15 +400,41 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
-            this.panel7.Controls.Add(this.lblDep);
             this.panel7.Controls.Add(this.btnSearch);
-            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.txtSearch);
+            this.panel7.Controls.Add(this.lblDep);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(258, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel7.Margin = new System.Windows.Forms.Padding(5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1569, 85);
             this.panel7.TabIndex = 4;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.btnSearch.Location = new System.Drawing.Point(1429, 19);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 41);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(1127, 26);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(277, 31);
+            this.txtSearch.TabIndex = 3;
             // 
             // lblDep
             // 
@@ -424,74 +448,37 @@
             this.lblDep.TabIndex = 2;
             this.lblDep.Text = "Department Management";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
-            this.btnSearch.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(1434, 32);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 33);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox1.Location = new System.Drawing.Point(996, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 31);
-            this.textBox1.TabIndex = 0;
-            // 
             // dgvDepartments
             // 
             this.dgvDepartments.AllowUserToOrderColumns = true;
-            this.dgvDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDepartments.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.dgvDepartments.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDepartments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvDepartments.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDepartments.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDepartments.Location = new System.Drawing.Point(259, 80);
+            this.dgvDepartments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDepartments.EnableHeadersVisualStyles = false;
+            this.dgvDepartments.Location = new System.Drawing.Point(258, 85);
             this.dgvDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDepartments.Name = "dgvDepartments";
             this.dgvDepartments.RowHeadersWidth = 51;
-            this.dgvDepartments.Size = new System.Drawing.Size(1568, 455);
+            this.dgvDepartments.Size = new System.Drawing.Size(1569, 449);
             this.dgvDepartments.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ITP104PROJECT.Properties.Resources.Businesswoman_free_icons_designed_by_Freepik;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 103);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // Departments
             // 
@@ -516,10 +503,10 @@
             this.panel2.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,8 +523,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Label lblDepartmentName;
         private System.Windows.Forms.TextBox txtDepName;
@@ -559,6 +544,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvDepartments;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         //private System.Windows.Forms.PictureBox pictureBox1;
         //private System.Windows.Forms.Label lblName;
         //private System.Windows.Forms.Button btnDashboard;

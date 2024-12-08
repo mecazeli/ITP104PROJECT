@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -559,7 +560,87 @@ namespace ITP104PROJECT
         {
             UpdateEmployee();
         }
+
+        //-------SEARCH FUNCTION--------
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            SearchEmployees(searchTerm);
+        }
+
+        private void SearchEmployees(string searchTerm)
+        {
+            dgvEmployees.Rows.Clear();
+
+            // Convert the search term to lower case for case-insensitive comparison
+            string lowerSearchTerm = searchTerm.ToLower();
+
+            try
+            {
+                conn.Open();
+
+                // Use a parameterized query to prevent SQL injection
+                string query = @"
+            SELECT 
+                e.employeeId, e.employeeName, e.age, e.gender, e.address,
+                e.email, e.position, e.datehired, e.salary, d.departmentName
+            FROM employee e
+            JOIN department d ON e.departmentId = d.departmentId";
+
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Check if any column contains the search term (case-insensitive)
+                            if (reader["employeeId"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["employeeName"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["age"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["gender"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["address"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["email"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["position"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["datehired"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["salary"].ToString().ToLower().Contains(lowerSearchTerm) ||
+                                reader["departmentName"].ToString().ToLower().Contains(lowerSearchTerm))
+                            {
+                                string formattedSalary = "₱" + Convert.ToDecimal(reader["salary"]).ToString("N2");
+
+                                dgvEmployees.Rows.Add(
+                                    reader["employeeId"],
+                                    reader["employeeName"],
+                                    reader["age"],
+                                    reader["gender"],
+                                    reader["address"],
+                                    reader["email"],
+                                    reader["position"],
+                                    reader["datehired"],
+                                    formattedSalary,
+                                    reader["departmentName"]
+                                );
+                            }
+                        }
+                    }
+                }
+
+                if (dgvEmployees.Rows.Count == 0)
+                {
+                    MessageBox.Show("No employees found matching the search criteria.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
-
 }
-
+     

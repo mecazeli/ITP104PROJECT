@@ -72,7 +72,6 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(91)))), ((int)(((byte)(94)))));
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Trebuchet MS", 12.8F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(161, 401);
@@ -88,6 +87,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Trebuchet MS", 11.8F);
             this.txtPassword.Location = new System.Drawing.Point(121, 320);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(257, 30);
             this.txtPassword.TabIndex = 5;
             // 
@@ -152,7 +152,9 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Login";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelLogin.ResumeLayout(false);

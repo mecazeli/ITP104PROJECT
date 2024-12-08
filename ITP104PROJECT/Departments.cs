@@ -121,10 +121,14 @@ namespace ITP104PROJECT
             dgvDepartments.Columns[1].Name = "Department Name";
             dgvDepartments.Columns[2].Name = "Description";
 
+            dgvDepartments.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvDepartments.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvDepartments.Columns[2].Width = 200;
+            dgvDepartments.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+
             try
             {
                 conn.Open();
-                MessageBox.Show(message);
 
                 string query = "SELECT * FROM department";
                 MySqlCommand command = new MySqlCommand(query, conn);
@@ -162,6 +166,7 @@ namespace ITP104PROJECT
                 }
             }
         }
+ 
 
 
         private void AddingDepartment()
@@ -407,5 +412,65 @@ namespace ITP104PROJECT
         {
             UpdateDepartment();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            SearchDepartment(searchTerm);
+        }
+
+        private void SearchDepartment(string searchTerm)
+        {
+            dgvDepartments.Rows.Clear();
+
+            // Convert the search term to lower case for case-insensitive comparison
+            string lowerSearchTerm = searchTerm.ToLower();
+
+            try
+            {
+                conn.Open();
+
+                // Use a parameterized query to prevent SQL injection
+                string query = @"
+            SELECT 
+                departmentId, departmentName
+            FROM department";
+
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Check if the department name contains the search term (case-insensitive)
+                            if (reader["departmentName"].ToString().ToLower().Contains(lowerSearchTerm))
+                            {
+                                dgvDepartments.Rows.Add(
+                                    reader["departmentId"],
+                                    reader["departmentName"]
+                                );
+                            }
+                        }
+                    }
+                }
+
+                if (dgvDepartments.Rows.Count == 0)
+                {
+                    MessageBox.Show("No departments found matching the search criteria.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
     }
 }
