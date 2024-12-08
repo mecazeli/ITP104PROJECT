@@ -103,7 +103,7 @@ namespace ITP104PROJECT
         private void Project_Load(object sender, EventArgs e)
         {
             label4.Text = _admin.name;
-            ViewProjectAndTasks("View Project and Tasks");
+            ViewProjectAndTasks();
             PopulateDepartmentComboBox();
             PopulateEmployee();
         }
@@ -168,7 +168,7 @@ namespace ITP104PROJECT
 
 
 
-        private void ViewProjectAndTasks(string message)
+        private void ViewProjectAndTasks()
         {;
             dgvProject.Rows.Clear();
             dgvProject.Columns.Clear();
@@ -193,7 +193,6 @@ namespace ITP104PROJECT
             {
                
                 conn.Open();
-                MessageBox.Show(message);
 
                
                 string query = @"
